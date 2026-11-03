@@ -24,7 +24,7 @@ def build_distribution(output: Path) -> Path:
     )
     # Publish the reviewed project introduction in both branches. Only example
     # links point back to main, because the lightweight branch excludes plugins.
-    for name in ("README.md", "README.zh.md", "README.en.md"):
+    for name in ("README.md", "README.zh.md"):
         content = (ROOT / name).read_text(encoding="utf-8")
         content = content.replace("](skills/ulanzi-plugin/", "](")
         for index in ("README.md", "README.zh.md"):

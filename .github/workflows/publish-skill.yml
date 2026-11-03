@@ -6,7 +6,6 @@ on:
     paths:
       - 'README.md'
       - 'README.zh.md'
-      - 'README.en.md'
       - 'skills/ulanzi-plugin/**'
       - 'tools/build_skill_distribution.py'
       - '.github/workflows/publish-skill.yml'
