@@ -1,0 +1,55 @@
+name: Publish lightweight skill branch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/ulanzi-plugin/**'
+      - 'tools/build_skill_distribution.py'
+      - '.github/workflows/publish-skill.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-lightweight-skill
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            skills/ulanzi-plugin
+            tools
+      - name: Build distribution
+        run: python3 tools/build_skill_distribution.py --out "$RUNNER_TEMP/ulanzi-skill-dist"
+      - name: Update skill branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh auth setup-git --hostname github.com
+          distribution="$RUNNER_TEMP/ulanzi-skill-dist"
+          remote_url="https://github.com/${GITHUB_REPOSITORY}.git"
+          git -C "$distribution" init -b skill
+          git -C "$distribution" remote add origin "$remote_url"
+          previous=$(git ls-remote --heads "$remote_url" refs/heads/skill)
+          if [ -n "$previous" ]; then
+            git -C "$distribution" fetch --depth 1 origin skill
+            git -C "$distribution" reset --soft FETCH_HEAD
+          fi
+          git -C "$distribution" config user.name 'github-actions[bot]'
+          git -C "$distribution" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C "$distribution" add --all
+          if git -C "$distribution" diff --cached --quiet; then
+            echo 'Skill distribution is unchanged.'
+            exit 0
+          fi
+          git -C "$distribution" commit -m 'chore: sync lightweight skill distribution'
+          git -C "$distribution" push origin HEAD:refs/heads/skill

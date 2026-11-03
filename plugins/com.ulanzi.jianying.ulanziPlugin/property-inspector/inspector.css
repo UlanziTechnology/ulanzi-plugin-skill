@@ -1,0 +1,29 @@
+body { margin: 0; color: #e9ecef; background: #24262a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.hidden { display: none; }
+.connection-status { margin-left: 0; margin-right: 0; }
+.check-value { display: flex; align-items: center; min-height: 30px; }
+details { margin: 14px 10px; border-top: 1px solid #3d4046; padding-top: 10px; }
+summary { cursor: pointer; color: #d7dbe0; font-size: 12px; }
+.hint { margin: 9px 10px; color: #a9afb8; font-size: 11px; line-height: 1.45; }
+details .hint { margin-left: 0; margin-right: 0; }
+.coordinate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.coordinate-grid label { color: #b9bec6; font-size: 11px; }
+.coordinate-grid input, .coordinate-grid select { box-sizing: border-box; width: 100%; margin-top: 4px; padding: 5px 7px; border: 1px solid #4a4e55; border-radius: 3px; color: #eef1f4; background: #303339; }
+.status { margin: 12px 10px 4px; padding: 8px; border-radius: 4px; color: #b9f5e9; background: #173c36; font-size: 11px; }
+.status.warn { color: #ffd8a8; background: #4a3217; }
+.capture-button { width: 100%; margin-top: 10px; padding: 7px 8px; border: 1px solid #4f8d82; border-radius: 4px; color: #c9fff5; background: #24584f; cursor: pointer; }
+.capture-button:disabled { cursor: wait; opacity: .65; }
+.clear-button { width: 100%; margin-top: 7px; padding: 6px 8px; border: 1px solid #565b63; border-radius: 4px; color: #c8cbd0; background: #33363b; cursor: pointer; }
+.capture-hint { margin-top: 6px; }
+.calibration-subtitle { margin-top: 16px; padding-top: 12px; border-top: 1px solid #454950; color: #e4e7eb; font-size: 12px; font-weight: 600; }
+.subset-title { margin: 12px 10px 0; color: #d7dbe0; font-size: 12px; }
+.subset-hint { margin-top: 5px; margin-bottom: 6px; }
+.parameter-subset { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; max-height: 168px; margin: 0 10px 12px; padding: 7px 8px; overflow-y: auto; border: 1px solid #3d4046; border-radius: 4px; background: #202226; }
+.subset-option { display: flex; align-items: center; min-width: 0; gap: 5px; padding: 3px 0; color: #c5cad1; font-size: 11px; }
+.subset-option input { flex: 0 0 auto; margin: 0; }
+.subset-option span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.shortcut-note { margin: 4px 0 8px; }
+.shortcut-note .hint { margin-top: 5px; margin-bottom: 5px; }
+.shortcut-note .tip.warn { color: #ffa314; }
+#shortcut-display.warn { color: #ffa314; font-size: 12px; font-weight: 600; }
+#shortcut-help { margin-top: 8px; margin-bottom: 5px; line-height: 1.5; background-position: left 1px; }

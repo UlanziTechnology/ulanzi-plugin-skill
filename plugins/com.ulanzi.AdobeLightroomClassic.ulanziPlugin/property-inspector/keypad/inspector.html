@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"
+    />
+    <title>action</title>
+    <link rel="stylesheet" href="../../libs/css/uspi.css" />
+  </head>
+  <body>
+    <div class="uspi-wrapper hidden">
+      
+      <p id="connect-status" class="tip info" data-localize>Connecting</p>
+      <p id="connect-tip" class="tip hidden" data-localize="connectTip">connectTip</p>
+
+      <hr />
+      
+      <form id="property-inspector">
+        
+        
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Press/Tap</div>
+          <select class="uspi-item-value keypad-selector" name="keypad">
+          </select>
+        </div>
+
+
+       
+      </form>
+      
+      
+
+      <details>
+        <summary data-localize="tip">tips</summary>
+        <ol>
+          <li data-localize="restartTip"> </li>
+          <li data-localize="connectTip"> </li>
+        </ol>
+      </details>
+
+    </div>
+
+    <script src="../../libs/js/constants.js"></script>
+    <script src="../../libs/js/eventEmitter.js"></script>
+    <script src="../../libs/js/timers.js"></script>
+    <script src="../../libs/js/utils.js"></script>
+    <script src="../../libs/js/ulanziApi.js"></script>
+
+    <script src="./piConfigs.js"></script>
+    <script src="./inspector.js"></script>
+  </body>
+</html>

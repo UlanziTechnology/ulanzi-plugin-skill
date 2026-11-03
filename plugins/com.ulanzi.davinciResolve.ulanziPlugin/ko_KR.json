@@ -1,0 +1,61 @@
+{
+  "Name": "DaVinci Resolve",
+  "Description": "DaVinci Resolve 색상 도구 및 타임라인용 다이얼 컨트롤",
+  "Actions": [
+    {
+      "Name": "컬러 휠 조정",
+      "Tooltip": "색상 휠, 슬라이더, 커브 또는 숫자 필드에 마우스를 올린 뒤 다이얼을 돌려 조정합니다."
+    },
+    {
+      "Name": "타임라인 제어",
+      "Tooltip": "다이얼을 돌려 타임라인을 제어하고, 누른 채 돌려 6개 모드 중 하나를 선택합니다."
+    }
+  ],
+  "Localization": {
+    "Hover Adjust Settings": "컬러 휠 설정",
+    "Dial mode": "다이얼 모드",
+    "Press + dial mode": "누른 상태의 다이얼 모드",
+    "Rotate around center": "중심을 기준으로 회전",
+    "Push/pull along diameter": "지름 방향으로 밀기/당기기",
+    "User guide": "사용자 가이드",
+    "Checking DaVinci Resolve...": "DaVinci Resolve 확인 중...",
+    "DaVinci Resolve detected.": "DaVinci Resolve를 감지했습니다.",
+    "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.": "DaVinci Resolve를 감지하지 못했습니다. DaVinci Resolve를 열면 이 플러그인이 자동으로 다시 연결됩니다.",
+    "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.": "DaVinci Resolve를 감지했습니다. Color 페이지로 전환하고 Color Wheels를 여세요.",
+    "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.": "DaVinci Resolve가 아직 준비되지 않았습니다. DaVinci Resolve를 열고 Color 페이지가 보이도록 유지하세요.",
+    "DaVinci detection unavailable. Please check plugin dependencies.": "DaVinci 감지를 사용할 수 없습니다. 플러그인 의존성을 확인하세요.",
+    "Plugin connection lost. DaVinci status cannot be checked.": "플러그인 연결이 끊어졌습니다. DaVinci 상태를 확인할 수 없습니다.",
+    "Timeline Control Settings": "타임라인 제어 설정",
+    "Connected to DaVinci Resolve.": "DaVinci Resolve에 연결됨",
+    "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.": "다이얼을 누른 채 돌려 모드를 전환하세요. 확대/축소, 트랙 높이 또는 스크롤 모드에서는 포인터를 타임라인 위에 두세요.",
+    "Current mode:": "현재 모드:",
+    "Mode": "모드",
+    "Initial mode": "초기 모드",
+    "Previous / next frame": "이전 / 다음 프레임",
+    "Track height": "트랙 높이",
+    "Timeline zoom": "타임라인 확대/축소",
+    "Timeline vertical scroll": "타임라인 세로 스크롤",
+    "Timeline horizontal scroll": "타임라인 가로 스크롤",
+    "Playhead large step": "재생 헤드 큰 이동",
+    "Large step": "큰 이동",
+    "1 second": "1초",
+    "5 seconds": "5초",
+    "10 seconds": "10초",
+    "30 seconds": "30초",
+    "Scroll sensitivity": "스크롤 감도",
+    "Playhead backend": "재생 헤드 백엔드",
+    "Automatic (recommended)": "자동(권장)",
+    "Scripting API": "Scripting API",
+    "TCP 9060": "TCP 9060",
+    "Keyboard fallback": "키보드 대체",
+    "Resolve focus guard": "Resolve 포커스 보호",
+    "Required": "사용",
+    "Disabled": "사용 안 함",
+    "Dial direction": "다이얼 방향",
+    "Normal": "일반",
+    "Inverted": "반전",
+    "Timeline backend will be selected automatically.": "타임라인 백엔드가 자동으로 선택됩니다.",
+    "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.": "먼저 Resolve를 한 번 클릭해 전면으로 가져오세요. 다이얼을 누른 채 돌려 모드를 선택하고 놓아 확정합니다. 확대/축소, 트랙 높이, 스크롤 시 포인터를 타임라인 위에 두세요.",
+    "Plugin connection lost.": "플러그인 연결이 끊어졌습니다."
+  }
+}

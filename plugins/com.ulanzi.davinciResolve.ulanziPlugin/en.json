@@ -1,0 +1,61 @@
+{
+  "Name": "DaVinci Resolve",
+  "Description": "Dial controls for DaVinci Resolve color tools and timeline",
+  "Actions": [
+    {
+      "Name": "Color Wheel Adjust",
+      "Tooltip": "Point at color wheels, sliders, curves, or numeric fields, then turn the dial to adjust."
+    },
+    {
+      "Name": "Timeline Control",
+      "Tooltip": "Turn to control the timeline. Press and turn to select one of six modes."
+    }
+  ],
+  "Localization": {
+    "Hover Adjust Settings": "Color Wheel Settings",
+    "Dial mode": "Dial mode",
+    "Press + dial mode": "Press + dial mode",
+    "Rotate around center": "Rotate around center",
+    "Push/pull along diameter": "Push/pull along diameter",
+    "User guide": "User guide",
+    "Checking DaVinci Resolve...": "Checking DaVinci Resolve...",
+    "DaVinci Resolve detected.": "DaVinci Resolve detected.",
+    "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.": "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.",
+    "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.": "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.",
+    "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.": "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.",
+    "DaVinci detection unavailable. Please check plugin dependencies.": "DaVinci detection unavailable. Please check plugin dependencies.",
+    "Plugin connection lost. DaVinci status cannot be checked.": "Plugin connection lost. DaVinci status cannot be checked.",
+    "Timeline Control Settings": "Timeline Control Settings",
+    "Connected to DaVinci Resolve.": "Connected to DaVinci Resolve.",
+    "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.": "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.",
+    "Current mode:": "Current mode:",
+    "Mode": "Mode",
+    "Initial mode": "Initial mode",
+    "Previous / next frame": "Previous / next frame",
+    "Track height": "Track height",
+    "Timeline zoom": "Timeline zoom",
+    "Timeline vertical scroll": "Timeline vertical scroll",
+    "Timeline horizontal scroll": "Timeline horizontal scroll",
+    "Playhead large step": "Playhead large step",
+    "Large step": "Large step",
+    "1 second": "1 second",
+    "5 seconds": "5 seconds",
+    "10 seconds": "10 seconds",
+    "30 seconds": "30 seconds",
+    "Scroll sensitivity": "Scroll sensitivity",
+    "Playhead backend": "Playhead backend",
+    "Automatic (recommended)": "Automatic (recommended)",
+    "Scripting API": "Scripting API",
+    "TCP 9060": "TCP 9060",
+    "Keyboard fallback": "Keyboard fallback",
+    "Resolve focus guard": "Resolve focus guard",
+    "Required": "Required",
+    "Disabled": "Disabled",
+    "Dial direction": "Dial direction",
+    "Normal": "Normal",
+    "Inverted": "Inverted",
+    "Timeline backend will be selected automatically.": "Timeline backend will be selected automatically.",
+    "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.": "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.",
+    "Plugin connection lost.": "Plugin connection lost."
+  }
+}

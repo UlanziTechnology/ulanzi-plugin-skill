@@ -1,0 +1,250 @@
+{
+  "Version": "1.3.1",
+  "Author": "Ulanzi",
+  "Name": "Adobe Lightroom Classic",
+  "Description": "Adobe Lightroom Classic",
+  "Icon": "assets/icons/logo.svg",
+  "Category": "Adobe Lightroom Classic",
+  "CategoryIcon": "assets/icons/logo.svg",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "SupportedInMultiActions": false,
+  "PrivateAPI": true,
+  "UUID": "com.ulanzi.ulanzideck.lrc",
+  "Actions": [
+    {
+      "Name": "Basic Editing",
+      "Icon": "assets/icons/basicEdit.svg",
+      "PropertyInspectorPath": "property-inspector/keypad/inspector.html",
+
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_basicEdit.svg"
+        }
+      ],
+      "Tooltip": "Basic Editing",
+      "UUID": "com.ulanzi.ulanzideck.lrc.basicEditing",
+      "Controllers": [
+          "Keypad"    
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Filter Labels",
+      "Icon": "assets/icons/flag.svg",
+      "PropertyInspectorPath": "property-inspector/keypad/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_flag.svg"
+        }
+      ],
+      "Tooltip": "Filter Labels",
+      "UUID": "com.ulanzi.ulanzideck.lrc.filterLabels",
+      "Controllers": [
+          "Keypad"    
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "View Modes",
+      "Icon": "assets/icons/view.svg",
+      "PropertyInspectorPath": "property-inspector/keypad/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_view.svg"
+        }
+      ],
+      "Tooltip": "View Modes",
+      "UUID": "com.ulanzi.ulanzideck.lrc.viewModes",  
+      "Controllers": [
+          "Keypad"    
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Local Adjustment",
+      "Icon": "assets/icons/local.svg",
+      "PropertyInspectorPath": "property-inspector/keypad/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_local.svg"
+        }
+      ],
+      "Tooltip": "Local Adjustment",
+      "UUID": "com.ulanzi.ulanzideck.lrc.localAdjustment",
+      "Controllers": [
+          "Keypad"    
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Color Shortcut Keys",
+      "Icon": "assets/icons/button_select.svg",
+      "PropertyInspectorPath": "property-inspector/basic/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_button_select.svg"
+        }
+      ],
+      "Tooltip": "Color Shortcut Keys",
+      "UUID": "com.ulanzi.ulanzideck.lrc.basic",
+      "Controllers": [
+          "Keypad"    
+      ],
+      "Encoder": { 
+          "layout": "$UA1"
+      },
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Basic",
+      "Icon": "assets/icons/basic.svg",
+      "PropertyInspectorPath": "property-inspector/basic/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_basic.svg"
+        }
+      ],
+      "Tooltip": "Basic",
+      "UUID": "com.ulanzi.ulanzideck.lrc.basicDail",
+      "Controllers": [
+          "Encoder"
+      ],
+      "Encoder": { 
+          "layout": "$UA1"
+      },
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Tone Curve",
+      "Icon": "assets/icons/tone.svg",
+      "PropertyInspectorPath": "property-inspector/encoder/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_tone.svg"
+        }
+      ],
+      "Tooltip": "Tone Curve",
+      "UUID": "com.ulanzi.ulanzideck.lrc.toneCurve",
+      "Controllers": [
+          "Encoder"    
+      ],
+      "Encoder": { 
+          "layout": "$UA1"
+      },
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "HSL Color Mixer",
+      "Icon": "assets/icons/color.svg",
+      "PropertyInspectorPath": "property-inspector/encoder/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_color.svg"
+        }
+      ],
+      "Tooltip": "HSL Color Mixer",
+      "UUID": "com.ulanzi.ulanzideck.lrc.hslColorMixer",
+      "Controllers": [
+          "Encoder"    
+      ],
+      "Encoder": { 
+          "layout": "$UA1"
+      },
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Photo Preview",
+      "Icon": "assets/icons/photo.svg",
+      "PropertyInspectorPath": "property-inspector/encoder/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_photo.svg"
+        }
+      ],
+      "Tooltip": "Photo Preview",
+      "UUID": "com.ulanzi.ulanzideck.lrc.photoPreview",
+      "Controllers": [
+          "Encoder"    
+      ],
+      "Encoder": { 
+          "layout": "$UA1"
+      },
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Adjust Selected Slider (Assigned Function)",
+      "Icon": "assets/icons/button_select.svg",
+      "PropertyInspectorPath": "property-inspector/encoder/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_button_select.svg"
+        }
+      ],
+      "Tooltip": "Adjust Selected Slider (Assigned Function)",
+      "UUID": "com.ulanzi.ulanzideck.lrc.general",
+      "Controllers": [
+          "Encoder"    
+      ],
+      "Encoder": { 
+          "layout": "$UA1"
+      },
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Adjust Selected Slider (Under Mouse Pointer)",
+      "Icon": "assets/icons/mouse_select.svg",
+      "PropertyInspectorPath": "property-inspector/encoder/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/icons/default_mouse_select.svg"
+        }
+      ],
+      "Tooltip": "Adjust Selected Slider (Under Mouse Pointer)",
+      "UUID": "com.ulanzi.ulanzideck.lrc.mouseSelect",
+      "Controllers": [
+          "Encoder"    
+      ],
+      "Encoder": { 
+          "layout": "$UA1"
+      },
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Edit Photo",
+      "Icon": "assets/icons/edit_photo.svg",
+      "PropertyInspectorPath": "property-inspector/editPhoto/inspector.html",
+      "state": 0,
+      "States": [{ "Image": "assets/icons/default_edit_photo.svg" }],
+      "Tooltip": "Edit Photo",
+      "UUID": "com.ulanzi.ulanzideck.lrc.editPhoto",
+      "Controllers": ["Encoder"],
+      "Encoder": { "layout": "$UA1" },
+      "SupportedInMultiActions": false
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinVersion": "2.1.4"
+  }
+}

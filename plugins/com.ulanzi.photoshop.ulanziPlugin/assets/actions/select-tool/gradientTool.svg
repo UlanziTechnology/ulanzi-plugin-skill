@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" fill="none" viewBox="0 0 144 144">
+  <g clip-path="url(#a)">
+    <path fill="#fff" d="M48 48h-4v48h4V48Z" opacity=".9"/>
+    <path fill="#fff" d="M52 48h-4v48h4V48Z" opacity=".8"/>
+    <path fill="#fff" d="M56 48h-4v48h4V48Z" opacity=".7"/>
+    <path fill="#fff" d="M60 48h-4v48h4V48Z" opacity=".6"/>
+    <path fill="#fff" d="M64 48h-4v48h4V48Z" opacity=".5"/>
+    <path fill="#fff" d="M68 48h-4v48h4V48Z" opacity=".4"/>
+    <path fill="#fff" d="M72 48h-4v48h4V48Z" opacity=".35"/>
+    <path fill="#fff" d="M76 48h-4v48h4V48Z" opacity=".3"/>
+    <path fill="#fff" d="M80 48h-4v48h4V48Z" opacity=".25"/>
+    <path fill="#fff" d="M84 48h-4v48h4V48Z" opacity=".2"/>
+    <path fill="#fff" d="M48 48h-4v48h4V48Z" opacity=".9"/>
+    <path fill="#fff" d="M88 48h-4v48h4V48Z" opacity=".15"/>
+    <path fill="#fff" d="M52 48h-4v48h4V48Z" opacity=".8"/>
+    <path fill="#fff" d="M92 48h-4v48h4V48Z" opacity=".1"/>
+    <path fill="#fff" d="M56 48h-4v48h4V48Z" opacity=".7"/>
+    <path fill="#fff" d="M96 48h-4v48h4V48Z" opacity=".05"/>
+    <path fill="#fff" d="M60 48h-4v48h4V48Z" opacity=".6"/>
+    <path fill="#fff" fill-rule="evenodd" d="M40 46v52a2 2 0 0 0 2 2h60a2 2 0 0 0 2-2V46a2 2 0 0 0-2-2H42a2 2 0 0 0-2 2Zm60 50H44V48h56v48Z" clip-rule="evenodd"/>
+    <path fill="#fff" d="M64 48h-4v48h4V48Z" opacity=".5"/>
+    <path fill="#fff" d="M68 48h-4v48h4V48Z" opacity=".4"/>
+    <path fill="#fff" d="M72 48h-4v48h4V48Z" opacity=".35"/>
+    <path fill="#fff" d="M76 48h-4v48h4V48Z" opacity=".3"/>
+    <path fill="#fff" d="M80 48h-4v48h4V48Z" opacity=".25"/>
+    <path fill="#fff" d="M84 48h-4v48h4V48Z" opacity=".2"/>
+    <path fill="#fff" d="M88 48h-4v48h4V48Z" opacity=".15"/>
+    <path fill="#fff" d="M92 48h-4v48h4V48Z" opacity=".1"/>
+    <path fill="#fff" d="M96 48h-4v48h4V48Z" opacity=".05"/>
+    <path fill="#fff" fill-rule="evenodd" d="M40 46v52a2 2 0 0 0 2 2h60a2 2 0 0 0 2-2V46a2 2 0 0 0-2-2H42a2 2 0 0 0-2 2Zm60 50H44V48h56v48Z" clip-rule="evenodd"/>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h144v144H0z"/>
+    </clipPath>
+  </defs>
+</svg>

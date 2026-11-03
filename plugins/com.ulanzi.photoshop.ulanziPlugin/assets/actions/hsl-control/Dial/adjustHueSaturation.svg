@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+  <path fill="#fff" fill-rule="evenodd" d="M2.667 6.667v34.666A1.333 1.333 0 0 0 4 42.667h40a1.333 1.333 0 0 0 1.334-1.334V6.667A1.333 1.333 0 0 0 44 5.333H4a1.333 1.333 0 0 0-1.333 1.334Zm40 33.333H5.334V24h37.333v16ZM5.334 8v13.333h8V8h-8ZM16 8v13.333h10.667V8H16Zm21.334 13.333h-8V8h8v13.333Zm2.666 0h2.667V8H40v13.333Z" clip-rule="evenodd"/>
+  <path fill="#fff" d="M40 40h2.667V24H40v16Z" opacity=".9"/>
+  <path fill="#fff" d="M37.333 40H40V24h-2.667v16Z" opacity=".8"/>
+  <path fill="#fff" d="M34.666 40h2.667V24h-2.667v16Z" opacity=".7"/>
+  <path fill="#fff" d="M32 40h2.667V24H32v16Z" opacity=".6"/>
+  <path fill="#fff" d="M29.333 40H32V24h-2.667v16Z" opacity=".5"/>
+  <path fill="#fff" d="M26.666 40h2.667V24h-2.667v16Z" opacity=".4"/>
+  <path fill="#fff" d="M24 40h2.667V24H24v16Z" opacity=".35"/>
+  <path fill="#fff" d="M21.333 40H24V24h-2.667v16Z" opacity=".3"/>
+  <path fill="#fff" d="M18.666 40h2.667V24h-2.667v16Z" opacity=".25"/>
+  <path fill="#fff" fill-rule="evenodd" d="M2.667 6.667v34.666A1.333 1.333 0 0 0 4 42.667h40a1.333 1.333 0 0 0 1.334-1.334V6.667A1.333 1.333 0 0 0 44 5.333H4a1.333 1.333 0 0 0-1.333 1.334Zm40 33.333H5.334V24h37.333v16ZM5.334 8v13.333h8V8h-8ZM16 8v13.333h10.667V8H16Zm21.334 13.333h-8V8h8v13.333Zm2.666 0h2.667V8H40v13.333Z" clip-rule="evenodd"/>
+  <path fill="#fff" d="M16 40h2.667V24H16v16Z" opacity=".2"/>
+  <path fill="#fff" d="M13.333 40H16V24h-2.667v16Z" opacity=".15"/>
+  <path fill="#fff" d="M10.666 40h2.667V24h-2.667v16Z" opacity=".1"/>
+  <path fill="#fff" d="M8 40h2.667V24H8v16Z" opacity=".05"/>
+</svg>

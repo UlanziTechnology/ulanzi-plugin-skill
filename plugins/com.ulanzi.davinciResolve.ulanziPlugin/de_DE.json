@@ -1,0 +1,61 @@
+{
+  "Name": "DaVinci Resolve",
+  "Description": "Drehreglersteuerung für Farbwerkzeuge und Timeline in DaVinci Resolve",
+  "Actions": [
+    {
+      "Name": "Farbrad-Anpassung",
+      "Tooltip": "Zeige mit der Maus auf Farbräder, Schieberegler, Kurven oder Zahlenfelder und drehe dann den Regler zum Anpassen."
+    },
+    {
+      "Name": "Zeitleistensteuerung",
+      "Tooltip": "Drehen steuert die Zeitleiste; Drücken und Drehen wählt einen von sechs Modi."
+    }
+  ],
+  "Localization": {
+    "Hover Adjust Settings": "Farbrad-Einstellungen",
+    "Dial mode": "Reglermodus",
+    "Press + dial mode": "Modus bei Drücken + Drehen",
+    "Rotate around center": "Um die Mitte drehen",
+    "Push/pull along diameter": "Entlang des Durchmessers schieben/ziehen",
+    "User guide": "Benutzerhandbuch",
+    "Checking DaVinci Resolve...": "DaVinci Resolve wird gesucht...",
+    "DaVinci Resolve detected.": "DaVinci Resolve erkannt.",
+    "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.": "DaVinci Resolve wurde nicht erkannt. Öffne DaVinci Resolve; dieses Plugin verbindet sich dann automatisch erneut.",
+    "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.": "DaVinci Resolve wurde erkannt. Wechsle zur Color-Seite und oeffne die Color Wheels.",
+    "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.": "DaVinci Resolve ist noch nicht bereit. Oeffne DaVinci Resolve und lasse die Color-Seite sichtbar.",
+    "DaVinci detection unavailable. Please check plugin dependencies.": "DaVinci-Erkennung ist nicht verfügbar. Bitte prüfe die Plugin-Abhängigkeiten.",
+    "Plugin connection lost. DaVinci status cannot be checked.": "Plugin-Verbindung verloren. Der DaVinci-Status kann nicht geprüft werden.",
+    "Timeline Control Settings": "Zeitleistensteuerung",
+    "Connected to DaVinci Resolve.": "Mit DaVinci Resolve verbunden.",
+    "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.": "Drücke und drehe den Regler, um den Modus zu wechseln. Für Zoom, Spurhöhe oder Scrollen muss der Zeiger über der Zeitleiste bleiben.",
+    "Current mode:": "Aktueller Modus:",
+    "Mode": "Modus",
+    "Initial mode": "Startmodus",
+    "Previous / next frame": "Vorheriges / nächstes Bild",
+    "Track height": "Spurhöhe",
+    "Timeline zoom": "Zeitleisten-Zoom",
+    "Timeline vertical scroll": "Vertikal scrollen",
+    "Timeline horizontal scroll": "Horizontal scrollen",
+    "Playhead large step": "Abspielkopf in großen Schritten",
+    "Large step": "Großer Schritt",
+    "1 second": "1 Sekunde",
+    "5 seconds": "5 Sekunden",
+    "10 seconds": "10 Sekunden",
+    "30 seconds": "30 Sekunden",
+    "Scroll sensitivity": "Scroll-Empfindlichkeit",
+    "Playhead backend": "Abspielkopf-Backend",
+    "Automatic (recommended)": "Automatisch (empfohlen)",
+    "Scripting API": "Scripting API",
+    "TCP 9060": "TCP 9060",
+    "Keyboard fallback": "Tastatur-Fallback",
+    "Resolve focus guard": "Resolve-Fokusschutz",
+    "Required": "Aktiviert",
+    "Disabled": "Deaktiviert",
+    "Dial direction": "Drehrichtung",
+    "Normal": "Normal",
+    "Inverted": "Umgekehrt",
+    "Timeline backend will be selected automatically.": "Das Zeitleisten-Backend wird automatisch gewählt.",
+    "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.": "Klicke zuerst einmal in Resolve, um es in den Vordergrund zu bringen. Drücke und drehe den Regler zur Moduswahl und lasse ihn zum Bestätigen los. Für Zoom, Spurhöhe und Scrollen muss der Mauszeiger über der Zeitleiste liegen.",
+    "Plugin connection lost.": "Plugin-Verbindung verloren."
+  }
+}

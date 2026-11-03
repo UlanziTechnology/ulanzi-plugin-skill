@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Photo</title>
+  <link rel="stylesheet" href="../../libs/css/uspi.css">
+  <link rel="stylesheet" href="./inspector.css">
+</head>
+<body>
+  <div class="uspi-wrapper hidden">
+    <p id="connect-status" class="tip info" data-localize>Connecting</p>
+    <hr>
+    <form id="photo-settings">
+      <div class="uspi-item">
+        <label class="uspi-item-label" for="current-parameter" data-localize>Current Parameter</label>
+        <select class="uspi-item-value" id="current-parameter" name="press" aria-describedby="current-parameter-help"></select>
+      </div>
+      <p id="current-parameter-help" class="tip" data-localize="photoCurrentParameterHelp">Select parameters in the list below to choose which ones appear here and are available when holding and rotating the dial.</p>
+      <div class="uspi-item" id="step-row">
+        <label class="uspi-item-label" for="step-size" data-localize>Step Size</label>
+        <div class="uspi-item-value">
+          <input id="step-size" name="stepSize" type="range" min="1" max="100" step="1" value="1">
+          <span class="rangeValue" id="step-value">1</span>
+        </div>
+      </div>
+      <div class="uspi-item hidden" id="exposure-row">
+        <label class="uspi-item-label" for="exposure-step" data-localize>Step Size</label>
+        <div class="uspi-item-value">
+          <input id="exposure-step" name="exposureStepSize" type="range" min="0.01" max="1" step="0.01" value="0.1">
+          <span class="rangeValue" id="exposure-value">0.1</span>
+        </div>
+      </div>
+      <div class="parameter-selection">
+        <div class="selection-heading">
+          <strong data-localize="photoParameterList">Switching parameters</strong>
+          <span id="selection-count" aria-live="polite"></span>
+        </div>
+        <div id="parameter-groups"></div>
+        <p id="selection-warning" class="tip warn hidden" role="status" data-localize="photoKeepOne">Keep at least one parameter selected.</p>
+      </div>
+    </form>
+    <details>
+      <summary data-localize="tip">Tips</summary>
+      <ol>
+        <li data-localize="photoDialHelp">Rotate to adjust. Press to reset the current parameter. Hold and rotate to switch parameters and show a Lightroom toast.</li>
+        <li data-localize="restartTip">After first installing the plugin, restart Lightroom Classic and confirm that Ulanzi is enabled in File &gt; Plug-in Manager.</li>
+        <li data-localize="connectTip">If Lightroom Classic is open but disconnected, reload the Ulanzi plugin in File &gt; Plug-in Manager.</li>
+      </ol>
+    </details>
+  </div>
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+  <script type="module" src="./inspector.js"></script>
+</body>
+</html>

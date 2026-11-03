@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Adjust Settings</title>
+  <link rel="stylesheet" href="../libs/css/uspi.css">
+  <script src="../libs/js/constants.js"></script>
+  <script src="../libs/js/eventEmitter.js"></script>
+  <script src="../libs/js/timers.js"></script>
+  <script src="../libs/js/utils.js"></script>
+  <script src="../libs/js/ulanziApi.js"></script>
+  <style>
+    .pi-status {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .pi-guide {
+      margin: 10px 10px 0;
+    }
+    .pi-guide a {
+      color: #4aa3ff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .pi-guide a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="uspi-wrapper">
+    <div id="davinci_status" class="tip info pi-status" data-localize>Checking DaVinci Resolve...</div>
+    <hr>
+
+    <form id="property-inspector">
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Dial mode</div>
+        <select class="uspi-item-value" name="dial_mode">
+          <option value="orbit" data-localize>Rotate around center</option>
+          <option value="diameter" data-localize>Push/pull along diameter</option>
+        </select>
+      </div>
+
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Press + dial mode</div>
+        <select class="uspi-item-value" name="hold_dial_mode">
+          <option value="diameter" data-localize>Push/pull along diameter</option>
+          <option value="orbit" data-localize>Rotate around center</option>
+        </select>
+      </div>
+
+      <div class="pi-guide">
+        <a id="user_guide_link" href="#" data-localize>User guide</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const DEFAULT_SETTINGS = {
+      dial_mode: 'diameter',
+      hold_dial_mode: 'orbit',
+      settings_version: 2,
+    };
+    const VALID_MODES = new Set(['orbit', 'diameter']);
+    let currentContext = null;
+    let statusPollTimer = null;
+
+    function normalizeMode(value, fallback) {
+      return VALID_MODES.has(value) ? value : fallback;
+    }
+
+    function normalizeSettings(settings) {
+      const incoming = settings || {};
+      return {
+        dial_mode: normalizeMode(incoming.dial_mode, DEFAULT_SETTINGS.dial_mode),
+        hold_dial_mode: normalizeMode(incoming.hold_dial_mode, DEFAULT_SETTINGS.hold_dial_mode),
+        settings_version: DEFAULT_SETTINGS.settings_version,
+      };
+    }
+
+    function applySettings(settings) {
+      Utils.setFormValue(normalizeSettings(settings), '#property-inspector');
+    }
+
+    function saveSettings() {
+      const settings = normalizeSettings(Utils.getFormValue('#property-inspector'));
+      $UD.setSettings(settings, currentContext || undefined);
+    }
+
+    function contextFromMessage(message) {
+      if (message && message.context) {
+        return message.context;
+      }
+      if (message && message.uuid && message.key && message.actionid) {
+        return $UD.encodeContext(message);
+      }
+      return null;
+    }
+
+    function contextFromCurrentUD() {
+      if ($UD.uuid && $UD.key && $UD.actionid) {
+        return $UD.encodeContext($UD);
+      }
+      return null;
+    }
+
+    function captureContext(message) {
+      const context = contextFromMessage(message);
+      if (context) {
+        currentContext = context;
+      }
+      return currentContext;
+    }
+
+    function isCurrentContext(message) {
+      const context = contextFromMessage(message);
+      return !context || !currentContext || context === currentContext;
+    }
+
+    function settingsFromMessage(message) {
+      if (!message) {
+        return null;
+      }
+      return message.settings || message.param || message.payload || null;
+    }
+
+    function requestCurrentSettings() {
+      if (currentContext) {
+        $UD.getSettings(currentContext);
+      }
+    }
+
+    function setDavinciStatus(key, level) {
+      const status = document.getElementById('davinci_status');
+      status.classList.remove('info', 'success', 'warn', 'error');
+      status.classList.add(level || 'info');
+      status.textContent = $UD.t(key);
+    }
+
+    function requestDavinciStatus() {
+      $UD.sendToPlugin({ type: 'request_davinci_status' });
+    }
+
+    function startStatusPolling() {
+      if (statusPollTimer) clearInterval(statusPollTimer);
+      requestDavinciStatus();
+      statusPollTimer = setInterval(requestDavinciStatus, 1000);
+    }
+
+    function stopStatusPolling() {
+      if (!statusPollTimer) return;
+      clearInterval(statusPollTimer);
+      statusPollTimer = null;
+    }
+
+    $UD.onConnected(() => {
+      currentContext = currentContext || contextFromCurrentUD();
+      setDavinciStatus('Checking DaVinci Resolve...', 'info');
+      requestCurrentSettings();
+      startStatusPolling();
+    });
+
+    $UD.onClose(() => {
+      stopStatusPolling();
+      setDavinciStatus('Plugin connection lost. DaVinci status cannot be checked.', 'error');
+    });
+
+    $UD.onError(() => {
+      stopStatusPolling();
+      setDavinciStatus('Plugin connection lost. DaVinci status cannot be checked.', 'error');
+    });
+
+    $UD.onAdd((message) => {
+      captureContext(message);
+      applySettings(settingsFromMessage(message) || DEFAULT_SETTINGS);
+      requestCurrentSettings();
+    });
+
+    $UD.onParamFromApp((message) => {
+      captureContext(message);
+      applySettings(settingsFromMessage(message) || DEFAULT_SETTINGS);
+      requestCurrentSettings();
+    });
+
+    $UD.onDidReceiveSettings((message) => {
+      if (!isCurrentContext(message)) {
+        return;
+      }
+      captureContext(message);
+      applySettings(settingsFromMessage(message) || DEFAULT_SETTINGS);
+    });
+
+    $UD.onSendToPropertyInspector((message) => {
+      if (!isCurrentContext(message)) {
+        return;
+      }
+      const payload = message.payload || {};
+      if (payload.type === 'davinci_status') {
+        setDavinciStatus(payload.statusKey || 'Checking DaVinci Resolve...', payload.level || 'info');
+      }
+    });
+
+    document.getElementById('property-inspector').addEventListener('change', saveSettings);
+    document.getElementById('user_guide_link').addEventListener('click', (event) => {
+      event.preventDefault();
+      $UD.openUrl(`https://www.ulanzistudio.com/doc/DaVinciResolve_${$UD.language}`);
+    });
+
+    // Register every callback before opening the local WebSocket. On a fast
+    // localhost connection, connecting first can emit onConnected too early.
+    $UD.connect('com.ulanzi.ulanzistudio.davinciResolve.action');
+  </script>
+</body>
+</html>

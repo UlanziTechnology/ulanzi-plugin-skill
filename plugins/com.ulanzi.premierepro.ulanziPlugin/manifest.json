@@ -1,0 +1,143 @@
+{
+  "Version": "1.0.1",
+  "Author": "Ulanzi",
+  "Name": "Adobe Premiere Pro",
+  "Description": "Control Premiere timelines and Lumetri Color with your Ulanzi device.",
+  "Icon": "assets/icons/plugin.svg",
+  "Category": "Adobe Premiere Pro",
+  "CategoryIcon": "assets/icons/plugin.svg",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "PrivateAPI": true,
+  "SupportedInMultiActions": false,
+  "UUID": "com.ulanzi.ulanzistudio.premierepro",
+  "Actions": [
+    {
+      "UUID": "com.ulanzi.ulanzistudio.premierepro.queueExport",
+      "Name": "Quick Export",
+      "Tooltip": "Export the current sequence in Premiere or add it to the Media Encoder queue. Each press creates a new export without overwriting existing files.",
+      "Icon": "assets/icons/queueExport.svg",
+      "PropertyInspectorPath": "property-inspector/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/states/queueExport.svg"
+        }
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "com.ulanzi.ulanzistudio.premierepro.timelineJog",
+      "Name": "Playhead",
+      "Tooltip": "Turn the dial to move the playhead frame by frame; hold and turn to move faster. Movement stops at the start or end of the sequence.",
+      "Icon": "assets/icons/timelineJog.svg",
+      "PropertyInspectorPath": "property-inspector/index.html",
+      "Controllers": [
+        "Encoder"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/states/timelineJog.svg"
+        }
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "com.ulanzi.ulanzistudio.premierepro.trimControl",
+      "Name": "Clip Trim",
+      "Tooltip": "Select a clip on the timeline first. Ripple editing adjusts its In or Out point and moves later clips along with it. Rolling editing moves the edit point between this clip and the next. Unsupported clips stay unchanged.",
+      "Icon": "assets/icons/trimControl.svg",
+      "PropertyInspectorPath": "property-inspector/index.html",
+      "Controllers": [
+        "Encoder"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/states/trimControl.svg"
+        }
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "com.ulanzi.ulanzistudio.premierepro.timelineZoom",
+      "Name": "Timeline Zoom",
+      "Tooltip": "Turn clockwise to zoom in or counterclockwise to zoom out, centered on the playhead.",
+      "Icon": "assets/icons/timelineZoom.svg",
+      "PropertyInspectorPath": "property-inspector/index.html",
+      "Controllers": [
+        "Encoder"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/states/timelineZoom.svg"
+        }
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "com.ulanzi.ulanzistudio.premierepro.parameterSelect",
+      "Name": "Dial Parameter Switch",
+      "Tooltip": "Press to switch the parameter controlled by dials in the same group. This only selects a parameter; it does not change the image.",
+      "Icon": "assets/icons/parameterSelect.svg",
+      "PropertyInspectorPath": "property-inspector/index.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/states/parameterSelect.svg"
+        }
+      ],
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "com.ulanzi.ulanzistudio.premierepro.parameterDial",
+      "Name": "Lumetri Dial",
+      "Tooltip": "Turn to adjust the current parameter; hold and turn to switch parameters; press to reset the current parameter to its default.",
+      "Icon": "assets/icons/parameterDial.svg",
+      "PropertyInspectorPath": "property-inspector/index.html",
+      "Controllers": [
+        "Encoder"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "state": 0,
+      "States": [
+        {
+          "Image": "assets/states/parameterDial.svg"
+        }
+      ],
+      "SupportedInMultiActions": false
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    },
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    }
+  ],
+  "Software": {
+    "MinVersion": "2.1.4"
+  }
+}

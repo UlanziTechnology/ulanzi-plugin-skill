@@ -1,0 +1,72 @@
+{
+  "Version": "1.0.3",
+  "Author": "Ulanzi",
+  "Name": "Jianying Pro",
+  "Description": "Shortcut, timeline and color controls for Jianying Pro.",
+  "Icon": "resources/icons/jianying-app.png",
+  "Category": "Jianying Pro",
+  "CategoryIcon": "resources/icons/categoryIcon.png",
+  "CodePath": "plugin/app.py",
+  "Type": "Python",
+  "PrivateAPI": false,
+  "SupportedInMultiActions": false,
+  "UUID": "com.ulanzi.ulanzistudio.jianying",
+  "Actions": [
+    {
+      "Name": "Shortcut",
+      "Icon": "resources/icons/basic.svg",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "state": 0,
+      "States": [{"Name": "Ready", "Image": "resources/icons/basic.svg"}],
+      "Tooltip": "Run a Jianying Pro editing shortcut.",
+      "UUID": "com.ulanzi.ulanzistudio.jianying.shortcut",
+      "SupportedInMultiActions": true,
+      "Controllers": ["Keypad"],
+      "Devices": []
+    },
+    {
+      "Name": "Timeline Control",
+      "Icon": "resources/icons/timeline.svg",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "state": 0,
+      "States": [{"Name": "Ready", "Image": "resources/icons/timeline.svg"}],
+      "Tooltip": "Turn to control the timeline; hold and turn to switch functions.",
+      "UUID": "com.ulanzi.ulanzistudio.jianying.timelineScrub",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Encoder"],
+      "Encoder": {"layout": "$UA1"},
+      "Devices": []
+    },
+    {
+      "Name": "Adjust Selected Slider",
+      "Icon": "resources/icons/basic-adjustments.svg",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "state": 0,
+      "States": [{"Name": "Ready", "Image": "resources/icons/basic-adjustments.svg"}],
+      "Tooltip": "Hover a supported slider, turn to adjust, and press to reset. Basic: Temperature, Tint, Saturation, Vibrance, Brightness, Contrast, Highlights, Shadows, Whites, Blacks, Exposure, Sharpen, Clarity, Grain, Fade, and Vignette. HSL: Hue, Saturation, and Brightness for Red, Orange, Yellow, Green, Cyan, Blue, Purple, and Magenta.",
+      "UUID": "com.ulanzi.ulanzistudio.jianying.basicAdjustments",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Encoder"],
+      "Encoder": {"layout": "$UA1"},
+      "Devices": []
+    },
+    {
+      "Name": "Color Wheels",
+      "Icon": "resources/icons/color-wheels.svg",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "state": 0,
+      "States": [{"Name": "Ready", "Image": "resources/icons/color-wheels.svg"}],
+      "Tooltip": "Hover over intensity or any color wheel; turn to adjust and press to reset.",
+      "UUID": "com.ulanzi.ulanzistudio.jianying.colorWheels",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Encoder"],
+      "Encoder": {"layout": "$UA1"},
+      "Devices": []
+    }
+  ],
+  "OS": [
+    {"Platform": "mac", "MinimumVersion": "12"},
+    {"Platform": "windows", "MinimumVersion": "10"}
+  ],
+  "Software": {"MinVersion": "3.2.1"}
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Control Settings</title>
+  <link rel="stylesheet" href="../libs/css/uspi.css">
+  <script src="../libs/js/constants.js"></script>
+  <script src="../libs/js/eventEmitter.js"></script>
+  <script src="../libs/js/timers.js"></script>
+  <script src="../libs/js/utils.js"></script>
+  <script src="../libs/js/ulanziApi.js"></script>
+  <style>
+    .pi-status { margin-left: 0; margin-right: 0; }
+    .pi-inline-help { margin: 4px 10px 0 calc(var(--uspi-label-width) + 20px); color: #888c94; font-size: 12px; line-height: 1.45; }
+  </style>
+</head>
+<body>
+  <div class="uspi-wrapper">
+    <div id="davinci_status" class="tip info pi-status" data-localize>Checking DaVinci Resolve...</div>
+    <hr>
+
+    <form id="property-inspector">
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Mode</div>
+        <select class="uspi-item-value" name="mode">
+          <option value="frame_step" data-localize>Previous / next frame</option>
+          <option value="track_height" data-localize>Track height</option>
+          <option value="timeline_zoom" data-localize>Timeline zoom</option>
+          <option value="vertical_scroll" data-localize>Timeline vertical scroll</option>
+          <option value="horizontal_scroll" data-localize>Timeline horizontal scroll</option>
+          <option value="playhead_seconds" data-localize>Playhead large step</option>
+        </select>
+      </div>
+      <div class="pi-inline-help" data-localize>
+        Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const DEFAULT_SETTINGS = {
+      mode: 'frame_step',
+      backend: 'auto',
+      seconds_per_tick: 1,
+      scroll_sensitivity: 1,
+      require_resolve_focus: true,
+      invert_direction: false,
+      settings_version: 1,
+    };
+    const MODES = new Set([
+      'frame_step', 'track_height', 'timeline_zoom',
+      'vertical_scroll', 'horizontal_scroll', 'playhead_seconds',
+    ]);
+    const BACKENDS = new Set(['auto', 'scripting', 'tcp', 'keyboard']);
+    const SECOND_OPTIONS = [1, 5, 10, 30];
+    const SENSITIVITY_OPTIONS = [0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4];
+    let currentContext = null;
+    let currentSettings = { ...DEFAULT_SETTINGS };
+    let statusPollTimer = null;
+
+    function asBool(value, fallback) {
+      if (value === true || value === 'true' || value === 1 || value === '1') return true;
+      if (value === false || value === 'false' || value === 0 || value === '0') return false;
+      return fallback;
+    }
+
+    function normalizeSettings(settings, fallback = DEFAULT_SETTINGS) {
+      const incoming = { ...fallback, ...(settings || {}) };
+      const seconds = Number.parseInt(incoming.seconds_per_tick, 10);
+      const sensitivity = Number.parseFloat(incoming.scroll_sensitivity);
+      const nearest = (value, options, fallback) => Number.isFinite(value)
+        ? options.reduce((best, option) => Math.abs(option - value) < Math.abs(best - value) ? option : best)
+        : fallback;
+      return {
+        mode: MODES.has(incoming.mode) ? incoming.mode : DEFAULT_SETTINGS.mode,
+        backend: BACKENDS.has(incoming.backend) ? incoming.backend : DEFAULT_SETTINGS.backend,
+        seconds_per_tick: nearest(seconds, SECOND_OPTIONS, 1),
+        scroll_sensitivity: nearest(sensitivity, SENSITIVITY_OPTIONS, 1),
+        require_resolve_focus: asBool(incoming.require_resolve_focus, true),
+        invert_direction: asBool(incoming.invert_direction, false),
+        settings_version: DEFAULT_SETTINGS.settings_version,
+      };
+    }
+
+    function contextFromMessage(message) {
+      if (message && message.context) return message.context;
+      if (message && message.uuid && message.key && message.actionid) return $UD.encodeContext(message);
+      return null;
+    }
+
+    function captureContext(message) {
+      currentContext = contextFromMessage(message) || currentContext;
+      return currentContext;
+    }
+
+    function isCurrentContext(message) {
+      const context = contextFromMessage(message);
+      return !context || !currentContext || context === currentContext;
+    }
+
+    function settingsFromMessage(message) {
+      return message && (message.settings || message.param || message.payload);
+    }
+
+    function setDavinciStatus(key, level) {
+      const status = document.getElementById('davinci_status');
+      status.classList.remove('info', 'success', 'warn', 'error');
+      status.classList.add(level || 'info');
+      status.textContent = $UD.t(key);
+    }
+
+    function applySettings(settings) {
+      currentSettings = normalizeSettings(settings, currentSettings);
+      Utils.setFormValue({ mode: currentSettings.mode }, '#property-inspector');
+    }
+
+    function saveSettings() {
+      currentSettings = normalizeSettings(
+        Utils.getFormValue('#property-inspector'),
+        currentSettings,
+      );
+      $UD.setSettings(currentSettings, currentContext || undefined);
+    }
+
+    function requestSettings() {
+      if (currentContext) $UD.getSettings(currentContext);
+    }
+
+    function requestDavinciStatus() {
+      $UD.sendToPlugin({ type: 'request_davinci_status' });
+    }
+
+    function startStatusPolling() {
+      if (statusPollTimer) clearInterval(statusPollTimer);
+      requestDavinciStatus();
+      statusPollTimer = setInterval(requestDavinciStatus, 1000);
+    }
+
+    function stopStatusPolling() {
+      if (!statusPollTimer) return;
+      clearInterval(statusPollTimer);
+      statusPollTimer = null;
+    }
+
+    $UD.onConnected(() => {
+      if (!currentContext && $UD.uuid && $UD.key && $UD.actionid) {
+        currentContext = $UD.encodeContext($UD);
+      }
+      setDavinciStatus('Checking DaVinci Resolve...', 'info');
+      requestSettings();
+      startStatusPolling();
+    });
+    $UD.onAdd((message) => {
+      captureContext(message);
+      applySettings(settingsFromMessage(message) || DEFAULT_SETTINGS);
+      requestSettings();
+    });
+    $UD.onParamFromApp((message) => {
+      captureContext(message);
+      applySettings(settingsFromMessage(message) || DEFAULT_SETTINGS);
+      requestSettings();
+    });
+    $UD.onDidReceiveSettings((message) => {
+      if (!isCurrentContext(message)) return;
+      captureContext(message);
+      applySettings(settingsFromMessage(message) || DEFAULT_SETTINGS);
+    });
+    $UD.onSendToPropertyInspector((message) => {
+      if (!isCurrentContext(message)) return;
+      const payload = message.payload || {};
+      if (payload.type === 'davinci_status') {
+        setDavinciStatus(payload.statusKey || 'Checking DaVinci Resolve...', payload.level || 'info');
+      }
+    });
+    $UD.onClose(() => {
+      stopStatusPolling();
+      setDavinciStatus('Plugin connection lost. DaVinci status cannot be checked.', 'error');
+    });
+    $UD.onError(() => {
+      stopStatusPolling();
+      setDavinciStatus('Plugin connection lost. DaVinci status cannot be checked.', 'error');
+    });
+    document.getElementById('property-inspector').addEventListener('change', saveSettings);
+
+    // Register every callback before opening the local WebSocket. On a fast
+    // localhost connection, connecting first can emit onConnected too early.
+    $UD.connect('com.ulanzi.ulanzistudio.davinciResolve.timelineControl');
+  </script>
+</body>
+</html>

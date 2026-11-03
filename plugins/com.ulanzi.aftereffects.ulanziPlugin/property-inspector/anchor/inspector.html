@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Anchor Point Grid</title>
+    <link rel="stylesheet" href="../../libs/css/uspi.css" />
+    <link rel="stylesheet" href="./inspector.css" />
+  </head>
+  <body>
+    <div class="uspi-wrapper hidden">
+      <p id="status-message" class="tip hidden"></p>
+      <hr id="status-divider" class="hidden" />
+      <form id="property-inspector">
+        <div class="uspi-item">
+          <div class="uspi-item-label" data-localize>Anchor position</div>
+          <div class="anchor-grid" role="radiogroup">
+            <input type="hidden" name="anchorPoint" value="center" />
+            <button type="button" class="anchor-grid-point" data-anchor-point="topLeft" data-label-key="Top left" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="topCenter" data-label-key="Top center" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="topRight" data-label-key="Top right" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="middleLeft" data-label-key="Middle left" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="center" data-label-key="Center" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="middleRight" data-label-key="Middle right" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="bottomLeft" data-label-key="Bottom left" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="bottomCenter" data-label-key="Bottom center" role="radio"></button>
+            <button type="button" class="anchor-grid-point" data-anchor-point="bottomRight" data-label-key="Bottom right" role="radio"></button>
+          </div>
+        </div>
+      </form>
+      <details>
+        <summary data-localize>Tips</summary>
+        <p data-localize>pi.anchor_tip</p>
+      </details>
+    </div>
+    <script src="../../libs/js/constants.js"></script>
+    <script src="../../libs/js/eventEmitter.js"></script>
+    <script src="../../libs/js/timers.js"></script>
+    <script src="../../libs/js/utils.js"></script>
+    <script src="../../libs/js/ulanziApi.js"></script>
+    <script src="../common.js"></script>
+    <script src="./inspector.js"></script>
+  </body>
+</html>

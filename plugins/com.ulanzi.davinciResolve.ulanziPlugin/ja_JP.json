@@ -1,0 +1,61 @@
+{
+  "Name": "DaVinci Resolve",
+  "Description": "DaVinci Resolve のカラーツールとタイムライン用ダイヤルコントロール",
+  "Actions": [
+    {
+      "Name": "カラーホイール調整",
+      "Tooltip": "カラーホイール、スライダー、カーブ、数値フィールドにマウスを合わせてから、ダイヤルを回して調整します。"
+    },
+    {
+      "Name": "タイムライン制御",
+      "Tooltip": "ダイヤルを回してタイムラインを操作し、押しながら回して6つのモードから選択します。"
+    }
+  ],
+  "Localization": {
+    "Hover Adjust Settings": "カラーホイール設定",
+    "Dial mode": "ダイヤルモード",
+    "Press + dial mode": "押しながら回すモード",
+    "Rotate around center": "中心の周りを回転",
+    "Push/pull along diameter": "直径方向に押し引き",
+    "User guide": "ユーザーガイド",
+    "Checking DaVinci Resolve...": "DaVinci Resolve を確認中...",
+    "DaVinci Resolve detected.": "DaVinci Resolve を検出しました。",
+    "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.": "DaVinci Resolve が検出されません。DaVinci Resolve を開くと、このプラグインは自動的に再接続します。",
+    "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.": "DaVinci Resolve を検出しました。カラー ページに切り替えて、カラーホイールを開いてください。",
+    "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.": "DaVinci Resolve はまだ準備できていません。DaVinci Resolve を開き、カラー ページを表示したままにしてください。",
+    "DaVinci detection unavailable. Please check plugin dependencies.": "DaVinci の検出を利用できません。プラグインの依存関係を確認してください。",
+    "Plugin connection lost. DaVinci status cannot be checked.": "プラグイン接続が切断されました。DaVinci の状態を確認できません。",
+    "Timeline Control Settings": "タイムライン制御設定",
+    "Connected to DaVinci Resolve.": "DaVinci Resolve に接続済み",
+    "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.": "ダイヤルを押しながら回してモードを切り替えます。ズーム、トラック高さ、スクロールではポインターをタイムライン上に置いてください。",
+    "Current mode:": "現在のモード：",
+    "Mode": "モード",
+    "Initial mode": "初期モード",
+    "Previous / next frame": "前のフレーム / 次のフレーム",
+    "Track height": "トラックの高さ",
+    "Timeline zoom": "タイムラインズーム",
+    "Timeline vertical scroll": "タイムライン上下スクロール",
+    "Timeline horizontal scroll": "タイムライン左右スクロール",
+    "Playhead large step": "再生ヘッドの大移動",
+    "Large step": "大移動量",
+    "1 second": "1 秒",
+    "5 seconds": "5 秒",
+    "10 seconds": "10 秒",
+    "30 seconds": "30 秒",
+    "Scroll sensitivity": "スクロール感度",
+    "Playhead backend": "再生ヘッドのバックエンド",
+    "Automatic (recommended)": "自動（推奨）",
+    "Scripting API": "Scripting API",
+    "TCP 9060": "TCP 9060",
+    "Keyboard fallback": "キーボード代替",
+    "Resolve focus guard": "Resolve フォーカス保護",
+    "Required": "有効",
+    "Disabled": "無効",
+    "Dial direction": "ダイヤル方向",
+    "Normal": "標準",
+    "Inverted": "反転",
+    "Timeline backend will be selected automatically.": "タイムラインのバックエンドは自動選択されます。",
+    "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.": "最初に Resolve を一度クリックして前面にします。ダイヤルを押しながら回してモードを選び、離して確定します。ズーム、トラック高さ、スクロールではポインターをタイムライン上に置いてください。",
+    "Plugin connection lost.": "プラグイン接続が切断されました。"
+  }
+}

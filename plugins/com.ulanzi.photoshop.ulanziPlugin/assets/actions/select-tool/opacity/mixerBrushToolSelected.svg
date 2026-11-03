@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" fill="none" viewBox="0 0 144 144" style="fill-opacity: .25;">
+  <g clip-path="url(#a)">
+    <g clip-path="url(#b)">
+      <path fill="#000" fill-opacity=".5" d="M0 0h144v144H0z" style="fill-opacity: .25;"/>
+      <rect width="144" height="144" stroke="#fff" stroke-width="24" rx="24" style="fill-opacity: .25;"/>
+      <path fill="#fff" fill-rule="evenodd" style="fill-opacity: .25;" d="M39.65 49.993c2.347-4.291 4.83-8.829 4.077-13.993 1.09 3.705 4.03 7.384 6.927 11.01 3.522 4.407 6.982 8.736 6.982 12.943a10.455 10.455 0 0 1-10.818 10.046A10.453 10.453 0 0 1 36 59.953c0-3.291 1.782-6.548 3.65-9.96ZM75.8 84.2c14.47-16.454 32.844-39.07 28.032-43.882-4.559-4.559-22.683 15.345-36.764 30.809-.783.86-1.553 1.706-2.308 2.533A20.102 20.102 0 0 1 75.8 84.2Zm-14.782-6.14a9.843 9.843 0 0 0-8.39 2.4 25.871 25.871 0 0 0-5.358 9.564 11.24 11.24 0 0 1-6.72 9.544 1.2 1.2 0 0 0-.682 1.424 1.797 1.797 0 0 0 1.29 1.316 47.52 47.52 0 0 0 3.954.8c5.214.818 14.96 1.476 21.612-3.304a13.773 13.773 0 0 0 5.644-9.092 13.626 13.626 0 0 0-11.35-12.652Z" clip-rule="evenodd"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h144v144H0z" style="fill-opacity: .25;"/>
+    </clipPath>
+    <clipPath id="b">
+      <path fill="#fff" d="M0 0h144v144H0z" style="fill-opacity: .25;"/>
+    </clipPath>
+  </defs>
+</svg>

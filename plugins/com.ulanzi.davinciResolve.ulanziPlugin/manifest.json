@@ -1,0 +1,56 @@
+{
+  "Version": "1.2.8",
+  "Author": "Ulanzi",
+  "Name": "DaVinci Resolve",
+  "Description": "Dial controls for DaVinci Resolve color tools and timeline",
+  "Icon": "resources/plugin-icon.svg",
+  "Category": "DaVinci Resolve",
+  "CategoryIcon": "resources/category-icon.svg",
+  "CodePath": "plugin/app.py",
+  "Type": "Python",
+  "PrivateAPI": false,
+  "UUID": "com.ulanzi.ulanzistudio.davinciResolve",
+  "Actions": [
+    {
+      "Name": "Color Wheel Adjust",
+      "Icon": "resources/action-icon.svg",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "state": 0,
+      "States": [
+        { "Name": "Ready", "Image": "resources/action-active.svg" }
+      ],
+      "Tooltip": "Point at color wheels, sliders, curves, or numeric fields, then turn the dial to adjust.",
+      "UUID": "com.ulanzi.ulanzistudio.davinciResolve.action",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Encoder"],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "Devices": []
+    },
+    {
+      "Name": "Timeline Control",
+      "Icon": "resources/timeline-action-icon.svg",
+      "PropertyInspectorPath": "property-inspector/timeline-inspector.html",
+      "state": 0,
+      "States": [
+        { "Name": "Ready", "Image": "resources/timeline-action-active.svg" }
+      ],
+      "Tooltip": "Turn to control the timeline. Press and turn to select one of six modes.",
+      "UUID": "com.ulanzi.ulanzistudio.davinciResolve.timelineControl",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Encoder"],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "Devices": []
+    }
+  ],
+  "OS": [
+    { "Platform": "windows", "MinimumVersion": "10" },
+    { "Platform": "mac", "MinimumVersion": "10.15" }
+  ],
+  "Software": {
+    "MinVersion": "3.0.0"
+  }
+}

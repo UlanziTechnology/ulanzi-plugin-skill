@@ -1,0 +1,258 @@
+{
+  "Name": "Adobe Photoshop",
+  "Description": "Control Adobe Photoshop.",
+  "Actions": [
+    {
+      "Name": "Undo/Redo",
+      "Tooltip": "Move one step back or forward."
+    },
+    {
+      "Name": "Play Action",
+      "Tooltip": "Execute the action’s recorded commands in the active document."
+    },
+    {
+      "Name": "Layer Scroll",
+      "Tooltip": "Select the next layer up or down."
+    },
+    {
+      "Name": "Set Blend Mode",
+      "Tooltip": "Set the blend mode of layers."
+    },
+    {
+      "Name": "Layer Control",
+      "Tooltip": "Create, modify, and manage layers."
+    },
+    {
+      "Name": "Adjust Hue/Saturation",
+      "Tooltip": "Adjust Hue/Saturation adjustment layer manually."
+    },
+    {
+      "Name": "Select Tool",
+      "Tooltip": "Select a tool from the toolbar."
+    },
+    {
+      "Name": "Create Fill Adjustment Layer",
+      "Tooltip": "Create a Fill or an Adjustment Layer."
+    },
+    {
+      "Name": "Select Subject",
+      "Tooltip": "Select the most prominent subject in your image."
+    },
+    {
+      "Name": "Set Color",
+      "Tooltip": "Set the foreground or background color."
+    },
+    {
+      "Name": "Rasterize Layer/Type",
+      "Tooltip": "Convert vector or text layers into pixel-based layers."
+    },
+    {
+      "Name": "Transform Layer",
+      "Tooltip": "Scale, rotate, skew, or distort the selected layer."
+    },
+    {
+      "Name": "Content Aware Fill",
+      "Tooltip": "Fill selected areas by analyzing surrounding content."
+    },
+    {
+      "Name": "Layer Opacity",
+      "Tooltip": "Adjust the opacity of the current layer."
+    },
+    {
+      "Name": "Zoom",
+      "Tooltip": "Magnify or reduce the view of your canvas."
+    },
+    {
+      "Name": "Brightness/Contrast",
+      "Tooltip": "Adjust the overall lightness or contrast of your image."
+    },
+    {
+      "Name": "Brush Control",
+      "Tooltip": "Adjust size, hardness, opacity, flow, and smoothing"
+    },
+    {
+      "Name": "Rotation View Tool",
+      "Tooltip": "Rotate the canvas for convenient viewing angles"
+    },
+    {
+      "Name": "Adjust Selected Parameter",
+      "Tooltip": "Adjust color adjustment parameters (Hue/Saturation, Levels, Curves) using encoder"
+    }
+  ],
+  "Localization": {
+    "Connected": "Connected to Photoshop",
+    "Disconnected": "Disconnected from Photoshop",
+    "Tips": "You need install Adobe Creative Cloud and Licensed Adobe Photoshop (version 23.0.0 or later).",
+    "UXPDisabled": "UXP plugin might have been disabled, click \"Enable\" to enable it.",
+    "EnableButton": "Enable",
+    "PhotoshopNotRunning": "Photoshop is not running",
+
+    "Select": "Select",
+    "SelectPlaceholder": "Select",
+
+    "Mode": "Mode",
+    "Foreground": "Foreground",
+    "Background": "Background",
+    "Both": "Both",
+    "ForegroundColor": "Foreground",
+    "BackgroundColor": "Background",
+
+    "Action": "Action",
+    "Undo": "Undo",
+    "Redo": "Redo",
+
+    "ActionSet": "Action Set",
+    "ActionName": "Action",
+
+    "Direction": "Direction",
+    "Up": "Up",
+    "Down": "Down",
+
+    "BlendMode": "Blend Mode",
+    "Normal": "Normal",
+    "Dissolve": "Dissolve",
+    "Darken": "Darken",
+    "Multiply": "Multiply",
+    "ColorRangeBurn": "Color Burn",
+    "Lighten": "Lighten",
+    "Screen": "Screen",
+    "ColorRangeDodge": "Color Dodge",
+    "Overlay": "Overlay",
+    "Difference": "Difference",
+    "Exclusion": "Exclusion",
+    "Hue": "Hue",
+    "Saturation": "Saturation",
+    "Color": "Color",
+    "Luminosity": "Luminosity",
+
+    "LayerControl": "Layer Control",
+    "CreateNewLayer": "Create New Layer",
+    "DuplicateLayer": "Duplicate Layer",
+    "LockUnlockLayer": "Lock/Unlock Layer",
+    "CreateMaskLayer": "Add Mask Layer",
+    "MergeVisible": "Merge Visible Layers",
+    "MergeSelected": "Merge Selected Layers",
+    "RasterizeSelected": "Rasterize Selected Layer",
+    "FlattenImage": "Flatten Image",
+    "HideUnhideLayer": "Toggle Layer Visibility",
+    "CreateHSLLayer": "Create Hue/Saturation Adjustment Layer",
+
+    "ColorRange": "Color Range",
+    "Step": "Step",
+    "Property": "Property",
+    "Master": "Master",
+    "Reds": "Reds",
+    "Yellows": "Yellows",
+    "Greens": "Greens",
+    "Cyans": "Cyans",
+    "Blues": "Blues",
+    "Magentas": "Magentas",
+    "Lightness": "Lightness",
+
+    "Tool": "Tool",
+
+    "AdjustmentLayer": "Adjustment Layer",
+    "SolidColor": "Solid Color",
+    "Gradient": "Gradient",
+    "Pattern": "Pattern",
+    "BrightnessContrast": "Brightness/Contrast",
+    "Levels": "Levels",
+    "Curves": "Curves",
+    "Exposure": "Exposure",
+    "Vibrance": "Vibrance",
+    "HueSaturationLightness": "Hue, Saturation and Lightness",
+    "ColorBalance": "Color Balance",
+    "BlackWhite": "Black & White",
+    "PhotoFilter": "Photo Filter",
+    "ChannelMixer": "Channel Mixer",
+    "ColorLookup": "Color Lookup",
+    "Invert": "Invert",
+    "Posterize": "Posterize",
+    "Threshold": "Threshold",
+    "GradientMap": "Gradient Map",
+    "SelectiveColor": "Selective Color",
+
+    "LayerProperty": "Layer Property",
+    "FreeTransform": "Free Transform",
+    "Scale": "Scale",
+    "Rotate": "Rotate",
+    "Skew": "Skew",
+    "Distort": "Distort",
+    "Perspective": "Perspective",
+    "Warp": "Warp",
+    "Rotate180": "Rotate 180°",
+    "Rotate90Clockwise": "Rotate 90° Clockwise",
+    "Rotate90CounterClockwise": "Rotate 90° Counter Clockwise",
+    "FlipHorizontal": "Flip Horizontal",
+    "FlipVertical": "Flip Vertical",
+
+    "Opacity": "Opacity",
+    "Behind": "Behind",
+    "Clear": "Clear",
+    "ColorBurn": "Color Burn",
+    "LinearBurn": "Linear Burn",
+    "DarkerColor": "Darker Color",
+    "ColorDodge": "Color Dodge",
+    "LinearDodge": "Linear Dodge (Add)",
+    "LighterColor": "Lighter Color",
+    "SoftLight": "Soft Light",
+    "HardLight": "Hard Light",
+    "VividLight": "Vivid Light",
+    "LinearLight": "Linear Light",
+    "PinLight": "Pin Light",
+    "HardMix": "Hard Mix",
+    "BlendSubtraction": "Subtract",
+    "BlendDivide": "Divide",
+
+    "SetOpacity": "Set Opacity",
+    "AdjustOpacity": "Adjust Opacity",
+    "StepSize": "Step Size",
+    "Zoom": "Zoom",
+    "SetZoom": "Set Zoom",
+    "AdjustZoom": "Adjust Zoom",
+    "Value": "Value",
+    "Brightness": "Brightness",
+    "Contrast": "Contrast",
+    "SetBrightness": "Set Brightness",
+    "SetContrast": "Set Contrast",
+    "AdjustBrightness": "Adjust Brightness",
+    "AdjustContrast": "Adjust Contrast",
+    "Size": "Size",
+    "Hardness": "Hardness",
+    "Flow": "Flow",
+    "Smoothness": "Smoothness",
+    "Angle": "Angle",
+    "SetSize": "Set Size",
+    "AdjustSize": "Adjust Size",
+    "SetHardness": "Set Hardness",
+    "AdjustHardness": "Adjust Hardness",
+    "SetFlow": "Set Flow",
+    "AdjustFlow": "Adjust Flow",
+    "SetSmoothness": "Set Smoothness",
+    "AdjustSmoothness": "Adjust Smoothness",
+    "SetAngle": "Set Angle",
+    "AdjustAngle": "Adjust Angle",
+    "Clockwise": "Clockwise",
+    "CounterClockwise": "Counter-Clockwise",
+
+    "AdjustParameter": "Adjust Selected Parameter",
+    "Menu": "Menu",
+    "HueSaturation": "Hue/Saturation",
+    "Shadow": "Shadow",
+    "Midtone": "Midtone",
+    "Highlight": "Highlight",
+    "OutputShadow": "Output Shadow",
+    "OutputHighlight": "Output Highlight",
+    "Highlights": "Highlights",
+    "Midtones": "Midtones",
+    "Shadows": "Shadows",
+    "InitialOption": "Initial Option",
+    "Reset": "Reset Default",
+    "StepUnit": "Step Unit",
+    "DialDownAction": "Press Action",
+    "OpenDialog": "Open Dialog (Shortcut)",
+    "ConfirmAction": "Confirm & Close (Enter)",
+    "TabAction": "Switch Field (Tab)",
+    "CancelAction": "Cancel & Close (Esc)"
+  }
+}

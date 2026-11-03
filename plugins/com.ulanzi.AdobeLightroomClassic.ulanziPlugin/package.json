@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "ulanzideck-plugin",
+  "description": "ulanzi Plugin",
+  "scripts": {
+    "check": "node --check plugin/app.js"
+  },
+  "type": "module",
+  "author": "ulanzi",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

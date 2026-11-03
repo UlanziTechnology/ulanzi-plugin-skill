@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src ws://127.0.0.1:*; object-src 'none'; base-uri 'none'">
+  <title>Ulanzi Premiere Background Bridge</title>
+</head><body>
+  <!-- This extension is UI Type Custom. These status nodes are for diagnostics
+       and VM tests only; no window is ever opened by the background service. -->
+  <div hidden><p id="description"></p><p id="connection"></p><button id="reconnect" type="button"></button><p id="parameter" hidden></p><small id="footer"></small></div>
+  <script src="../lib/CSInterface.js"></script><script src="../js/client.js"></script>
+</body></html>

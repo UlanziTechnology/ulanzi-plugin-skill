@@ -1,0 +1,61 @@
+{
+  "Name": "DaVinci Resolve",
+  "Description": "DaVinci Resolve 調色工具與時間線旋鈕控制",
+  "Actions": [
+    {
+      "Name": "色輪調節",
+      "Tooltip": "將滑鼠指向調色輪、滑桿、曲線或數值欄位後，轉動旋鈕進行調整。"
+    },
+    {
+      "Name": "時間線控制",
+      "Tooltip": "轉動旋鈕控制時間線；按壓並轉動可在六種模式之間切換。"
+    }
+  ],
+  "Localization": {
+    "Hover Adjust Settings": "色輪設定",
+    "Dial mode": "旋轉模式",
+    "Press + dial mode": "按壓旋轉模式",
+    "Rotate around center": "環繞旋轉",
+    "Push/pull along diameter": "徑向推拉",
+    "User guide": "用戶指南",
+    "Checking DaVinci Resolve...": "正在偵測 DaVinci Resolve...",
+    "DaVinci Resolve detected.": "已偵測到 DaVinci Resolve。",
+    "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.": "未偵測到 DaVinci Resolve。請先開啟 DaVinci Resolve，插件會自動重新連線。",
+    "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.": "已偵測到 DaVinci Resolve。請切換到調色頁面並開啟色輪面板。",
+    "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.": "DaVinci Resolve 尚未就緒。請開啟 DaVinci Resolve，並保持調色頁面可見。",
+    "DaVinci detection unavailable. Please check plugin dependencies.": "DaVinci 偵測不可用。請檢查插件依賴。",
+    "Plugin connection lost. DaVinci status cannot be checked.": "插件連線已中斷，暫時無法檢查 DaVinci 狀態。",
+    "Timeline Control Settings": "時間線控制設定",
+    "Connected to DaVinci Resolve.": "已連接 DaVinci Resolve",
+    "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.": "按壓並旋轉旋鈕可切換模式。使用縮放、軌道高度或捲動模式時，請將滑鼠指標停在時間線區域。",
+    "Current mode:": "當前模式：",
+    "Mode": "模式",
+    "Initial mode": "初始模式",
+    "Previous / next frame": "上一幀 / 下一幀",
+    "Track height": "軌道高度",
+    "Timeline zoom": "時間線縮放",
+    "Timeline vertical scroll": "時間線上下捲動",
+    "Timeline horizontal scroll": "時間線左右捲動",
+    "Playhead large step": "播放頭前後移動",
+    "Large step": "大步進",
+    "1 second": "1 秒",
+    "5 seconds": "5 秒",
+    "10 seconds": "10 秒",
+    "30 seconds": "30 秒",
+    "Scroll sensitivity": "捲動靈敏度",
+    "Playhead backend": "播放頭控制後端",
+    "Automatic (recommended)": "自動（建議）",
+    "Scripting API": "Scripting API",
+    "TCP 9060": "TCP 9060",
+    "Keyboard fallback": "快捷鍵備援",
+    "Resolve focus guard": "Resolve 前景保護",
+    "Required": "啟用",
+    "Disabled": "停用",
+    "Dial direction": "旋鈕方向",
+    "Normal": "正常",
+    "Inverted": "反向",
+    "Timeline backend will be selected automatically.": "將自動選擇時間線控制後端。",
+    "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.": "請先點按一次 Resolve，使其位於前台。按壓並轉動旋鈕選擇模式，鬆開確認。使用縮放、軌道高度和捲動模式時，請將滑鼠指標停在時間線區域。",
+    "Plugin connection lost.": "插件連線已中斷。"
+  }
+}

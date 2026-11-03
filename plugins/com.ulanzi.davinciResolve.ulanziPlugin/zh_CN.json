@@ -1,0 +1,61 @@
+{
+  "Name": "DaVinci Resolve",
+  "Description": "DaVinci Resolve 调色工具与时间线旋钮控制",
+  "Actions": [
+    {
+      "Name": "色轮调节",
+      "Tooltip": "鼠标指向校色轮、滑条、曲线或参数框后，使用旋钮进行调整。"
+    },
+    {
+      "Name": "时间线控制",
+      "Tooltip": "旋转控制时间线；按压并旋转可在六种模式间切换。"
+    }
+  ],
+  "Localization": {
+    "Hover Adjust Settings": "色轮设置",
+    "Dial mode": "旋转模式",
+    "Press + dial mode": "按压旋转模式",
+    "Rotate around center": "环绕旋转",
+    "Push/pull along diameter": "径向推拉",
+    "User guide": "用户指南",
+    "Checking DaVinci Resolve...": "正在检测 DaVinci Resolve...",
+    "DaVinci Resolve detected.": "已检测到 DaVinci Resolve。",
+    "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.": "未检测到 DaVinci Resolve，请先打开 DaVinci Resolve，插件会自动重连。",
+    "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.": "已检测到 DaVinci Resolve，请切到调色页面并打开色轮面板。",
+    "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.": "DaVinci Resolve 暂未就绪，请打开 DaVinci Resolve 并保持调色页面可见。",
+    "DaVinci detection unavailable. Please check plugin dependencies.": "DaVinci 检测不可用，请检查插件依赖。",
+    "Plugin connection lost. DaVinci status cannot be checked.": "插件连接已断开，暂时无法检测 DaVinci。",
+    "Timeline Control Settings": "时间线控制设置",
+    "Connected to DaVinci Resolve.": "已连接 DaVinci Resolve",
+    "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.": "按压并旋转旋钮可切换模式。使用缩放、轨道高度或滚动模式时，请将鼠标指针停在时间线区域。",
+    "Current mode:": "当前模式：",
+    "Mode": "模式",
+    "Initial mode": "初始模式",
+    "Previous / next frame": "上一帧 / 下一帧",
+    "Track height": "轨道高度",
+    "Timeline zoom": "时间线缩放",
+    "Timeline vertical scroll": "时间线上下滚动",
+    "Timeline horizontal scroll": "时间线左右滚动",
+    "Playhead large step": "时间轴前后移动",
+    "Large step": "大步进",
+    "1 second": "1 秒",
+    "5 seconds": "5 秒",
+    "10 seconds": "10 秒",
+    "30 seconds": "30 秒",
+    "Scroll sensitivity": "滚动灵敏度",
+    "Playhead backend": "播放头控制后端",
+    "Automatic (recommended)": "自动（推荐）",
+    "Scripting API": "Scripting API",
+    "TCP 9060": "TCP 9060",
+    "Keyboard fallback": "快捷键回退",
+    "Resolve focus guard": "Resolve 前台保护",
+    "Required": "启用",
+    "Disabled": "关闭",
+    "Dial direction": "旋钮方向",
+    "Normal": "正常",
+    "Inverted": "反向",
+    "Timeline backend will be selected automatically.": "将自动选择时间线控制后端。",
+    "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.": "请先点击一次 Resolve，使其处于前台。按压并旋转旋钮选择模式，松开确认。使用缩放、轨道高度和滚动模式时，请将鼠标指针停在时间线区域。",
+    "Plugin connection lost.": "插件连接已断开。"
+  }
+}

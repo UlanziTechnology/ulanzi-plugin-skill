@@ -1,0 +1,12 @@
+# Source snapshot: keep locally installed Qt runtimes out of version control.
+__pycache__/
+*.pyc
+*.pyo
+/site-packages/PyQt5/
+/site-packages/PyQt5-*.dist-info/
+/site-packages/pyqt5_qt5-*.dist-info/
+/site-packages/pyqt5_sip-*.dist-info/
+/site-packages-macos/PyQt5/
+/site-packages-macos/PyQt5-*.dist-info/
+/site-packages-macos/pyqt5_qt5-*.dist-info/
+/site-packages-macos/pyqt5_sip-*.dist-info/

@@ -1,0 +1,61 @@
+{
+  "Name": "DaVinci Resolve",
+  "Description": "Controlo por seletor para ferramentas de cor e linha temporal do DaVinci Resolve",
+  "Actions": [
+    {
+      "Name": "Ajuste da roda de cores",
+      "Tooltip": "Aponte para rodas de cor, controlos deslizantes, curvas ou campos numéricos e rode o seletor para ajustar."
+    },
+    {
+      "Name": "Controlo da linha temporal",
+      "Tooltip": "Rode para controlar a linha temporal; prima e rode para escolher um de seis modos."
+    }
+  ],
+  "Localization": {
+    "Hover Adjust Settings": "Definições da roda de cores",
+    "Dial mode": "Modo do seletor",
+    "Press + dial mode": "Modo premir + seletor",
+    "Rotate around center": "Rodar em torno do centro",
+    "Push/pull along diameter": "Empurrar/puxar ao longo do diâmetro",
+    "User guide": "Guia do utilizador",
+    "Checking DaVinci Resolve...": "A verificar o DaVinci Resolve...",
+    "DaVinci Resolve detected.": "DaVinci Resolve detetado.",
+    "DaVinci Resolve not detected. Open DaVinci Resolve, then this plugin will reconnect automatically.": "DaVinci Resolve não detetado. Abra o DaVinci Resolve e este plugin irá voltar a ligar automaticamente.",
+    "DaVinci Resolve detected. Switch to the Color page and open Color Wheels.": "DaVinci Resolve detetado. Mude para a página Color e abra Color Wheels.",
+    "DaVinci Resolve is not ready yet. Open DaVinci Resolve and keep the Color page visible.": "O DaVinci Resolve ainda não está pronto. Abra o DaVinci Resolve e mantenha a página Color visível.",
+    "DaVinci detection unavailable. Please check plugin dependencies.": "A deteção do DaVinci não está disponível. Verifique as dependências do plugin.",
+    "Plugin connection lost. DaVinci status cannot be checked.": "A ligação do plugin foi perdida. Não é possível verificar o estado do DaVinci.",
+    "Timeline Control Settings": "Definições da linha temporal",
+    "Connected to DaVinci Resolve.": "Ligado ao DaVinci Resolve.",
+    "Press and turn the dial to switch modes. For zoom, track height, or scrolling, keep the pointer over the timeline.": "Prima e rode o seletor para mudar de modo. Para zoom, altura da faixa ou deslocamento, mantenha o ponteiro sobre a linha temporal.",
+    "Current mode:": "Modo atual:",
+    "Mode": "Modo",
+    "Initial mode": "Modo inicial",
+    "Previous / next frame": "Fotograma anterior / seguinte",
+    "Track height": "Altura da faixa",
+    "Timeline zoom": "Zoom da linha temporal",
+    "Timeline vertical scroll": "Deslocamento vertical",
+    "Timeline horizontal scroll": "Deslocamento horizontal",
+    "Playhead large step": "Passo grande do cursor",
+    "Large step": "Passo grande",
+    "1 second": "1 segundo",
+    "5 seconds": "5 segundos",
+    "10 seconds": "10 segundos",
+    "30 seconds": "30 segundos",
+    "Scroll sensitivity": "Sensibilidade de deslocamento",
+    "Playhead backend": "Backend do cursor",
+    "Automatic (recommended)": "Automático (recomendado)",
+    "Scripting API": "Scripting API",
+    "TCP 9060": "TCP 9060",
+    "Keyboard fallback": "Alternativa de teclado",
+    "Resolve focus guard": "Proteção de foco do Resolve",
+    "Required": "Ativada",
+    "Disabled": "Desativada",
+    "Dial direction": "Direção do seletor",
+    "Normal": "Normal",
+    "Inverted": "Invertida",
+    "Timeline backend will be selected automatically.": "O backend da linha temporal será selecionado automaticamente.",
+    "Click Resolve once to bring it to the foreground. Press and turn the dial to choose a mode, then release to confirm. For zoom, track height, and scrolling, keep the pointer over the timeline area.": "Primeiro, clique uma vez no Resolve para o colocar em primeiro plano. Prima e rode o seletor para escolher um modo e solte para confirmar. Para zoom, altura e deslocamento, mantenha o ponteiro sobre a linha temporal.",
+    "Plugin connection lost.": "A ligação do plugin foi perdida."
+  }
+}

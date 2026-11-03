@@ -1,0 +1,6 @@
+# Versions retained in the supplied Windows CPython 3.14 snapshot.
+websocket-client==1.9.0
+comtypes==1.4.16
+pywin32==311
+pywinauto==0.6.9
+six==1.17.0

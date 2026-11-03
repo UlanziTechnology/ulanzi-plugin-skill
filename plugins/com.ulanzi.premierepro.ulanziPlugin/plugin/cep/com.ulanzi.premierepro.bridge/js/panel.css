@@ -1,0 +1,10 @@
+:root { color-scheme: dark; font: 12px/1.5 system-ui, sans-serif; background: #242424; color: #dedede; }
+body { margin: 16px; } h1 { margin: 0 0 10px; font-size: 16px; font-weight: 600; }
+p { margin: 10px 0; } small { display: block; margin-top: 16px; color: #aaa; }
+button { border: 1px solid #666; border-radius: 4px; background: #343434; color: inherit; padding: 5px 14px; cursor: pointer; }
+button:focus-visible { outline: 2px solid #ad9cff; outline-offset: 2px; } button:disabled { opacity: .5; cursor: default; }
+#connection[data-state="connected"] { color: #9ed6a5; } #connection[data-state="locked"], #connection[data-state="runtimeError"] { color: #ffcb8a; }
+#parameter { padding: 8px 10px; background: #3b3358; border-radius: 4px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; }
+#recovery { color: #ffcb8a; }
+[hidden] { display: none !important; }

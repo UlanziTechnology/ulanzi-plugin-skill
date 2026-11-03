@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>One-click Expression</title>
+    <link rel="stylesheet" href="../../libs/css/uspi.css" />
+  </head>
+  <body>
+    <div class="uspi-wrapper hidden">
+      <p id="status-message" class="tip hidden"></p>
+      <hr id="status-divider" class="hidden" />
+      <form id="property-inspector">
+        <div class="uspi-item">
+          <div class="uspi-item-label" data-localize>Expression type</div>
+          <select class="uspi-item-value" name="expressionType" id="expression-type">
+            <option value="wiggle" data-localize>Wiggle</option>
+            <option value="loop" data-localize>Loop</option>
+            <option value="stutter" data-localize>Stutter</option>
+            <option value="countdownNumber" data-localize>Numeric countdown</option>
+            <option value="custom" data-localize>Custom</option>
+          </select>
+        </div>
+        <div class="uspi-item hidden" id="loop-type-item">
+          <div class="uspi-item-label" data-localize>Loop mode</div>
+          <select class="uspi-item-value" name="loopType" id="loop-type">
+            <option value="cycle" data-localize>Cycle</option>
+            <option value="pingpong" data-localize>Ping Pong</option>
+            <option value="continue" data-localize>Continue</option>
+          </select>
+        </div>
+        <div class="uspi-item">
+          <div class="uspi-item-label" data-localize>Expression code</div>
+          <textarea class="uspi-item-value" name="expressionText" id="expression-text" rows="12" placeholder="Enter an After Effects expression" data-localize="Enter an After Effects expression"></textarea>
+        </div>
+        <div class="uspi-item">
+          <button type="button" id="reset-button" class="uspi-item-value default" data-localize>Restore defaults</button>
+        </div>
+      </form>
+      <details>
+        <summary data-localize>Tips</summary>
+        <p data-localize>pi.expression_tip</p>
+        <p data-localize>pi.expression_countdown_keyframes_tip</p>
+        <p data-localize>pi.expression_custom_tip</p>
+        <p data-localize>pi.expression_tokens_tip</p>
+        <p data-localize>pi.expression_frequency_tip</p>
+        <p data-localize>pi.expression_amplitude_tip</p>
+        <p data-localize>pi.expression_loop_type_tip</p>
+        <p data-localize>pi.expression_tokens_scope</p>
+      </details>
+    </div>
+    <script src="../../libs/js/constants.js"></script>
+    <script src="../../libs/js/eventEmitter.js"></script>
+    <script src="../../libs/js/timers.js"></script>
+    <script src="../../libs/js/utils.js"></script>
+    <script src="../../libs/js/ulanziApi.js"></script>
+    <script src="../common.js"></script>
+    <script src="./defaults.js"></script>
+    <script src="./inspector.js"></script>
+  </body>
+</html>

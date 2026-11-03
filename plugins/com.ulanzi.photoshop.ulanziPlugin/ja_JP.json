@@ -1,0 +1,258 @@
+{
+  "Name": "Adobe Photoshop",
+  "Description": "Adobe Photoshopを制御します。",
+  "Actions": [
+    {
+      "Name": "取り消し/やり直し",
+      "Tooltip": "1ステップ戻るまたは進む"
+    },
+    {
+      "Name": "アクションを再生",
+      "Tooltip": "アクティブなドキュメントで記録されたコマンドを実行します"
+    },
+    {
+      "Name": "レイヤーをスクロール",
+      "Tooltip": "次のレイヤーを上下に選択します"
+    },
+    {
+      "Name": "描画モードを設定",
+      "Tooltip": "レイヤーの描画モードを設定します"
+    },
+    {
+      "Name": "レイヤー操作",
+      "Tooltip": "レイヤーの作成、変更、管理を行います"
+    },
+    {
+      "Name": "色相・彩度を調整",
+      "Tooltip": "色相・彩度調整レイヤーを手動で調整します"
+    },
+    {
+      "Name": "ツールを選択",
+      "Tooltip": "ツールバーからツールを選択します"
+    },
+    {
+      "Name": "塗りつぶし/調整レイヤーを作成",
+      "Tooltip": "塗りつぶしまたは調整レイヤーを作成します"
+    },
+    {
+      "Name": "被写体を選択",
+      "Tooltip": "画像内で最も目立つ被写体を選択します"
+    },
+    {
+      "Name": "カラーを設定",
+      "Tooltip": "描画色または背景色を設定します"
+    },
+    {
+      "Name": "レイヤー/テキストをラスタライズ",
+      "Tooltip": "ベクトルまたはテキストレイヤーをピクセルベースのレイヤーに変換します"
+    },
+    {
+      "Name": "レイヤーを変形",
+      "Tooltip": "選択したレイヤーを拡大・縮小、回転、傾斜、または変形します"
+    },
+    {
+      "Name": "コンテンツに応じた塗りつぶし",
+      "Tooltip": "周囲のコンテンツを分析して選択範囲を塗りつぶします"
+    },
+    {
+      "Name": "レイヤーの不透明度",
+      "Tooltip": "現在のレイヤーの不透明度を調整します"
+    },
+    {
+      "Name": "ズーム",
+      "Tooltip": "キャンバスの表示を拡大または縮小します"
+    },
+    {
+      "Name": "明るさ・コントラスト",
+      "Tooltip": "画像全体の明るさまたはコントラストを調整します"
+    },
+    {
+      "Name": "ブラシコントロール",
+      "Tooltip": "サイズ、硬さ、不透明度、流量、滑らかさを調整します"
+    },
+    {
+      "Name": "表示の回転ツール",
+      "Tooltip": "便利な視野角でキャンバスを回転します"
+    },
+    {
+      "Name": "選択したパラメータを調整",
+      "Tooltip": "ダイヤルで色調補正パラメータ（色相・彩度、レベル補正、トーンカーブ）を調整"
+    }
+  ],
+  "Localization": {
+    "Connected": "Photoshopに接続しました",
+    "Disconnected": "Photoshopから切断されました",
+    "Tips": "Adobe Creative Cloudとライセンス版のAdobe Photoshop（バージョン23.0.0以降）をインストールする必要があります。",
+    "UXPDisabled": "UXPプラグインが無効になっている可能性があります。「有効化」をクリックして有効にしてください。",
+    "EnableButton": "有効化",
+    "PhotoshopNotRunning": "Photoshopが起動していません",
+
+    "Select": "選択",
+    "SelectPlaceholder": "選択してください",
+
+    "Mode": "モード",
+    "Foreground": "描画色",
+    "Background": "背景色",
+    "Both": "両方",
+    "ForegroundColor": "描画色",
+    "BackgroundColor": "背景色",
+
+    "Action": "アクション",
+    "Undo": "元に戻す",
+    "Redo": "やり直し",
+
+    "ActionSet": "アクションセット",
+    "ActionName": "アクション",
+
+    "Direction": "方向",
+    "Up": "上へ",
+    "Down": "下へ",
+
+    "BlendMode": "描画モード",
+    "Normal": "通常",
+    "Dissolve": "ディザ合成",
+    "Darken": "比較(暗)",
+    "Multiply": "乗算",
+    "ColorRangeBurn": "焼き込みカラー",
+    "Lighten": "比較(明)",
+    "Screen": "スクリーン",
+    "ColorRangeDodge": "覆い焼きカラー",
+    "Overlay": "オーバーレイ",
+    "Difference": "差の絶対値",
+    "Exclusion": "除外",
+    "Hue": "色相",
+    "Saturation": "彩度",
+    "Color": "カラー",
+    "Luminosity": "輝度",
+
+    "LayerControl": "レイヤーコントロール",
+    "CreateNewLayer": "新規レイヤーを作成",
+    "DuplicateLayer": "レイヤーを複製",
+    "LockUnlockLayer": "レイヤーをロック/ロック解除",
+    "CreateMaskLayer": "レイヤーマスクを追加",
+    "MergeVisible": "表示レイヤーを結合",
+    "MergeSelected": "レイヤーを結合",
+    "RasterizeSelected": "レイヤーをラスタライズ",
+    "FlattenImage": "画像を統合",
+    "HideUnhideLayer": "レイヤーの表示/非表示を切り替え",
+    "CreateHSLLayer": "色相・彩度調整レイヤーを作成",
+
+    "ColorRange": "カラー範囲",
+    "Step": "ステップ",
+    "Property": "プロパティ",
+    "Master": "マスター",
+    "Reds": "レッド系",
+    "Yellows": "イエロー系",
+    "Greens": "グリーン系",
+    "Cyans": "シアン系",
+    "Blues": "ブルー系",
+    "Magentas": "マゼンタ系",
+    "Lightness": "明度",
+
+    "Tool": "ツール",
+
+    "AdjustmentLayer": "調整レイヤー",
+    "SolidColor": "べた塗り",
+    "Gradient": "グラデーション",
+    "Pattern": "パターン",
+    "BrightnessContrast": "明るさ・コントラスト",
+    "Levels": "レベル補正",
+    "Curves": "トーンカーブ",
+    "Exposure": "露光量",
+    "Vibrance": "自然な彩度",
+    "HueSaturationLightness": "色相・彩度・明度",
+    "ColorBalance": "カラーバランス",
+    "BlackWhite": "白黒",
+    "PhotoFilter": "レンズフィルター",
+    "ChannelMixer": "チャンネルミキサー",
+    "ColorLookup": "カラールックアップ",
+    "Invert": "階調の反転",
+    "Posterize": "ポスタリゼーション",
+    "Threshold": "2階調化",
+    "GradientMap": "グラデーションマップ",
+    "SelectiveColor": "特定色域の選択",
+
+    "LayerProperty": "レイヤープロパティ",
+    "FreeTransform": "自由変形",
+    "Scale": "拡大・縮小",
+    "Rotate": "回転",
+    "Skew": "傾斜",
+    "Distort": "ゆがみ",
+    "Perspective": "遠近法",
+    "Warp": "ワープ",
+    "Rotate180": "180°回転",
+    "Rotate90Clockwise": "90°時計回り",
+    "Rotate90CounterClockwise": "90°反時計回り",
+    "FlipHorizontal": "水平方向に反転",
+    "FlipVertical": "垂直方向に反転",
+
+    "Opacity": "不透明度",
+    "Behind": "背面",
+    "Clear": "クリア",
+    "ColorBurn": "焼き込みカラー",
+    "LinearBurn": "焼き込み（リニア）",
+    "DarkerColor": "カラー比較（暗）",
+    "ColorDodge": "覆い焼きカラー",
+    "LinearDodge": "覆い焼き（リニア）- 加算",
+    "LighterColor": "カラー比較（明）",
+    "SoftLight": "ソフトライト",
+    "HardLight": "ハードライト",
+    "VividLight": "ビビッドライト",
+    "LinearLight": "リニアライト",
+    "PinLight": "ピンライト",
+    "HardMix": "ハードミックス",
+    "BlendSubtraction": "減算",
+    "BlendDivide": "除算",
+
+    "SetOpacity": "不透明度を設定",
+    "AdjustOpacity": "不透明度を調整",
+    "StepSize": "ステップサイズ",
+    "Zoom": "ズーム",
+    "SetZoom": "ズームを設定",
+    "AdjustZoom": "ズームを調整",
+    "Value": "値",
+    "Brightness": "明るさ",
+    "Contrast": "コントラスト",
+    "SetBrightness": "明るさを設定",
+    "SetContrast": "コントラストを設定",
+    "AdjustBrightness": "明るさを調整",
+    "AdjustContrast": "コントラストを調整",
+    "Size": "サイズ",
+    "Hardness": "硬さ",
+    "Flow": "流量",
+    "Smoothness": "滑らかさ",
+    "Angle": "角度",
+    "SetSize": "サイズを設定",
+    "AdjustSize": "サイズを調整",
+    "SetHardness": "硬さを設定",
+    "AdjustHardness": "硬さを調整",
+    "SetFlow": "流量を設定",
+    "AdjustFlow": "流量を調整",
+    "SetSmoothness": "滑らかさを設定",
+    "AdjustSmoothness": "滑らかさを調整",
+    "SetAngle": "角度を設定",
+    "AdjustAngle": "角度を調整",
+    "Clockwise": "時計回り",
+    "CounterClockwise": "反時計回り",
+
+    "AdjustParameter": "選択したパラメータを調整",
+    "Menu": "調整メニュー",
+    "HueSaturation": "色相・彩度",
+    "Shadow": "シャドウ",
+    "Midtone": "中間調",
+    "Highlight": "ハイライト",
+    "OutputShadow": "出力シャドウ",
+    "OutputHighlight": "出力ハイライト",
+    "Highlights": "ハイライト",
+    "Midtones": "中間調",
+    "Shadows": "シャドウ",
+    "InitialOption": "初期設定項目",
+    "Reset": "初期値に戻す",
+    "StepUnit": "変化量",
+    "DialDownAction": "押し操作",
+    "OpenDialog": "ダイアログを開く (ショートカット)",
+    "ConfirmAction": "確定して閉じる (Enter)",
+    "TabAction": "項目切り替え (Tab)",
+    "CancelAction": "キャンセル (Esc)"
+  }
+}

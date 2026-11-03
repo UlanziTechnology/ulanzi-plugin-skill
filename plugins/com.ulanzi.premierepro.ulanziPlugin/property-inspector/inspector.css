@@ -1,0 +1,16 @@
+[hidden] { display: none !important; }
+body { margin: 0; }
+.description { color: var(--uspi-color, #b4b5ba); line-height: 1.55; margin: 10px 4px; overflow-wrap: anywhere; }
+#connection-recovery ol { padding-left: 24px; }
+#connection-recovery li + li { margin-top: 8px; }
+.path-row { display: flex; gap: 5px; min-width: 0; }
+.path-row input { min-width: 0; flex: 1; width: 40px; padding: 0 8px; height: var(--uspi-height); background: var(--uspi-inputbg); border: 1px solid var(--uspi-bordercolor); border-radius: var(--uspi-borderradius); }
+.path-row button { flex: 0 0 auto; width: auto; padding: 0 10px; }
+.checkbox-row { display: flex; align-items: center; gap: 6px; }
+.checkbox-row input { flex: 0 0 auto; }
+.uspi-item-value { flex: 1; min-width: 0; }
+.uspi-item-label { flex: 0 0 100px; }
+pre { margin: 10px 4px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; line-height: 1.5; }
+/* Keep SDK checkbox artwork while leaving its input keyboard-focusable and accessible. */
+input[type="checkbox"] { display: block; position: absolute; width: 1px; height: 1px; margin: 0; opacity: 0; clip-path: inset(50%); overflow: hidden; }
+input[type="checkbox"]:disabled + label { opacity: .5; }

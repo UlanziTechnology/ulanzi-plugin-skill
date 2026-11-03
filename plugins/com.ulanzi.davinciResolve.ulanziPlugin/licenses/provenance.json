@@ -1,0 +1,133 @@
+{
+  "licenses": [
+    {
+      "component": "pyobjc-core",
+      "version": "12.2.1",
+      "file": "licenses/pyobjc-core-12.2.1/License.txt",
+      "sha256": "0ca04b07928d4872b9d9bb22187ca0426dd8bfab08f26eada0999a71dc81aaff",
+      "source_archive": "pyobjc_core-12.2.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/b4/b1/729f7458a63758bd21716648a8abcd9a0c8f2d2e9897763c8a1a1c7fd31b/pyobjc_core-12.2.1.tar.gz",
+      "source_archive_sha256": "7a7b9b018402342cf32bf1956366896350fbe5c0478cb3ef59778f77abed7f07",
+      "upstream_member": "pyobjc_core-12.2.1/License.txt"
+    },
+    {
+      "component": "pyobjc-framework-ApplicationServices",
+      "version": "12.2.1",
+      "file": "licenses/pyobjc-framework-ApplicationServices-12.2.1/License.txt",
+      "sha256": "0ca04b07928d4872b9d9bb22187ca0426dd8bfab08f26eada0999a71dc81aaff",
+      "source_archive": "pyobjc_framework_applicationservices-12.2.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/5e/4d/0ebdd8144aba94b8fe9828ccee5616a4bf53d1f8bc51cff55f3cce86d695/pyobjc_framework_applicationservices-12.2.1.tar.gz",
+      "source_archive_sha256": "048ea663c9ac75c44a15dc7d5b8d78cbb4c97bf1c76e83835e8d5498e184001f",
+      "upstream_member": "pyobjc_framework_applicationservices-12.2.1/License.txt"
+    },
+    {
+      "component": "pywin32",
+      "version": "311",
+      "file": "licenses/pywin32-311/pythonwin/license.txt",
+      "sha256": "11d8462e134e8efe8f4bd52372292a72ff0b670753d2f49f71675eed0dbfd085",
+      "source_archive": "pywin32-311-cp314-cp314-win_amd64.whl",
+      "source_url": "https://files.pythonhosted.org/packages/90/4b/07c77d8ba0e01349358082713400435347df8426208171ce297da32c313d/pywin32-311-cp314-cp314-win_amd64.whl",
+      "source_archive_sha256": "3aca44c046bd2ed8c90de9cb8427f581c479e594e99b5c0bb19b29c10fd6cb87",
+      "upstream_member": "pythonwin/license.txt"
+    },
+    {
+      "component": "pywin32",
+      "version": "311",
+      "file": "licenses/pywin32-311/win32/license.txt",
+      "sha256": "11d8462e134e8efe8f4bd52372292a72ff0b670753d2f49f71675eed0dbfd085",
+      "source_archive": "pywin32-311-cp314-cp314-win_amd64.whl",
+      "source_url": "https://files.pythonhosted.org/packages/90/4b/07c77d8ba0e01349358082713400435347df8426208171ce297da32c313d/pywin32-311-cp314-cp314-win_amd64.whl",
+      "source_archive_sha256": "3aca44c046bd2ed8c90de9cb8427f581c479e594e99b5c0bb19b29c10fd6cb87",
+      "upstream_member": "win32/license.txt"
+    },
+    {
+      "component": "pywin32",
+      "version": "311",
+      "file": "licenses/pywin32-311/win32com/License.txt",
+      "sha256": "c3bdfa1152a9b9d404ddc90b817e1b6945803879ac53a14d2dde30d677f883bd",
+      "source_archive": "pywin32-311-cp314-cp314-win_amd64.whl",
+      "source_url": "https://files.pythonhosted.org/packages/90/4b/07c77d8ba0e01349358082713400435347df8426208171ce297da32c313d/pywin32-311-cp314-cp314-win_amd64.whl",
+      "source_archive_sha256": "3aca44c046bd2ed8c90de9cb8427f581c479e594e99b5c0bb19b29c10fd6cb87",
+      "upstream_member": "win32com/License.txt"
+    },
+    {
+      "component": "comtypes",
+      "version": "1.4.16",
+      "file": "licenses/comtypes-1.4.16/LICENSE.txt",
+      "sha256": "3b1767f010980b46926b23bf0afce5d72f3359ee5e2b27baca71b9b4209ab383",
+      "source": "retained from supplied plugin snapshot",
+      "original_path": "site-packages/comtypes-1.4.16.dist-info/licenses/LICENSE.txt",
+      "upstream_release": "https://pypi.org/project/comtypes/1.4.16/"
+    },
+    {
+      "component": "pywinauto",
+      "version": "0.6.9",
+      "file": "licenses/pywinauto-0.6.9/LICENSE.txt",
+      "sha256": "18a999a95b7b23d86c410b4534e44d69f6d8ce13c3a53719b06ab895d8a2e73a",
+      "source": "retained from supplied plugin snapshot",
+      "original_path": "site-packages/pywinauto-0.6.9.dist-info/LICENSE",
+      "upstream_release": "https://pypi.org/project/pywinauto/0.6.9/"
+    },
+    {
+      "component": "six",
+      "version": "1.17.0",
+      "file": "licenses/six-1.17.0/LICENSE.txt",
+      "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0",
+      "source": "retained from supplied plugin snapshot",
+      "original_path": "site-packages/six-1.17.0.dist-info/LICENSE",
+      "upstream_release": "https://pypi.org/project/six/1.17.0/"
+    },
+    {
+      "component": "websocket-client",
+      "version": "1.9.0",
+      "file": "licenses/websocket-client-1.9.0/LICENSE.txt",
+      "sha256": "d7ad8d0966aa363d45c7b16b0838cadcd51676acdf215ad967307d581b47872c",
+      "source": "retained from supplied plugin snapshot",
+      "original_path": "site-packages/websocket_client-1.9.0.dist-info/licenses/LICENSE",
+      "upstream_release": "https://pypi.org/project/websocket-client/1.9.0/"
+    },
+    {
+      "component": "pyobjc-framework-Cocoa",
+      "version": "12.2.1",
+      "file": "licenses/pyobjc-framework-Cocoa-12.2.1/LICENSE.txt",
+      "sha256": "0ca04b07928d4872b9d9bb22187ca0426dd8bfab08f26eada0999a71dc81aaff",
+      "source": "retained from supplied plugin snapshot",
+      "original_path": "site-packages-macos/pyobjc_framework_cocoa-12.2.1.dist-info/licenses/LICENSE.txt",
+      "upstream_release": "https://pypi.org/project/pyobjc-framework-Cocoa/12.2.1/"
+    },
+    {
+      "component": "pyobjc-framework-CoreText",
+      "version": "12.2.1",
+      "file": "licenses/pyobjc-framework-CoreText-12.2.1/LICENSE.txt",
+      "sha256": "0ca04b07928d4872b9d9bb22187ca0426dd8bfab08f26eada0999a71dc81aaff",
+      "source": "retained from supplied plugin snapshot",
+      "original_path": "site-packages-macos/pyobjc_framework_coretext-12.2.1.dist-info/licenses/LICENSE.txt",
+      "upstream_release": "https://pypi.org/project/pyobjc-framework-CoreText/12.2.1/"
+    },
+    {
+      "component": "pyobjc-framework-Quartz",
+      "version": "12.2.1",
+      "file": "licenses/pyobjc-framework-Quartz-12.2.1/LICENSE.txt",
+      "sha256": "0ca04b07928d4872b9d9bb22187ca0426dd8bfab08f26eada0999a71dc81aaff",
+      "source": "retained from supplied plugin snapshot",
+      "original_path": "site-packages-macos/pyobjc_framework_quartz-12.2.1.dist-info/licenses/LICENSE.txt",
+      "upstream_release": "https://pypi.org/project/pyobjc-framework-Quartz/12.2.1/"
+    },
+    {
+      "component": "plugin-common-python",
+      "version": "snapshot version not recorded",
+      "file": "licenses/plugin-common-python/LICENSE",
+      "sha256": "61018b594be937e4aedcdc1a10d7af131d71f97a10a24021f587370a1342d29e",
+      "source_url": "https://raw.githubusercontent.com/UlanziTechnology/plugin-common-python/main/LICENSE",
+      "source": "upstream license restored; SDK snapshot not asserted identical to current main"
+    },
+    {
+      "component": "plugin-common-html",
+      "version": "snapshot version not recorded",
+      "file": "licenses/plugin-common-html/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source_url": "https://raw.githubusercontent.com/UlanziTechnology/plugin-common-html/main/LICENSE",
+      "source": "upstream license restored; SDK snapshot not asserted identical to current main"
+    }
+  ]
+}

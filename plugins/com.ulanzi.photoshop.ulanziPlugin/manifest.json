@@ -1,0 +1,366 @@
+{
+  "Author": "Ulanzi",
+  "Name": "Adobe Photoshop",
+  "Description": "Control Adobe Photoshop.",
+  "Version": "2.2.0",
+  "Category": "Photoshop",
+  "CategoryIcon": "assets/category.svg",
+  "Icon": "assets/category.svg",
+  "CodePath": "main.js",
+  "Type": "JavaScript",
+  "PrivateAPI": true,
+  "UUID": "com.ulanzi.ulanzideck.photoshop",
+  "UxpPhotoshopPluginVersion": "1.5.7",
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    },
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "6.1"
+  },
+  "Actions": [
+    {
+      "Name": "Undo/Redo",
+      "Icon": "assets/actions/undo-redo/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/undo-redo/state.svg",
+          "Name": "Undo/Redo"
+        }
+      ],
+      "Tooltip": "Undo/Redo",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.undo-redo",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Play Action",
+      "Icon": "assets/actions/play/playActionIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/play/playAction.svg",
+          "Name": "Play"
+        }
+      ],
+      "Tooltip": "Play Action",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.play-action",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Layer Scroll",
+      "Icon": "assets/actions/layer-scroll/layerScrollIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/layer-scroll/scrollUp.svg",
+          "Name": "Scroll Up"
+        },
+        {
+          "Image": "assets/actions/layer-scroll/scrollDown.svg",
+          "Name": "Scroll Down"
+        }
+      ],
+      "Tooltip": "Layer Scroll",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.layer-scroll",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Set Layer Mode",
+      "Icon": "assets/actions/layer-mode/setBlendModeIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/layer-mode/setBlendMode.svg",
+          "Name": "Set Blend Mode"
+        }
+      ],
+      "Tooltip": "Set Layer Mode",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.layer-mode",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Layer Control",
+      "Icon": "assets/actions/layer-control/layerIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/layer-control/createNewLayer.svg",
+          "Name": "Create New Layer"
+        }
+      ],
+      "Tooltip": "Layer Control",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.layer-control",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Adjust Hue/Saturation",
+      "Icon": "assets/actions/hsl-control/Key/adjustHueSaturationIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/hsl-control/Key/hueIncrease.svg",
+          "Name": "Increase Hue"
+        }
+      ],
+      "Tooltip": "Adjust Hue/Saturation",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.hsl-control",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Select Tool",
+      "Icon": "assets/actions/select-tool/selectToolIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/select-tool/selectTool.svg",
+          "Name": "Select Tool"
+        }
+      ],
+      "Tooltip": "Select Tool",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.select-tool",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Create Fill Adjustment Layer",
+      "Icon": "assets/actions/create-fill-adjustment-layer/adjustmentLayerIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/create-fill-adjustment-layer/adjustmentLayer.svg",
+          "Name": "Create Fill Adjustment Layer"
+        }
+      ],
+      "Tooltip": "Create a Fill or an Adjustment Layer",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.create-fill-adjustment-layer",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Select Subject",
+      "Icon": "assets/actions/select-subject/selectSubjectIcon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/select-subject/selectSubject.svg",
+          "Name": "Select Subject"
+        }
+      ],
+      "Tooltip": "Select Subject",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.select-subject",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Set Color",
+      "Icon": "assets/actions/set-color/category.svg",
+      "States": [
+        {
+          "Image": "assets/actions/set-color/both.svg",
+          "Name": "Set Color"
+        }
+      ],
+      "Tooltip": "Set Color",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.set-color",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Rasterize Layer/Type",
+      "Icon": "assets/actions/rasterize-layer-type/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/rasterize-layer-type/state.svg",
+          "Name": "Rasterize Layer/Type"
+        }
+      ],
+      "Tooltip": "Rasterize Layer/Type",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.rasterize-layer-type",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Transform Layer",
+      "Icon": "assets/actions/transform-layer/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/transform-layer/state.svg",
+          "Name": "Transform Layer"
+        }
+      ],
+      "Tooltip": "Transform Layer",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.transform-layer",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Content Aware Fill",
+      "Icon": "assets/actions/content-aware-fill/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/content-aware-fill/state.svg",
+          "Name": "Content Aware Fill"
+        }
+      ],
+      "Tooltip": "Content Aware Fill",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.content-aware-fill",
+      "SupportedInMultiActions": false,
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Layer Opacity",
+      "Icon": "assets/actions/layer-opacity/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/layer-opacity/state.svg",
+          "Name": "Layer Opacity"
+        }
+      ],
+      "Tooltip": "Layer Opacity",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.layer-opacity",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Zoom",
+      "Icon": "assets/actions/zoom/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/zoom/state.svg",
+          "Name": "Zoom"
+        }
+      ],
+      "Tooltip": "Zoom",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.zoom",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Brightness/Contrast",
+      "Icon": "assets/actions/brightness/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/brightness/state.svg",
+          "Name": "Brightness"
+        }
+      ],
+      "Tooltip": "Brightness/Contrast",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.brightness",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Brush Control",
+      "Icon": "assets/actions/brush-control/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/brush-control/states/size.svg",
+          "Name": "Size"
+        }
+      ],
+      "Tooltip": "Brush Control",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.brush-control",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Rotate View",
+      "Icon": "assets/actions/rotate-view/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/rotate-view/state_cw.svg",
+          "Name": "Rotate View (Clockwise)"
+        },
+        {
+          "Image": "assets/actions/rotate-view/state_ccw.svg",
+          "Name": "Rotate View (Counter-Clockwise)"
+        }
+      ],
+      "Tooltip": "Rotate View",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.rotate-view",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    },
+    {
+      "Name": "Adjust Selected Parameter",
+      "Icon": "assets/actions/adjust-parameter/icon.svg",
+      "States": [
+        {
+          "Image": "assets/actions/adjust-parameter/state.svg",
+          "Name": "Adjust Parameter"
+        }
+      ],
+      "Tooltip": "Adjust Selected Parameter",
+      "UUID": "com.ulanzi.ulanzideck.photoshop.adjust-parameter",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Encoder",
+        "Keypad"
+      ],
+      "Encoder": {
+        "layout": "$UA1"
+      },
+      "PropertyInspectorPath": "ui/index.html"
+    }
+  ]
+}

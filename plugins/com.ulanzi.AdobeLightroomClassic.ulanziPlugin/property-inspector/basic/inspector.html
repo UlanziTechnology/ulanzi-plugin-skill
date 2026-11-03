@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"
+    />
+    <title>action</title>
+    <link rel="stylesheet" href="../../libs/css/uspi.css" />
+  </head>
+  <body>
+    <div class="uspi-wrapper hidden">
+
+      <p id="connect-status" class="tip info" data-localize>Connecting</p>
+      <p id="connect-tip" class="tip hidden" data-localize="connectTip">connectTip</p>
+
+      <hr />
+
+      <form id="property-inspector"  class="hidden">
+        
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Parameters</div>
+          <select class="uspi-item-value keypad-selector" name="keypad">
+          </select>
+        </div>
+
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Press/Tap</div>
+          <select class="uspi-item-value action-selector" name="action">
+            <option value="selectedParameter" data-localize>Selected parameter</option>
+            <option value="SwitchUp" data-localize>Switch parameters upwards</option>
+            <option value="SwitchDown" data-localize>Switch parameters downwards</option>
+            <option value="Decrease" data-localize>Decrease</option>
+            <option value="Increase" data-localize>Increase</option>
+          </select>
+        </div>
+      </form>
+
+      <form id="property-inspector-encoder"  class="hidden">
+        
+        <div type="range" class="uspi-item stepsize-item">
+            <div class="uspi-item-label" data-localize>Step Size</div>
+            <div class="uspi-item-value">
+                <input  type="range" min="1" max="100" value="1" step="1" name="stepSize" >
+                <span class="rangeValue">1</span>
+            </div>
+        </div>
+        <div type="range" class="uspi-item exposure-stepsize-item hidden">
+            <div class="uspi-item-label" data-localize>Step Size</div>
+            <div class="uspi-item-value">
+                <input  type="range" min="0.01" max="1" value="0.1" step="0.01" name="exposureStepSize" >
+                <span class="rangeValue">0.1</span>
+            </div>
+        </div>
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Press/Tap</div>
+          <select class="uspi-item-value press-selector" name="press">
+          </select>
+        </div>
+        
+        <div type="select" class="uspi-item hidden colors-item">
+
+          <div class="uspi-item-label" data-localize>Colors</div>
+          <select class="uspi-item-value colors-selector" name="color">
+          </select>
+        </div>
+        
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Rotate clockwise</div>
+          <select class="uspi-item-value rCW-selector" name="rCW">
+          </select>
+        </div>
+        
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Rotate counterclockwise</div>
+          <select class="uspi-item-value rCCW-selector" name="rCCW">
+          </select>
+        </div>
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Press and rotate clockwise</div>
+          <select class="uspi-item-value prCW-selector" name="prCW">
+          </select>
+        </div>
+        <div type="select" class="uspi-item">
+          <div class="uspi-item-label" data-localize>Press and rotate counterclockwise</div>
+          <select class="uspi-item-value prCCW-selector" name="prCCW">
+          </select>
+        </div>
+        
+      </form>
+
+      <details>
+        <summary data-localize="tip">tips</summary>
+        <ol>
+          <li data-localize="restartTip"> </li>
+          <li data-localize="connectTip"> </li>
+        </ol>
+      </details>
+
+     
+    </div>
+
+    <script src="../../libs/js/constants.js"></script>
+    <script src="../../libs/js/eventEmitter.js"></script>
+    <script src="../../libs/js/timers.js"></script>
+    <script src="../../libs/js/utils.js"></script>
+    <script src="../../libs/js/ulanziApi.js"></script>
+
+    <script src="./piConfigs.js"></script>
+    <script src="./inspector.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+# Optional macOS overlay runtime, installed separately by the user.
+# Excluded from the public source snapshot; not covered by the plugin MIT license.
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.19
+PyQt5-sip==12.18.0

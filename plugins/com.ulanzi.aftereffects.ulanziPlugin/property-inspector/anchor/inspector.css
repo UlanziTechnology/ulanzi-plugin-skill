@@ -1,0 +1,41 @@
+.anchor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 24px);
+  gap: 14px;
+  width: auto;
+  padding: 16px;
+  background: #18191b;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+}
+
+button.anchor-grid-point {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+}
+
+button.anchor-grid-point::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 3px solid #a9abb1;
+  border-radius: 50%;
+  transition: background-color 100ms ease, border-color 100ms ease, box-shadow 100ms ease, transform 100ms ease;
+}
+
+button.anchor-grid-point:hover::before,
+button.anchor-grid-point:focus-visible::before {
+  border-color: #d8ccff;
+  transform: scale(1.1);
+}
+
+button.anchor-grid-point.selected::before {
+  background: #8b5cf6;
+  border-color: #c4b5fd;
+  box-shadow: 0 0 0 2px rgb(139 92 246 / 25%);
+}

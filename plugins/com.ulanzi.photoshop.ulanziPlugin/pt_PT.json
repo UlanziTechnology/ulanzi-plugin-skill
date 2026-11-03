@@ -1,0 +1,259 @@
+{
+  "Name": "Adobe Photoshop",
+  "Description": "Controlar o Adobe Photoshop.",
+  "Actions": [
+    {
+      "Name": "Anular/Refazer",
+      "Tooltip": "Retroceder ou avançar um passo."
+    },
+    {
+      "Name": "Reproduzir Ação",
+      "Tooltip": "Executar os comandos gravados da ação no documento ativo."
+    },
+    {
+      "Name": "Deslocar Camada",
+      "Tooltip": "Selecionar a próxima camada acima ou abaixo."
+    },
+    {
+      "Name": "Definir Modo de Mistura",
+      "Tooltip": "Definir o modo de mistura das camadas."
+    },
+    {
+      "Name": "Controlo de Camadas",
+      "Tooltip": "Criar, modificar e gerir camadas."
+    },
+    {
+      "Name": "Ajustar Matiz/Saturação",
+      "Tooltip": "Ajustar manualmente a camada de ajuste de Matiz/Saturação."
+    },
+    {
+      "Name": "Selecionar Ferramenta",
+      "Tooltip": "Selecionar uma ferramenta da barra de ferramentas."
+    },
+    {
+      "Name": "Criar Camada de Ajuste de Preenchimento",
+      "Tooltip": "Criar uma camada de Preenchimento ou de Ajuste."
+    },
+    {
+      "Name": "Selecionar Motivo",
+      "Tooltip": "Selecionar o motivo mais proeminente na sua imagem."
+    },
+    {
+      "Name": "Definir Cor",
+      "Tooltip": "Definir a cor de primeiro plano ou de fundo."
+    },
+    {
+      "Name": "Rasterizar Camada/Tipo",
+      "Tooltip": "Converter camadas vetoriais ou de texto em camadas baseadas em píxeis."
+    },
+    {
+      "Name": "Transformar Camada",
+      "Tooltip": "Escalar, rodar, inclinar ou distorcer a camada selecionada."
+    },
+    {
+      "Name": "Preenchimento com Reconhecimento de Conteúdo",
+      "Tooltip": "Preencher áreas selecionadas analisando o conteúdo envolvente."
+    },
+    {
+      "Name": "Opacidade da Camada",
+      "Tooltip": "Ajustar a opacidade da camada atual."
+    },
+    {
+      "Name": "Zoom",
+      "Tooltip": "Ampliar ou reduzir a visualização da sua tela."
+    },
+    {
+      "Name": "Brilho/Contraste",
+      "Tooltip": "Ajustar a luminosidade ou o contraste geral da sua imagem."
+    },
+    {
+      "Name": "Controlo de Pincel",
+      "Tooltip": "Ajustar tamanho, dureza, opacidade, fluxo e suavização"
+    },
+    {
+      "Name": "Ferramenta de Rotação de Vista",
+      "Tooltip": "Rodar a tela para ângulos de visualização convenientes"
+    },
+    {
+      "Name": "Ajustar Parâmetro Selecionado",
+      "Tooltip": "Ajustar parâmetros de cor (Matiz/Saturação, Níveis, Curvas) usando o codificador"
+    }
+  ],
+  "Localization": {
+    "Connected": "Ligado ao Photoshop",
+    "Disconnected": "Desligado do Photoshop",
+    "Tips": "É necessário instalar o Adobe Creative Cloud e o Adobe Photoshop licenciado (versão 23.0.0 ou posterior).",
+    "UXPDisabled": "O plug-in UXP pode ter sido desativado. Clique em \"Ativar\" para o ativar.",
+    "EnableButton": "Ativar",
+    "PhotoshopNotRunning": "O Photoshop não está em execução",
+
+    "Select": "Selecionar",
+    "SelectPlaceholder": "Por favor, selecione",
+
+    "Mode": "Modo",
+    "Foreground": "Primeiro Plano",
+    "Background": "Fundo",
+    "Both": "Ambos",
+    "ForegroundColor": "Cor de Primeiro Plano",
+    "BackgroundColor": "Cor de Fundo",
+
+    "Action": "Ação",
+    "Undo": "Anular",
+    "Redo": "Refazer",
+
+    "ActionSet": "Conjunto de Ações",
+    "ActionName": "Ação",
+
+    "Direction": "Direção",
+    "Up": "Cima",
+    "Down": "Baixo",
+
+    "BlendMode": "Modo de Mistura",
+    "Normal": "Normal",
+    "Dissolve": "Dissolver",
+    "Darken": "Escurecer",
+    "Multiply": "Multiplicar",
+    "ColorRangeBurn": "Subexposição de Cor",
+    "Lighten": "Clarear",
+    "Screen": "Ecrã",
+    "ColorRangeDodge": "Sobreexposição de Cor",
+    "Overlay": "Sobrepor",
+    "Difference": "Diferença",
+    "Exclusion": "Exclusão",
+    "Hue": "Matiz",
+    "Saturation": "Saturação",
+    "Color": "Cor",
+    "Luminosity": "Luminosidade",
+
+    "LayerControl": "Controlo de Camadas",
+    "CreateNewLayer": "Criar Nova Camada",
+    "DuplicateLayer": "Duplicar Camada",
+    "LockUnlockLayer": "Bloquear/Desbloquear Camada",
+    "CreateMaskLayer": "Adicionar Camada de Máscara",
+    "MergeVisible": "Unir Visíveis",
+    "MergeSelected": "Unir Camadas",
+    "RasterizeSelected": "Rasterizar Camada",
+    "FlattenImage": "Aplanar Imagem",
+    "HideUnhideLayer": "Alternar Visibilidade da Camada",
+    "CreateHSLLayer": "Criar Camada de Ajuste de Matiz/Saturação",
+
+    "ColorRange": "Gama de Cores",
+    "Step": "Tamanho do Passo",
+    "Property": "Propriedade",
+    "Master": "Principal",
+    "Reds": "Vermelhos",
+    "Yellows": "Amarelos",
+    "Greens": "Verdes",
+    "Cyans": "Cianos",
+    "Blues": "Azuis",
+    "Magentas": "Magentas",
+    "Lightness": "Luminosidade",
+
+    "Tool": "Ferramenta",
+
+    "AdjustmentLayer": "Camada de Ajuste",
+    "SolidColor": "Cor Sólida",
+    "Gradient": "Gradiente",
+    "Pattern": "Padrão",
+    "BrightnessContrast": "Brilho/Contraste",
+    "Levels": "Níveis",
+    "Curves": "Curvas",
+    "Exposure": "Exposição",
+    "Vibrance": "Intensidade",
+    "HueSaturationLightness": "Matiz Saturação Luminosidade",
+    "ColorBalance": "Equilíbrio de Cores",
+    "BlackWhite": "Preto e Branco",
+    "PhotoFilter": "Filtro de Fotografia",
+    "ChannelMixer": "Misturador de Canais",
+    "ColorLookup": "Pesquisa de Cor",
+    "Invert": "Inverter",
+    "Posterize": "Posterizar",
+    "Threshold": "Limiar",
+    "GradientMap": "Mapa de Gradiente",
+    "SelectiveColor": "Cor Seletiva",
+
+    "LayerProperty": "Propriedade da Camada",
+    "FreeTransform": "Transformação Livre",
+    "Scale": "Escalar",
+    "Rotate": "Rodar",
+    "Skew": "Inclinar",
+    "Distort": "Distorcer",
+    "Perspective": "Perspetiva",
+    "Warp": "Deformar",
+    "Rotate180": "Rodar 180°",
+    "Rotate90Clockwise": "Rodar 90° no Sentido Horário",
+    "Rotate90CounterClockwise": "Rodar 90° no Sentido Anti-Horário",
+    "FlipHorizontal": "Inverter Horizontalmente",
+    "FlipVertical": "Inverter Verticalmente",
+
+    "Opacity": "Opacidade",
+    "Behind": "Atrás",
+    "Clear": "Limpar",
+    "ColorBurn": "Subexposição de Cor",
+    "LinearBurn": "Subexposição Linear",
+    "DarkerColor": "Cor Mais Escura",
+    "ColorDodge": "Sobreexposição de Cor",
+    "LinearDodge": "Sobreexposição Linear (Adicionar)",
+    "LighterColor": "Cor Mais Clara",
+    "SoftLight": "Luz Suave",
+    "HardLight": "Luz Forte",
+    "VividLight": "Luz Intensa",
+    "LinearLight": "Luz Linear",
+    "PinLight": "Luz Indireta",
+    "HardMix": "Mistura Forte",
+    "BlendSubtraction": "Subtrair",
+    "BlendDivide": "Dividir",
+
+    "SetOpacity": "Definir Opacidade",
+    "AdjustOpacity": "Ajustar Opacidade",
+    "StepSize": "Tamanho do Passo",
+    "Zoom": "Zoom",
+    "SetZoom": "Definir Zoom",
+    "AdjustZoom": "Ajustar Zoom",
+    "Value": "Valor",
+    "Brightness": "Brilho",
+    "Contrast": "Contraste",
+    "SetBrightness": "Definir Brilho",
+    "SetContrast": "Definir Contraste",
+    "AdjustBrightness": "Ajustar Brilho",
+    "AdjustContrast": "Ajustar Contraste",
+    "Size": "Tamanho",
+    "Hardness": "Dureza",
+    "Flow": "Fluxo",
+    "Smoothness": "Suavização",
+    "Angle": "Ângulo",
+    "SetSize": "Definir Tamanho",
+    "AdjustSize": "Ajustar Tamanho",
+    "SetHardness": "Definir Dureza",
+    "AdjustHardness": "Ajustar Dureza",
+    "SetFlow": "Definir Fluxo",
+    "AdjustFlow": "Ajustar Fluxo",
+    "SetSmoothness": "Definir Suavização",
+    "AdjustSmoothness": "Ajustar Suavização",
+    "SetAngle": "Definir Ângulo",
+    "AdjustAngle": "Ajustar Ângulo",
+    "Clockwise": "Sentido Horário",
+    "CounterClockwise": "Sentido Anti-Horário",
+
+    "AdjustParameter": "Ajustar Parâmetro Selecionado",
+    "Menu": "Menu",
+    "HueSaturation": "Matiz/Saturação",
+    "Shadow": "Sombras",
+    "Midtone": "Tons Médios",
+    "Highlight": "Realces",
+    "OutputShadow": "Sombras de Saída",
+    "OutputHighlight": "Realces de Saída",
+    "Highlights": "Realces",
+    "Midtones": "Tons Médios",
+    "Shadows": "Sombras",
+    "InitialOption": "Opção Inicial",
+    "Reset": "Repor Predefinições",
+    "StepUnit": "Unidade de Ajuste",
+    "DialDownAction": "Ação de Pressionar",
+    "OpenDialog": "Abrir Diálogo (Atalho)",
+    "ConfirmAction": "Confirmar e Fechar (Enter)",
+    "TabAction": "Mudar Campo (Tab)",
+    "CancelAction": "Cancelar e Fechar (Esc)"
+  }
+}
+

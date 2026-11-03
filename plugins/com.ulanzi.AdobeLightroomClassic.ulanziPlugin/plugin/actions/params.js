@@ -1,0 +1,206 @@
+export const COLORS_PARAMS = [{
+    label:"Red",
+    value:"Red"
+},{
+    label:"Orange",
+    value:"Orange"
+},{
+    label:"Yellow",
+    value:"Yellow"
+},{
+    label:"Green",
+    value:"Green"
+},{
+    label:"Aqua",
+    value:"Aqua"
+},{
+    label:"Blue",
+    value:"Blue"
+},{
+    label:"Purple",
+    value:"Purple"
+},{
+    label:"Magenta",
+    value:"Magenta"
+}];
+
+export const BASIC_PARAMS = [{
+    label:"TEMPERATURE",
+    value:"TEMPERATURE"
+},{
+    label:"TINT",
+    value:"TINT"
+},{
+    label:"EXPOSURE",
+    value:"EXPOSURE"
+},{
+    label:"CONTRAST",
+    value:"CONTRAST"
+},{
+    label:"HIGHLIGHTS",
+    value:"HIGHLIGHTS"
+},{
+    label:"SHADOWS",
+    value:"SHADOWS"
+},{
+    label:"WHITES",
+    value:"WHITES"
+},{
+    label:"BLACKS",
+    value:"BLACKS"
+},{
+    label:"TEXTURE",
+    value:"TEXTURE"
+},{
+    label:"CLARITY",
+    value:"CLARITY"
+},{
+    label:"DEHAZE",
+    value:"DEHAZE"
+},{
+    label:"VIBRANCE",
+    value:"VIBRANCE"
+},{
+    label:"SATURATION",
+    value:"SATURATION"
+}]
+
+export const CURVE_PARAMS = [{
+    label:"HIGHLIGHTS",
+    value:"HIGHLIGHTS",
+},{
+    label:"LIGHTS",
+    value:"LIGHTS"
+},{
+    label:"DARKS",
+    value:"DARKS"
+},{
+    label:"SHADOWS",
+    value:"SHADOWS"
+}]
+
+
+export const BASIC_KEYPAD_PARAMS = [{
+            label:"TEMPERATURE",
+            value:"TEMPERATURE"
+        },{
+            label:"TINT",
+            value:"TINT"
+        },{
+            label:"EXPOSURE",
+            value:"EXPOSURE"
+        },{
+            label:"CONTRAST",
+            value:"CONTRAST"
+        },{
+            label:"HIGHLIGHTS",
+            value:"HIGHLIGHTS"
+        },{
+            label:"SHADOWS",
+            value:"SHADOWS"
+        },{
+            label:"WHITES",
+            value:"WHITES"
+        },{
+            label:"BLACKS",
+            value:"BLACKS"
+        },{
+            label:"TEXTURE",
+            value:"TEXTURE"
+        },{
+            label:"CLARITY",
+            value:"CLARITY"
+        },{
+            label:"DEHAZE",
+            value:"DEHAZE"
+        },{
+            label:"VIBRANCE",
+            value:"VIBRANCE"
+        },{
+            label:"SATURATION",
+            value:"SATURATION"
+        },{
+            label:"CURVE_HIGHLIGHTS",
+            value:"CURVE_HIGHLIGHTS",
+        },{
+            label:"CURVE_LIGHTS",
+            value:"CURVE_LIGHTS"
+        },{
+            label:"CURVE_DARKS",
+            value:"CURVE_DARKS"
+        },{
+            label:"CURVE_SHADOWS",
+            value:"CURVE_SHADOWS"
+        },{
+            label:"HSL_HUE_RED",
+            value:"HSL_HUE_RED"
+        },{
+            label:"HSL_HUE_ORANGE",
+            value:"HSL_HUE_ORANGE"
+        },{
+            label:"HSL_HUE_YELLOW",
+            value:"HSL_HUE_YELLOW"
+        },{
+            label:"HSL_HUE_GREEN",
+            value:"HSL_HUE_GREEN"
+        },{
+            label:"HSL_HUE_AQUA",
+            value:"HSL_HUE_AQUA"
+        },{
+            label:"HSL_HUE_BLUE",
+            value:"HSL_HUE_BLUE"
+        },{
+            label:"HSL_HUE_PURPLE",
+            value:"HSL_HUE_PURPLE"
+        },{
+            label:"HSL_HUE_MAGENTA",
+            value:"HSL_HUE_MAGENTA"
+        },{
+            label:"HSL_SAT_RED",
+            value:"HSL_SAT_RED"
+        },{
+            label:"HSL_SAT_ORANGE",
+            value:"HSL_SAT_ORANGE"
+        },{
+            label:"HSL_SAT_YELLOW",
+            value:"HSL_SAT_YELLOW"
+        },{
+            label:"HSL_SAT_GREEN",
+            value:"HSL_SAT_GREEN"
+        },{
+            label:"HSL_SAT_AQUA",
+            value:"HSL_SAT_AQUA"
+        },{
+            label:"HSL_SAT_BLUE",
+            value:"HSL_SAT_BLUE"
+        },{
+            label:"HSL_SAT_PURPLE",
+            value:"HSL_SAT_PURPLE"
+        },{
+            label:"HSL_SAT_MAGENTA",
+            value:"HSL_SAT_MAGENTA"
+        },{
+            label:"HSL_LUM_RED",
+            value:"HSL_LUM_RED"
+        },{
+            label:"HSL_LUM_ORANGE",
+            value:"HSL_LUM_ORANGE"
+        },{
+            label:"HSL_LUM_YELLOW",
+            value:"HSL_LUM_YELLOW"
+        },{
+            label:"HSL_LUM_GREEN",
+            value:"HSL_LUM_GREEN"
+        },{
+            label:"HSL_LUM_AQUA",
+            value:"HSL_LUM_AQUA"
+        },{
+            label:"HSL_LUM_BLUE",
+            value:"HSL_LUM_BLUE"
+        },{
+            label:"HSL_LUM_PURPLE",
+            value:"HSL_LUM_PURPLE"
+        },{
+            label:"HSL_LUM_MAGENTA",
+            value:"HSL_LUM_MAGENTA"
+        }]

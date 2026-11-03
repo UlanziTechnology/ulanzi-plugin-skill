@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adobe Premiere Pro</title>
+  <link rel="stylesheet" href="../libs/html/css/uspi.css">
+  <link rel="stylesheet" href="inspector.css">
+</head>
+<body>
+<main class="uspi-wrapper">
+  <p id="connection-status" class="tip info" role="status" aria-live="polite" data-localize>Checking Premiere</p>
+  <p id="status" class="tip hidden" role="status" aria-live="polite"></p>
+  <details id="connection-recovery" hidden>
+    <summary data-localize="View recovery steps">View recovery steps</summary>
+    <ol class="description">
+      <li data-localize="Recovery check">Recovery check</li>
+      <li data-localize="Recovery panel">Recovery panel</li>
+      <li data-localize="Recovery reconnect">Recovery reconnect</li>
+    </ol>
+    <p class="description" data-localize="Recovery busy">Recovery busy</p>
+  </details>
+  <hr>
+  <form id="settings-form" autocomplete="off">
+    <section data-action="queueExport" hidden>
+      <div class="uspi-item"><label class="uspi-item-label" for="presetScope" data-localize>Preset manager</label><select class="uspi-item-value" id="presetScope" name="presetScope"><option value="favorites" data-localize>Favorite presets</option><option value="all" data-localize>All presets</option><option value="custom" data-localize>Custom presets</option></select></div>
+      <div id="preset-directory-row" class="uspi-item" hidden><label class="uspi-item-label" for="presetDirectory" data-localize>Custom preset folder</label><div class="uspi-item-value path-row"><input id="presetDirectory" name="presetDirectory" placeholder="Choose a preset folder" data-localize="Choose a preset folder"><button type="button" data-browse="presetDirectory" data-localize>Browse</button></div></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="presets" data-localize>Export preset</label><div class="uspi-item-value uspi-select-row"><select id="presets"><option value="" data-localize>Choose a preset</option></select><button type="button" id="refresh-presets" class="uspi-refresh-btn" data-localize="Refresh presets" title="Refresh presets" aria-label="Refresh presets"></button></div></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="presetPath" data-localize>Currently selected</label><input class="uspi-item-value" id="presetPath" readonly placeholder="Select an export preset above first" data-localize="Select an export preset above first"></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="outputDirectory" data-localize>Output folder</label><div class="uspi-item-value path-row"><input id="outputDirectory" name="outputDirectory" placeholder="Choose an output folder" data-localize="Choose an output folder"><button type="button" data-browse="outputDirectory" data-localize>Browse</button></div></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="fileName" data-localize>File name</label><input class="uspi-item-value" id="fileName" name="fileName" placeholder="Sequence name if empty" data-localize="Sequence name if empty"></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="range" data-localize>Export range</label><select class="uspi-item-value" id="range" name="range"><option value="entire" data-localize>Entire sequence</option><option value="inOut" data-localize>Sequence In / Out</option></select></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="exportTarget" data-localize>Export method</label><select class="uspi-item-value" id="exportTarget" name="exportTarget"><option value="ame" data-localize>Media Encoder queue</option><option value="premiere" data-localize>Premiere direct export</option></select></div>
+      <div id="ame-queue-row" class="uspi-item"><span class="uspi-item-label" data-localize>Queue</span><div class="uspi-item-value checkbox-row"><input id="option-check-1" type="checkbox" name="startQueue"><label for="option-check-1" data-localize>Start Media Encoder queue</label></div></div>
+    </section>
+    <section data-action="timelineJog" hidden>
+      <div class="uspi-item"><label class="uspi-item-label" for="jog-step" data-localize>Frames per tick</label><input class="uspi-item-value" id="jog-step" name="step" type="number" min="1" max="100" step="1"></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="heldStep" data-localize>Held rotation</label><input class="uspi-item-value" id="heldStep" name="heldStep" type="number" min="1" max="100" step="1"></div>
+    </section>
+    <section data-action="trimControl" hidden>
+      <div class="uspi-item"><label class="uspi-item-label" for="mode" data-localize>Trim mode</label><select class="uspi-item-value" id="mode" name="mode"><option value="rippleIn" data-localize>Ripple In</option><option value="rippleOut" data-localize>Ripple Out</option><option value="rollingNext" data-localize>Rolling next edit</option></select></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="trim-step" data-localize>Frames per tick</label><select class="uspi-item-value" id="trim-step" name="step" data-number><option value="1">1</option><option value="5">5</option><option value="10">10</option></select></div>
+    </section>
+    <section data-action="parameterSelect" hidden>
+      <div class="uspi-item"><label class="uspi-item-label" for="select-group" data-localize>Group ID</label><input class="uspi-item-value" id="select-group" name="groupId" maxlength="64" placeholder="1"></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="select-parameter" data-localize>Parameter</label><select class="uspi-item-value parameter-options" id="select-parameter" name="parameter"></select></div>
+    </section>
+    <section data-action="parameterDial" hidden>
+      <div class="uspi-item"><label class="uspi-item-label" for="source" data-localize>Control source</label><select class="uspi-item-value" id="source" name="source"><option value="group" data-localize>Follow function group</option><option value="fixed" data-localize>Fixed parameter</option></select></div>
+      <div class="uspi-item" data-source="group"><label class="uspi-item-label" for="dial-group" data-localize>Group ID</label><input class="uspi-item-value" id="dial-group" name="groupId" maxlength="64" placeholder="1"></div>
+      <div class="uspi-item" data-source="fixed"><label class="uspi-item-label" for="dial-parameter" data-localize>Parameter</label><select class="uspi-item-value parameter-options" id="dial-parameter" name="parameter"></select></div>
+      <div class="uspi-item"><label class="uspi-item-label" for="stepMultiplier" data-localize>Step multiplier</label><input class="uspi-item-value" id="stepMultiplier" name="stepMultiplier" type="number" min="0.1" max="100" step="0.1"></div>
+    </section>
+    <hr>
+  </form>
+  <details id="help-details">
+    <summary data-localize>Tips</summary>
+    <div id="action-help"></div>
+    <div data-action="queueExport" hidden><p class="description" data-localize>Preset search help</p><p id="preset-search-notice" class="description" role="status" aria-live="polite" hidden></p></div>
+    <div data-action="trimControl" hidden><p class="description" data-localize>Trim press help</p></div>
+    <div data-action="parameterSelect" hidden><p class="description" data-localize>Group help</p></div>
+    <div data-action="parameterDial" hidden><p class="description" data-localize>Lumetri behavior help</p><p class="description" data-localize>Lumetri safety help</p><p class="description" data-localize>Saturation range help</p></div>
+  </details>
+</main>
+<script src="../libs/html/js/constants.js"></script>
+<script src="../libs/html/js/eventEmitter.js"></script>
+<script src="../libs/html/js/timers.js"></script>
+<script src="../libs/html/js/utils.js"></script>
+<script src="../libs/html/js/ulanziApi.js"></script>
+<script type="module" src="inspector.js"></script>
+</body>
+</html>

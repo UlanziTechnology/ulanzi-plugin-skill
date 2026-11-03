@@ -1,0 +1,258 @@
+{
+  "Name": "Adobe Photoshop",
+  "Description": "Adobe Photoshop steuern.",
+  "Actions": [
+    {
+      "Name": "Rückgängig/Wiederholen",
+      "Tooltip": "Einen Schritt zurück oder vorwärts gehen."
+    },
+    {
+      "Name": "Aktion ausführen",
+      "Tooltip": "Führt die aufgezeichneten Befehle der Aktion im aktiven Dokument aus."
+    },
+    {
+      "Name": "Ebene durchblättern",
+      "Tooltip": "Nächste Ebene nach oben oder unten auswählen."
+    },
+    {
+      "Name": "Füllmethode festlegen",
+      "Tooltip": "Füllmethode der Ebenen festlegen."
+    },
+    {
+      "Name": "Ebenensteuerung",
+      "Tooltip": "Ebenen erstellen, ändern und verwalten."
+    },
+    {
+      "Name": "Farbton/Sättigung anpassen",
+      "Tooltip": "Farbton/Sättigung-Einstellungsebene manuell anpassen."
+    },
+    {
+      "Name": "Werkzeug auswählen",
+      "Tooltip": "Ein Werkzeug aus der Werkzeugleiste auswählen."
+    },
+    {
+      "Name": "Füllung/Einstellungsebene erstellen",
+      "Tooltip": "Eine Füllung oder Einstellungsebene erstellen."
+    },
+    {
+      "Name": "Motiv auswählen",
+      "Tooltip": "Das markanteste Motiv in Ihrem Bild auswählen."
+    },
+    {
+      "Name": "Farbe festlegen",
+      "Tooltip": "Vordergrund- oder Hintergrundfarbe festlegen."
+    },
+    {
+      "Name": "Ebene/Text rastern",
+      "Tooltip": "Vektor- oder Textebenen in pixelbasierte Ebenen umwandeln."
+    },
+    {
+      "Name": "Ebene transformieren",
+      "Tooltip": "Ausgewählte Ebene skalieren, drehen, verzerren oder verformen."
+    },
+    {
+      "Name": "Inhaltsbasierte Füllung",
+      "Tooltip": "Ausgewählte Bereiche durch Analyse des umgebenden Inhalts füllen."
+    },
+    {
+      "Name": "Ebenendeckkraft",
+      "Tooltip": "Deckkraft der aktuellen Ebene anpassen."
+    },
+    {
+      "Name": "Zoom",
+      "Tooltip": "Ansicht der Arbeitsfläche vergrößern oder verkleinern."
+    },
+    {
+      "Name": "Helligkeit/Kontrast",
+      "Tooltip": "Gesamthelligkeit oder Kontrast des Bildes anpassen."
+    },
+    {
+      "Name": "Pinselsteuerung",
+      "Tooltip": "Größe, Härte, Deckkraft, Fluss und Glättung anpassen"
+    },
+    {
+      "Name": "Ansicht-drehen-Werkzeug",
+      "Tooltip": "Arbeitsfläche für bequeme Betrachtungswinkel drehen"
+    },
+    {
+      "Name": "Ausgewählten Parameter anpassen",
+      "Tooltip": "Farbkorrekturparameter (Farbton/Sättigung, Tonwertkorrektur, Kurven) mit dem Drehregler anpassen"
+    }
+  ],
+  "Localization": {
+    "Connected": "Mit Photoshop verbunden",
+    "Disconnected": "Von Photoshop getrennt",
+    "Tips": "Sie müssen Adobe Creative Cloud und eine lizenzierte Version von Adobe Photoshop (Version 23.0.0 oder höher) installiert haben.",
+    "UXPDisabled": "Das UXP-Plugin wurde möglicherweise deaktiviert. Klicken Sie auf \"Aktivieren\", um es zu aktivieren.",
+    "EnableButton": "Aktivieren",
+    "PhotoshopNotRunning": "Photoshop wird nicht ausgeführt",
+
+    "Select": "Auswählen",
+    "SelectPlaceholder": "Bitte auswählen",
+
+    "Mode": "Modus",
+    "Foreground": "Vordergrund",
+    "Background": "Hintergrund",
+    "Both": "Beides",
+    "ForegroundColor": "Vordergrundfarbe",
+    "BackgroundColor": "Hintergrundfarbe",
+
+    "Action": "Aktion",
+    "Undo": "Rückgängig",
+    "Redo": "Wiederholen",
+
+    "ActionSet": "Aktionssatz",
+    "ActionName": "Aktion",
+
+    "Direction": "Richtung",
+    "Up": "Aufwärts",
+    "Down": "Abwärts",
+
+    "BlendMode": "Füllmethode",
+    "Normal": "Normal",
+    "Dissolve": "Sprenkeln",
+    "Darken": "Abdunkeln",
+    "Multiply": "Multiplizieren",
+    "ColorRangeBurn": "Farbig nachbelichten",
+    "Lighten": "Aufhellen",
+    "Screen": "Negativ multiplizieren",
+    "ColorRangeDodge": "Farbig abwedeln",
+    "Overlay": "Ineinanderkopieren",
+    "Difference": "Differenz",
+    "Exclusion": "Ausschluss",
+    "Hue": "Farbton",
+    "Saturation": "Sättigung",
+    "Color": "Farbe",
+    "Luminosity": "Luminanz",
+
+    "LayerControl": "Ebenensteuerung",
+    "CreateNewLayer": "Neue Ebene erstellen",
+    "DuplicateLayer": "Ebene duplizieren",
+    "LockUnlockLayer": "Ebene sperren/entsperren",
+    "CreateMaskLayer": "Ebenenmaske hinzufügen",
+    "MergeVisible": "Sichtbare auf eine Ebene reduzieren",
+    "MergeSelected": "Ebenen reduzieren",
+    "RasterizeSelected": "Ebene rastern",
+    "FlattenImage": "Auf Hintergrundebene reduzieren",
+    "HideUnhideLayer": "Ebenensichtbarkeit umschalten",
+    "CreateHSLLayer": "Farbton/Sättigung-Einstellungsebene erstellen",
+
+    "ColorRange": "Farbbereich",
+    "Property": "Eigenschaft",
+    "Step": "Schrittweite",
+    "Master": "Standard",
+    "Reds": "Rottöne",
+    "Yellows": "Gelbtöne",
+    "Greens": "Grüntöne",
+    "Cyans": "Cyantöne",
+    "Blues": "Blautöne",
+    "Magentas": "Magentatöne",
+    "Lightness": "Helligkeit",
+
+    "Tool": "Werkzeug",
+
+    "AdjustmentLayer": "Einstellungsebene",
+    "SolidColor": "Farbfläche",
+    "Gradient": "Verlauf",
+    "Pattern": "Muster",
+    "BrightnessContrast": "Helligkeit/Kontrast",
+    "Levels": "Tonwertkorrektur",
+    "Curves": "Gradationskurven",
+    "Exposure": "Belichtung",
+    "Vibrance": "Dynamik",
+    "HueSaturationLightness": "Farbton, Sättigung und Helligkeit",
+    "ColorBalance": "Farbbalance",
+    "BlackWhite": "Schwarzweiß",
+    "PhotoFilter": "Fotofilter",
+    "ChannelMixer": "Kanalmixer",
+    "ColorLookup": "Color Lookup",
+    "Invert": "Umkehren",
+    "Posterize": "Tonwerttrennung",
+    "Threshold": "Schwellenwert",
+    "GradientMap": "Verlaufsumsetzung",
+    "SelectiveColor": "Selektive Farbkorrektur",
+
+    "LayerProperty": "Ebeneneigenschaft",
+    "FreeTransform": "Frei transformieren",
+    "Scale": "Skalieren",
+    "Rotate": "Drehen",
+    "Skew": "Neigen",
+    "Distort": "Verzerren",
+    "Perspective": "Perspektivisch",
+    "Warp": "Verkrümmen",
+    "Rotate180": "180° drehen",
+    "Rotate90Clockwise": "90° im Uhrzeigersinn drehen",
+    "Rotate90CounterClockwise": "90° gegen den Uhrzeigersinn drehen",
+    "FlipHorizontal": "Horizontal spiegeln",
+    "FlipVertical": "Vertikal spiegeln",
+
+    "Opacity": "Deckkraft",
+    "Behind": "Hinter",
+    "Clear": "Löschen",
+    "ColorBurn": "Farbig abwedeln",
+    "LinearBurn": "Linear nachbelichten",
+    "DarkerColor": "Dunklere Farbe",
+    "ColorDodge": "Farbig abwedeln",
+    "LinearDodge": "Linear abwedeln (Hinzufügen)",
+    "LighterColor": "Hellere Farbe",
+    "SoftLight": "Weiches Licht",
+    "HardLight": "Hartes Licht",
+    "VividLight": "Strahlendes Licht",
+    "LinearLight": "Lineares Licht",
+    "PinLight": "Punktlicht",
+    "HardMix": "Hartes Mischen",
+    "BlendSubtraction": "Subtrahieren",
+    "BlendDivide": "Unterteilen",
+
+    "SetOpacity": "Deckkraft festlegen",
+    "AdjustOpacity": "Deckkraft anpassen",
+    "StepSize": "Schrittweite",
+    "Zoom": "Zoom",
+    "SetZoom": "Zoom festlegen",
+    "AdjustZoom": "Zoom anpassen",
+    "Value": "Wert",
+    "Brightness": "Helligkeit",
+    "Contrast": "Kontrast",
+    "SetBrightness": "Helligkeit festlegen",
+    "SetContrast": "Kontrast festlegen",
+    "AdjustBrightness": "Helligkeit anpassen",
+    "AdjustContrast": "Kontrast anpassen",
+    "Size": "Größe",
+    "Hardness": "Härte",
+    "Flow": "Fluss",
+    "Smoothness": "Glättung",
+    "Angle": "Winkel",
+    "SetSize": "Größe festlegen",
+    "AdjustSize": "Größe anpassen",
+    "SetHardness": "Härte festlegen",
+    "AdjustHardness": "Härte anpassen",
+    "SetFlow": "Fluss festlegen",
+    "AdjustFlow": "Fluss anpassen",
+    "SetSmoothness": "Glättung festlegen",
+    "AdjustSmoothness": "Glättung anpassen",
+    "SetAngle": "Winkel festlegen",
+    "AdjustAngle": "Winkel anpassen",
+    "Clockwise": "Im Uhrzeigersinn",
+    "CounterClockwise": "Gegen den Uhrzeigersinn",
+
+    "AdjustParameter": "Ausgewählten Parameter anpassen",
+    "Menu": "Menü",
+    "HueSaturation": "Farbton/Sättigung",
+    "Shadow": "Tiefen",
+    "Midtone": "Mitteltöne",
+    "Highlight": "Lichter",
+    "OutputShadow": "Ausgabe-Tiefen",
+    "OutputHighlight": "Ausgabe-Lichter",
+    "Highlights": "Lichter",
+    "Midtones": "Mitteltöne",
+    "Shadows": "Tiefen",
+    "InitialOption": "Standardoption",
+    "Reset": "Standard wiederherstellen",
+    "StepUnit": "Schrittweite",
+    "DialDownAction": "Drück-Aktion",
+    "OpenDialog": "Dialog öffnen (Tastenkürzel)",
+    "ConfirmAction": "Bestätigen & Schließen (Enter)",
+    "TabAction": "Feld wechseln (Tab)",
+    "CancelAction": "Abbrechen & Schließen (Esc)"
+  }
+}

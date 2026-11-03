@@ -1,0 +1,259 @@
+{
+  "Name": "Adobe Photoshop",
+  "Description": "Adobe Photoshop을 제어합니다.",
+  "Actions": [
+    {
+      "Name": "실행 취소/다시 실행",
+      "Tooltip": "한 단계 뒤로 또는 앞으로 이동합니다."
+    },
+    {
+      "Name": "작업 실행",
+      "Tooltip": "활성 문서에서 작업의 기록된 명령을 실행합니다."
+    },
+    {
+      "Name": "레이어 스크롤",
+      "Tooltip": "위 또는 아래의 다음 레이어를 선택합니다."
+    },
+    {
+      "Name": "혼합 모드 설정",
+      "Tooltip": "레이어의 혼합 모드를 설정합니다."
+    },
+    {
+      "Name": "레이어 제어",
+      "Tooltip": "레이어를 생성, 수정 및 관리합니다."
+    },
+    {
+      "Name": "색조/채도 조정",
+      "Tooltip": "색조/채도 조정 레이어를 수동으로 조정합니다."
+    },
+    {
+      "Name": "도구 선택",
+      "Tooltip": "도구 모음에서 도구를 선택합니다."
+    },
+    {
+      "Name": "채우기 조정 레이어 생성",
+      "Tooltip": "채우기 또는 조정 레이어를 생성합니다."
+    },
+    {
+      "Name": "피사체 선택",
+      "Tooltip": "이미지에서 가장 두드러진 피사체를 선택합니다."
+    },
+    {
+      "Name": "색상 설정",
+      "Tooltip": "전경색 또는 배경색을 설정합니다."
+    },
+    {
+      "Name": "레이어/문자 래스터화",
+      "Tooltip": "벡터 또는 텍스트 레이어를 픽셀 기반 레이어로 변환합니다."
+    },
+    {
+      "Name": "레이어 변형",
+      "Tooltip": "선택한 레이어를 크기 조정, 회전, 기울이기 또는 왜곡합니다."
+    },
+    {
+      "Name": "내용 인식 채우기",
+      "Tooltip": "주변 콘텐츠를 분석하여 선택한 영역을 채웁니다."
+    },
+    {
+      "Name": "레이어 불투명도",
+      "Tooltip": "현재 레이어의 불투명도를 조정합니다."
+    },
+    {
+      "Name": "확대/축소",
+      "Tooltip": "캔버스 보기를 확대하거나 축소합니다."
+    },
+    {
+      "Name": "밝기/대비",
+      "Tooltip": "이미지의 전체 밝기 또는 대비를 조정합니다."
+    },
+    {
+      "Name": "브러시 제어",
+      "Tooltip": "크기, 경도, 불투명도, 유량 및 부드럽게 하기를 조정합니다."
+    },
+    {
+      "Name": "보기 회전 도구",
+      "Tooltip": "편리한 보기 각도를 위해 캔버스를 회전합니다."
+    },
+    {
+      "Name": "선택한 매개변수 조정",
+      "Tooltip": "다이얼을 사용하여 색상 조정 매개변수(색조/채도, 레벨, 곡선) 조정"
+    }
+  ],
+  "Localization": {
+    "Connected": "Photoshop에 연결됨",
+    "Disconnected": "Photoshop과의 연결이 끊김",
+    "Tips": "Adobe Creative Cloud와 라이선스가 있는 Adobe Photoshop(버전 23.0.0 이상)을 설치해야 합니다.",
+    "UXPDisabled": "UXP 플러그인이 비활성화되었을 수 있습니다. \"활성화\"를 클릭하여 활성화하세요.",
+    "EnableButton": "활성화",
+    "PhotoshopNotRunning": "Photoshop이 실행되지 않음",
+
+    "Select": "선택",
+    "SelectPlaceholder": "선택하세요",
+
+    "Mode": "모드",
+    "Foreground": "전경",
+    "Background": "배경",
+    "Both": "둘 다",
+    "ForegroundColor": "전경색",
+    "BackgroundColor": "배경색",
+
+    "Action": "작업",
+    "Undo": "실행 취소",
+    "Redo": "다시 실행",
+
+    "ActionSet": "작업 세트",
+    "ActionName": "작업",
+
+    "Direction": "방향",
+    "Up": "위로",
+    "Down": "아래로",
+
+    "BlendMode": "혼합 모드",
+    "Normal": "표준",
+    "Dissolve": "디졸브",
+    "Darken": "어둡게",
+    "Multiply": "곱하기",
+    "ColorRangeBurn": "색상 번",
+    "Lighten": "밝게",
+    "Screen": "스크린",
+    "ColorRangeDodge": "색상 닷지",
+    "Overlay": "오버레이",
+    "Difference": "차이",
+    "Exclusion": "제외",
+    "Hue": "색조",
+    "Saturation": "채도",
+    "Color": "색상",
+    "Luminosity": "광도",
+
+    "LayerControl": "레이어 제어",
+    "CreateNewLayer": "새 레이어 생성",
+    "DuplicateLayer": "레이어 복제",
+    "LockUnlockLayer": "레이어 잠금/잠금 해제",
+    "CreateMaskLayer": "마스크 레이어 추가",
+    "MergeVisible": "보이는 레이어 병합",
+    "MergeSelected": "레이어 병합",
+    "RasterizeSelected": "레이어 래스터화",
+    "FlattenImage": "이미지 병합",
+    "HideUnhideLayer": "레이어 가시성 전환",
+    "CreateHSLLayer": "색조/채도 조정 레이어 생성",
+
+    "ColorRange": "색상 범위",
+    "Step": "단계 크기",
+    "Property": "속성",
+    "Master": "마스터",
+    "Reds": "빨강",
+    "Yellows": "노랑",
+    "Greens": "초록",
+    "Cyans": "시안",
+    "Blues": "파랑",
+    "Magentas": "마젠타",
+    "Lightness": "밝기",
+
+    "Tool": "도구",
+
+    "AdjustmentLayer": "조정 레이어",
+    "SolidColor": "단색",
+    "Gradient": "그레이디언트",
+    "Pattern": "패턴",
+    "BrightnessContrast": "밝기/대비",
+    "Levels": "레벨",
+    "Curves": "곡선",
+    "Exposure": "노출",
+    "Vibrance": "자연스러운 채도",
+    "HueSaturationLightness": "색조 채도 밝기",
+    "ColorBalance": "색상 균형",
+    "BlackWhite": "흑백",
+    "PhotoFilter": "사진 필터",
+    "ChannelMixer": "채널 혼합기",
+    "ColorLookup": "색상 찾기",
+    "Invert": "색상 반전",
+    "Posterize": "포스터화",
+    "Threshold": "한계값",
+    "GradientMap": "그레이디언트 맵",
+    "SelectiveColor": "선택 색상",
+
+    "LayerProperty": "레이어 속성",
+    "FreeTransform": "자유 변형",
+    "Scale": "크기 조정",
+    "Rotate": "회전",
+    "Skew": "기울이기",
+    "Distort": "왜곡",
+    "Perspective": "원근",
+    "Warp": "뒤틀기",
+    "Rotate180": "180° 회전",
+    "Rotate90Clockwise": "시계 방향으로 90° 회전",
+    "Rotate90CounterClockwise": "시계 반대 방향으로 90° 회전",
+    "FlipHorizontal": "수평 뒤집기",
+    "FlipVertical": "수직 뒤집기",
+
+    "Opacity": "불투명도",
+    "Behind": "뒤",
+    "Clear": "지우기",
+    "ColorBurn": "색상 번",
+    "LinearBurn": "선형 번",
+    "DarkerColor": "어두운 색상",
+    "ColorDodge": "색상 닷지",
+    "LinearDodge": "선형 닷지(추가)",
+    "LighterColor": "밝은 색상",
+    "SoftLight": "부드러운 빛",
+    "HardLight": "강한 빛",
+    "VividLight": "생생한 빛",
+    "LinearLight": "선형 빛",
+    "PinLight": "핀 빛",
+    "HardMix": "하드 믹스",
+    "BlendSubtraction": "빼기",
+    "BlendDivide": "나누기",
+
+    "SetOpacity": "불투명도 설정",
+    "AdjustOpacity": "불투명도 조정",
+    "StepSize": "단계 크기",
+    "Zoom": "확대/축소",
+    "SetZoom": "확대/축소 설정",
+    "AdjustZoom": "확대/축소 조정",
+    "Value": "값",
+    "Brightness": "밝기",
+    "Contrast": "대비",
+    "SetBrightness": "밝기 설정",
+    "SetContrast": "대비 설정",
+    "AdjustBrightness": "밝기 조정",
+    "AdjustContrast": "대비 조정",
+    "Size": "크기",
+    "Hardness": "경도",
+    "Flow": "유량",
+    "Smoothness": "부드럽게 하기",
+    "Angle": "각도",
+    "SetSize": "크기 설정",
+    "AdjustSize": "크기 조정",
+    "SetHardness": "경도 설정",
+    "AdjustHardness": "경도 조정",
+    "SetFlow": "유량 설정",
+    "AdjustFlow": "유량 조정",
+    "SetSmoothness": "부드럽게 하기 설정",
+    "AdjustSmoothness": "부드럽게 하기 조정",
+    "SetAngle": "각도 설정",
+    "AdjustAngle": "각도 조정",
+    "Clockwise": "시계 방향",
+    "CounterClockwise": "시계 반대 방향",
+
+    "AdjustParameter": "선택한 매개변수 조정",
+    "Menu": "조정 메뉴",
+    "HueSaturation": "색조/채도",
+    "Shadow": "어두운 영역",
+    "Midtone": "중간 톤",
+    "Highlight": "밝은 영역",
+    "OutputShadow": "출력 어두운 영역",
+    "OutputHighlight": "출력 밝은 영역",
+    "Highlights": "밝은 영역",
+    "Midtones": "중간 톤",
+    "Shadows": "어두운 영역",
+    "InitialOption": "초기 옵션",
+    "Reset": "기본값으로 재설정",
+    "StepUnit": "조정 단위",
+    "DialDownAction": "누르기 동작",
+    "OpenDialog": "대화상자 열기 (단축키)",
+    "ConfirmAction": "확인 및 닫기 (Enter)",
+    "TabAction": "필드 전환 (Tab)",
+    "CancelAction": "취소 및 닫기 (Esc)"
+  }
+}
+

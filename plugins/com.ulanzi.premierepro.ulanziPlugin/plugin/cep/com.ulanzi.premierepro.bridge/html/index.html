@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self'; object-src 'none'; base-uri 'none'">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ulanzi Premiere Bridge Diagnostics</title><link rel="stylesheet" href="../js/panel.css">
+</head><body>
+  <h1>Ulanzi Premiere Bridge</h1>
+  <p id="description">The bridge connects automatically in the background. This panel is only for diagnostics.</p>
+  <p id="connection" role="status" aria-live="polite">Loading diagnostics. If this message remains, restart Premiere Pro and check that the CEP extension is installed correctly.</p>
+  <p id="recovery" hidden>Before reconnecting, check Premiere and the export queue. An interrupted operation may have completed; do not repeat it without checking.</p>
+  <div class="controls">
+    <button type="button" id="refresh" disabled>Refresh status</button>
+    <button type="button" id="reconnect" disabled>Reconnect</button>
+  </div>
+  <p id="parameter" role="status" aria-live="polite" hidden></p>
+  <small id="footer">You can close this panel. The background bridge continues running without a visible window.</small>
+  <script src="../lib/CSInterface.js"></script><script src="../js/diagnostics.js"></script>
+</body></html>

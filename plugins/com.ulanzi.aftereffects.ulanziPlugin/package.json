@@ -1,0 +1,14 @@
+{
+  "name": "com.ulanzi.aftereffects.ulanzi-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ulanzi Studio controls for Adobe After Effects",
+  "license": "MIT",
+  "scripts": {
+    "check": "node --check plugin/app.js"
+  },
+  "dependencies": {
+    "ws": "8.21.1"
+  }
+}

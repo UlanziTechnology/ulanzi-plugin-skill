@@ -1,0 +1,256 @@
+{
+  "Name": "Adobe Photoshop",
+  "Description": "控制 Adobe Photoshop。",
+  "Actions": [
+    {
+      "Name": "撤销/重做",
+      "Tooltip": "往后或往前一步"
+    },
+    {
+      "Name": "执行操作",
+      "Tooltip": "在活跃的文稿中执行此操作的录制指令"
+    },
+    {
+      "Name": "滚动选择图层",
+      "Tooltip": "向下/向上选择下一个图层"
+    },
+    {
+      "Name": "设置混合模式",
+      "Tooltip": "设置图层的混合模式"
+    },
+    {
+      "Name": "图层控制",
+      "Tooltip": "创建、修改和管理图层"
+    },
+    {
+      "Name": "调整色相/饱和度",
+      "Tooltip": "手动调整色相/饱和度调整图层"
+    },
+    {
+      "Name": "选取工具",
+      "Tooltip": "从工具栏选取工具"
+    },
+    {
+      "Name": "创建调整/填充图层",
+      "Tooltip": "创建一个调整/填充图层"
+    },
+    {
+      "Name": "选择对象",
+      "Tooltip": "选择图像中最突出的对象"
+    },
+    {
+      "Name": "设置颜色",
+      "Tooltip": "设置前景色或背景色"
+    },
+    {
+      "Name": "栅格化图层/类型",
+      "Tooltip": "将矢量或文字图层转换为基于像素的图层"
+    },
+    {
+      "Name": "变换图层",
+      "Tooltip": "缩放、旋转、斜切、或扭曲所选图层"
+    },
+    {
+      "Name": "内容识别填充",
+      "Tooltip": "通过分析周围内容来填充所选区域"
+    },
+    {
+      "Name": "图层不透明度",
+      "Tooltip": "调整当前图层的透明度"
+    },
+    {
+      "Name": "缩放",
+      "Tooltip": "放大或缩小画布的视图"
+    },
+    {
+      "Name": "亮度/对比度",
+      "Tooltip": "调整图像的亮度或对比度"
+    },
+    {
+      "Name": "画笔控制",
+      "Tooltip": "调整大小、硬度、不透明度、流量和平滑选项"
+    },
+    {
+      "Name": "旋转视图工具",
+      "Tooltip": "调整画布方向以便用合适角度查看"
+    },
+    {
+      "Name": "调整所选参数",
+      "Tooltip": "通过旋钮切换和调节调色面板参数（色相/饱和度、色阶、曲线等）"
+    }
+  ],
+  "Localization": {
+    "Connected": "已连接到 Photoshop",
+    "Disconnected": "与 Photoshop 断开连接",
+    "Tips": "您需要安装 Adobe Creative Cloud 和已授权的 Adobe Photoshop (版本 23.0.0 或更高版本)。",
+    "UXPDisabled": "UXP 插件可能已禁用 ，请点击“启用”来使用。",
+    "EnableButton": "启用",
+    "PhotoshopNotRunning": "未运行 Photoshop",
+
+    "Select": "选择",
+    "SelectPlaceholder": "请选择",
+
+    "Mode": "模式",
+    "Foreground": "前景色",
+    "Background": "背景色",
+    "Both": "前景色和背景色",
+    "ForegroundColor": "前景色",
+    "BackgroundColor": "背景色",
+
+    "Action": "操作",
+    "Undo": "撤销",
+    "Redo": "重做",
+
+    "ActionSet": "操作集合",
+    "ActionName": "操作",
+
+    "Direction": "方向",
+    "Up": "上",
+    "Down": "下",
+
+    "BlendMode": "混合模式",
+    "Normal": "正常",
+    "Dissolve": "溶解",
+    "Darken": "变暗",
+    "Multiply": "正片叠底",
+
+    "Lighten": "变亮",
+    "Screen": "滤色",
+    "Overlay": "叠加",
+    "Difference": "差值",
+    "Exclusion": "排除",
+    "Hue": "色相",
+    "Saturation": "饱和度",
+    "Color": "颜色",
+    "Luminosity": "明度",
+
+    "LayerControl": "图层控制",
+    "CreateNewLayer": "创建新图层",
+    "DuplicateLayer": "复制图层",
+    "LockUnlockLayer": "锁定/解锁图层",
+    "CreateMaskLayer": "添加蒙版图层",
+    "MergeVisible": "合并可见图层",
+    "MergeSelected": "合并图层",
+    "RasterizeSelected": "栅格化图层",
+    "FlattenImage": "拼合图像",
+    "HideUnhideLayer": "切换图层可见性",
+    "CreateHSLLayer": "创建色相/饱和度调整图层",
+
+    "ColorRange": "色彩范围",
+    "Property": "属性",
+    "Step": "调整单位",
+    "Master": "全图",
+    "Reds": "红色",
+    "Yellows": "黄色",
+    "Greens": "绿色",
+    "Cyans": "青色",
+    "Blues": "蓝色",
+    "Magentas": "洋红",
+    "Lightness": "明度",
+
+    "Tool": "工具",
+    "AdjustmentLayer": "调整图层",
+    "SolidColor": "纯色",
+    "Gradient": "渐变",
+    "Pattern": "图案",
+    "BrightnessContrast": "亮度/对比度",
+    "Levels": "色阶",
+    "Curves": "曲线",
+    "Exposure": "曝光度",
+    "Vibrance": "自然饱和度",
+    "HueSaturationLightness": "色相、饱和度和明度",
+    "ColorBalance": "色彩平衡",
+    "BlackWhite": "黑白",
+    "PhotoFilter": "照片滤镜",
+    "ChannelMixer": "通道混合器",
+    "ColorLookup": "颜色查找",
+    "Invert": "反相",
+    "Posterize": "色调分离",
+    "Threshold": "阈值",
+    "GradientMap": "渐变映射",
+    "SelectiveColor": "可选颜色",
+
+    "LayerProperty": "图层属性",
+    "FreeTransform": "自由变换",
+    "Scale": "缩放",
+    "Rotate": "旋转",
+    "Skew": "斜切",
+    "Distort": "扭曲",
+    "Perspective": "透视",
+    "Warp": "变形",
+    "Rotate180": "旋转 180°",
+    "Rotate90Clockwise": "顺时针旋转 90°",
+    "Rotate90CounterClockwise": "逆时针旋转 90°",
+    "FlipHorizontal": "水平翻转",
+    "FlipVertical": "垂直翻转",
+
+    "Opacity": "不透明度",
+    "Behind": "背后",
+    "Clear": "清除",
+    "ColorBurn": "颜色加深",
+    "LinearBurn": "线性加深",
+    "DarkerColor": "深色",
+    "ColorDodge": "颜色减淡",
+    "LinearDodge": "线性减淡（添加）",
+    "LighterColor": "浅色",
+    "SoftLight": "柔光",
+    "HardLight": "强光",
+    "VividLight": "亮光",
+    "LinearLight": "线性光",
+    "PinLight": "点光",
+    "HardMix": "实色混合",
+    "BlendSubtraction": "减去",
+    "BlendDivide": "划分",
+
+    "SetOpacity": "设置不透明度",
+    "AdjustOpacity": "调整不透明度",
+    "StepSize": "调整单位",
+    "Zoom": "缩放",
+    "SetZoom": "设置缩放",
+    "AdjustZoom": "调整缩放",
+    "Value": "数值",
+    "Brightness": "亮度",
+    "Contrast": "对比度",
+    "SetBrightness": "设置亮度",
+    "SetContrast": "设置对比度",
+    "AdjustBrightness": "调整亮度",
+    "AdjustContrast": "调整对比度",
+    "Size": "大小",
+    "Hardness": "硬度",
+    "Flow": "流量",
+    "Smoothness": "平滑",
+    "Angle": "角度",
+    "SetSize": "设置大小",
+    "AdjustSize": "调整大小",
+    "SetHardness": "设置硬度",
+    "AdjustHardness": "调整硬度",
+    "SetFlow": "设置流量",
+    "AdjustFlow": "调整流量",
+    "SetSmoothness": "设置平滑",
+    "AdjustSmoothness": "调整平滑",
+    "SetAngle": "设置角度",
+    "AdjustAngle": "调整角度",
+    "Clockwise": "顺时针",
+    "CounterClockwise": "逆时针",
+
+    "AdjustParameter": "调整所选参数",
+    "Menu": "调节菜单",
+    "HueSaturation": "色相/饱和度",
+    "Shadow": "黑场",
+    "Midtone": "中间调",
+    "Highlight": "白场",
+    "OutputShadow": "输出黑场",
+    "OutputHighlight": "输出白场",
+    "Highlights": "高光",
+    "Midtones": "中间调",
+    "Shadows": "暗部",
+    "InitialOption": "初始选项",
+    "Reset": "恢复默认参数",
+    "StepUnit": "调整单位",
+    "DialDownAction": "按下操作",
+    "OpenDialog": "呼出弹框 (快捷键)",
+    "ConfirmAction": "确认并关闭 (Enter)",
+    "TabAction": "切换选项 (Tab)",
+    "CancelAction": "取消并退出 (Esc)"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>After Effects</title>
+    <link rel="stylesheet" href="../../libs/css/uspi.css" />
+    <link rel="stylesheet" href="./inspector.css" />
+  </head>
+  <body>
+    <div class="uspi-wrapper hidden">
+      <p id="status-message" class="tip hidden"></p>
+      <hr id="status-divider" class="hidden" />
+      <div class="action-summary">
+        <p id="action-description" class="action-summary-primary"></p>
+        <p id="action-secondary" class="action-summary-secondary"></p>
+      </div>
+      <details>
+        <summary data-localize>Tips</summary>
+        <p id="action-tip"></p>
+      </details>
+    </div>
+    <script src="../../libs/js/constants.js"></script>
+    <script src="../../libs/js/eventEmitter.js"></script>
+    <script src="../../libs/js/timers.js"></script>
+    <script src="../../libs/js/utils.js"></script>
+    <script src="../../libs/js/ulanziApi.js"></script>
+    <script src="../common.js"></script>
+    <script src="./inspector.js"></script>
+  </body>
+</html>

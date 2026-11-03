@@ -1,0 +1,77 @@
+{
+  "Version": "1.0.0",
+  "Author": "Ulanzi",
+  "Name": "Adobe After Effects",
+  "Description": "Reference layers, anchor points, expressions, and composition markers for Adobe After Effects.",
+  "Icon": "assets/icons/plugin.svg",
+  "Category": "Adobe After Effects",
+  "CategoryIcon": "assets/icons/plugin.svg",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "SupportedInMultiActions": false,
+  "PrivateAPI": true,
+  "UUID": "com.ulanzi.ulanzistudio.aftereffects",
+  "Actions": [
+    {
+      "Name": "Enable Reference Layers",
+      "Icon": "assets/icons/reference-on.svg",
+      "PropertyInspectorPath": "property-inspector/simple/inspector.html",
+      "state": 0,
+      "States": [{ "Image": "assets/states/reference-on.svg" }],
+      "Tooltip": "Enable all layers whose names start with reference or ref",
+      "UUID": "com.ulanzi.ulanzistudio.aftereffects.referenceOn",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Disable Reference Layers",
+      "Icon": "assets/icons/reference-off.svg",
+      "PropertyInspectorPath": "property-inspector/simple/inspector.html",
+      "state": 0,
+      "States": [{ "Image": "assets/states/reference-off.svg" }],
+      "Tooltip": "Disable all layers whose names start with reference or ref",
+      "UUID": "com.ulanzi.ulanzistudio.aftereffects.referenceOff",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Anchor Point Grid",
+      "Icon": "assets/icons/anchor.svg",
+      "PropertyInspectorPath": "property-inspector/anchor/inspector.html",
+      "state": 0,
+      "States": [{ "Image": "assets/states/anchor.svg" }],
+      "Tooltip": "Move selected layers' anchor points to one of nine positions",
+      "UUID": "com.ulanzi.ulanzistudio.aftereffects.anchorGrid",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "One-click Expression",
+      "Icon": "assets/icons/expression.svg",
+      "PropertyInspectorPath": "property-inspector/expression/inspector.html",
+      "state": 0,
+      "States": [{ "Image": "assets/states/expression-wiggle.svg" }],
+      "Tooltip": "Apply an editable expression preset to selected properties or text layers",
+      "UUID": "com.ulanzi.ulanzistudio.aftereffects.expression",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": false
+    },
+    {
+      "Name": "Composition Markers",
+      "Icon": "assets/icons/marker.svg",
+      "PropertyInspectorPath": "property-inspector/simple/inspector.html",
+      "state": 0,
+      "States": [{ "Image": "assets/states/marker.svg" }],
+      "Tooltip": "Press to add a marker; rotate to jump between markers",
+      "UUID": "com.ulanzi.ulanzistudio.aftereffects.marker",
+      "Controllers": ["Encoder"],
+      "Encoder": { "layout": "$UA1" },
+      "SupportedInMultiActions": false
+    }
+  ],
+  "OS": [
+    { "Platform": "mac", "MinimumVersion": "10.15" },
+    { "Platform": "windows", "MinimumVersion": "10" }
+  ],
+  "Software": { "MinVersion": "2.1.4" }
+}

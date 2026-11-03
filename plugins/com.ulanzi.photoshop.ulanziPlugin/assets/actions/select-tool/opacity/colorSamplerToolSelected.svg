@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" fill="none" viewBox="0 0 144 144" style="fill-opacity: .25;">
+  <g clip-path="url(#a)">
+    <g clip-path="url(#b)">
+      <path fill="#000" fill-opacity=".5" d="M0 0h144v144H0z" style="fill-opacity: .25;"/>
+      <rect width="144" height="144" stroke="#fff" stroke-width="24" rx="24" style="fill-opacity: .25;"/>
+      <path fill="#fff" fill-rule="evenodd" style="fill-opacity: .25;" d="M54 37a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v7.252A8.014 8.014 0 0 0 44.252 50H37a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h7.252A8.014 8.014 0 0 0 50 59.748V67a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-7.252A8.014 8.014 0 0 0 59.748 54H67a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-7.252A8.014 8.014 0 0 0 54 44.252V37Zm-2 19a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm.464 42.524 28.45-28.45-6.988-6.988-28.45 28.45-.12.12a4.942 4.942 0 1 0 7.108 6.868ZM92.7 40.759a7.183 7.183 0 0 1 2.756-.547 7.187 7.187 0 0 1 5.092 2.11l1.132 1.132a7.202 7.202 0 0 1-.002 10.182l-9.05 9.05 2.83 2.83a2 2 0 0 1-.002 2.828l-6.722 6.722a2 2 0 0 1-2.828 0l-2.164-2.162-28.45 28.448a8.94 8.94 0 1 1-12.644-12.644l28.448-28.45-2.162-2.164a2 2 0 0 1 0-2.828l6.724-6.722a2 2 0 0 1 2.828 0l2.828 2.828 9.05-9.05a7.182 7.182 0 0 1 2.335-1.563Z" clip-rule="evenodd"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h144v144H0z" style="fill-opacity: .25;"/>
+    </clipPath>
+    <clipPath id="b">
+      <path fill="#fff" d="M0 0h144v144H0z" style="fill-opacity: .25;"/>
+    </clipPath>
+  </defs>
+</svg>

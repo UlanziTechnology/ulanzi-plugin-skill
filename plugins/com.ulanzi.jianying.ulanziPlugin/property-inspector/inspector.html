@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Jianying Pro</title>
+  <link rel="stylesheet" href="../plugin/libs/css/uspi.css">
+  <link rel="stylesheet" href="./inspector.css">
+</head>
+<body>
+  <div class="uspi-wrapper hidden" id="wrapper">
+    <div id="jianying-connection-status" class="tip info connection-status" data-localize="Checking Jianying Pro">正在检测剪映专业版…</div>
+    <hr>
+
+    <form id="property-inspector">
+      <div class="uspi-item" id="command-row">
+        <div class="uspi-item-label" data-localize="Function">功能</div>
+        <div class="uspi-item-value uspi-select-row">
+          <select id="command"></select>
+          <button type="button" class="uspi-refresh-btn" id="refresh-shortcuts" data-localize="Refresh shortcuts" title="Refresh shortcuts"></button>
+        </div>
+      </div>
+
+      <div class="shortcut-note" id="shortcut-preview">
+        <p class="hint" id="shortcut-source">正在读取剪映快捷键…</p>
+        <p class="hint"><span data-localize="Executed shortcut">执行快捷键</span>：<span id="shortcut-display"></span></p>
+        <p class="tip warn hidden" id="shortcut-help" role="status"></p>
+      </div>
+
+      <div class="uspi-item" id="timeline-mode-row">
+        <div class="uspi-item-label" data-localize="Current function">当前功能</div>
+        <select class="uspi-item-value select" id="timeline-mode"></select>
+      </div>
+
+      <div class="uspi-item" id="basic-hover-turn-row">
+        <div class="uspi-item-label" data-localize="Turn">旋转</div>
+        <select class="uspi-item-value select" id="basic-hover-turn">
+          <option value="hover_decrease_increase" data-localize="Decrease / increase hovered parameter">减小 / 增大悬停参数</option>
+        </select>
+      </div>
+
+      <div class="uspi-item" id="basic-hover-press-row">
+        <div class="uspi-item-label" data-localize="Press">按下</div>
+        <select class="uspi-item-value select" id="basic-hover-press">
+          <option value="reset_hovered" data-localize="Reset hovered parameter">重置悬停参数</option>
+        </select>
+      </div>
+
+      <p class="hint" id="selected-slider-hover-help" data-localize="Selected slider hover help">将鼠标移到“调节 → 基础”或“HSL”中的受支持滑条上。出现青色角框后旋转调节，按下重置。支持基础：色温、色调、饱和度、自然饱和度、亮度、对比度、高光、阴影、白色、黑色、光感、锐化、清晰度、颗粒、褪色、暗角；HSL：红、橙、黄、绿、青、蓝、紫、品红各自的色相、饱和度、亮度。</p>
+
+      <div class="uspi-item" id="color-wheel-dial-mode-row">
+        <div class="uspi-item-label" data-localize="Dial mode">旋转模式</div>
+        <select class="uspi-item-value select" id="color-wheel-dial-mode">
+          <option value="orbit" data-localize="Rotate around center">绕中心旋转</option>
+          <option value="diameter" data-localize="Push / pull along diameter">径向推拉</option>
+        </select>
+      </div>
+
+      <div class="uspi-item" id="color-wheel-hold-dial-mode-row">
+        <div class="uspi-item-label" data-localize="Press + dial mode">按住旋转</div>
+        <select class="uspi-item-value select" id="color-wheel-hold-dial-mode">
+          <option value="diameter" data-localize="Push / pull along diameter">径向推拉</option>
+          <option value="orbit" data-localize="Rotate around center">绕中心旋转</option>
+        </select>
+      </div>
+
+      <p class="hint" id="color-wheel-hover-help" data-localize="Color wheel hover help">请先在剪映中打开“调整 → 色轮”，再把鼠标移到强度滑条或任一色轮上。出现青色角标后即可旋转调整；按下旋钮重置当前悬停项。</p>
+
+      <div class="uspi-item" id="parameter-row">
+        <div class="uspi-item-label" data-localize="Parameter">参数</div>
+        <select class="uspi-item-value select" id="parameter"></select>
+      </div>
+
+      <div id="parameter-subset-row">
+        <div class="subset-title" data-localize="Cycle parameters">参与短按轮换的参数</div>
+        <p class="hint subset-hint" data-localize="Cycle parameters help">勾选短按旋钮时需要依次切换的参数；旋转只调节当前参数。</p>
+        <div id="parameter-subset" class="parameter-subset"></div>
+      </div>
+
+      <div class="uspi-item" id="color-row">
+        <div class="uspi-item-label" data-localize="Color">颜色</div>
+        <select class="uspi-item-value select" id="hsl-color">
+          <option value="red" data-localize="Red">红</option><option value="orange" data-localize="Orange">橙</option>
+          <option value="yellow" data-localize="Yellow">黄</option><option value="green" data-localize="Green">绿</option>
+          <option value="cyan" data-localize="Cyan">青</option><option value="blue" data-localize="Blue">蓝</option>
+          <option value="purple" data-localize="Purple">紫</option><option value="magenta" data-localize="Magenta">洋红</option>
+        </select>
+      </div>
+
+      <div class="uspi-item" id="sensitivity-row">
+        <div class="uspi-item-label" data-localize="Sensitivity">灵敏度</div>
+        <select class="uspi-item-value select" id="sensitivity">
+          <option value="0.5">0.5×</option><option value="1">1×</option>
+          <option value="2">2×</option><option value="5">5×</option>
+        </select>
+      </div>
+
+      <div class="uspi-item" id="require-active-row">
+        <div class="uspi-item-label" data-localize="Only when Jianying is frontmost">仅剪映前台</div>
+        <div class="uspi-item-value check-value">
+          <input id="require-active" type="checkbox" checked>
+          <label for="require-active"><span></span></label>
+        </div>
+      </div>
+
+      <details id="calibration-panel">
+        <summary data-localize="Mouse adjustment calibration">鼠标调节校准</summary>
+        <p class="hint" data-localize="Calibration help">填写当前参数数值或滑杆所在的屏幕坐标。旋钮会在这里做拖动，长按会双击复位。</p>
+        <div class="coordinate-grid">
+          <label><span data-localize="X coordinate">X</span> <input id="target-x" type="number" step="1" placeholder="1490"></label>
+          <label><span data-localize="Y coordinate">Y</span> <input id="target-y" type="number" step="1" placeholder="420"></label>
+          <label><span data-localize="Pixels per tick">像素/格</span> <input id="pixels-per-step" type="number" min="0.1" step="0.1" value="2"></label>
+          <label id="wheel-radius-label"><span data-localize="Wheel radius">色轮半径</span> <input id="wheel-radius" type="number" min="10" step="1" value="45"></label>
+          <label><span data-localize="Direction">方向</span>
+            <select id="axis"><option value="horizontal" data-localize="Horizontal">水平</option><option value="vertical" data-localize="Vertical">垂直</option></select>
+          </label>
+        </div>
+        <button type="button" id="capture-pointer" class="capture-button" data-localize="Capture parameter position">3 秒后读取鼠标位置</button>
+        <button type="button" id="clear-calibration" class="clear-button" data-localize="Clear parameter calibration">清除当前参数校准</button>
+        <p class="hint capture-hint" id="capture-hint" data-localize="Capture help">点击后，把鼠标移到剪映当前参数的数值或滑杆上并保持不动。</p>
+
+        <div class="calibration-subtitle" data-localize="Panel linkage (optional)">面板联动（可选）</div>
+        <p class="hint" data-localize="Panel linkage help">如果旋转前需要自动打开“基础 / HSL / 色轮”区域，请读取该入口的坐标。</p>
+        <div class="coordinate-grid">
+          <label><span data-localize="Entry X">入口 X</span> <input id="panel-x" type="number" step="1"></label>
+          <label><span data-localize="Entry Y">入口 Y</span> <input id="panel-y" type="number" step="1"></label>
+          <label><span data-localize="Wait seconds">等待秒数</span> <input id="panel-delay" type="number" min="0.02" max="0.5" step="0.02" value="0.12"></label>
+        </div>
+        <button type="button" id="capture-panel" class="capture-button" data-localize="Capture panel entry">3 秒后读取面板入口</button>
+        <button type="button" id="clear-panel" class="clear-button" data-localize="Clear panel linkage">清除面板联动</button>
+      </details>
+
+      <div id="status" class="status" data-localize="Connecting to plugin">正在连接插件…</div>
+      <p class="hint" id="gesture-help" data-localize="Gesture help">短按切换参数，长按复位；按住旋转为精细调节。</p>
+    </form>
+  </div>
+
+  <script src="../plugin/libs/js/constants.js"></script>
+  <script src="../plugin/libs/js/eventEmitter.js"></script>
+  <script src="../plugin/libs/js/timers.js"></script>
+  <script src="../plugin/libs/js/utils.js"></script>
+  <script src="../plugin/libs/js/ulanziApi.js"></script>
+  <script src="./inspector.js"></script>
+</body>
+</html>

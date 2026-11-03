@@ -1,0 +1,17 @@
+{
+  "name": "com.ulanzi.premierepro.ulanzi-plugin",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Premiere Pro phase-one CEP development build",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "ws": "8.21.0"
+  },
+  "scripts": {
+    "check": "node --check plugin/app.js"
+  }
+}
