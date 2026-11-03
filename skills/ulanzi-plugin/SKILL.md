@@ -49,6 +49,7 @@ For an idea such as "control my editing software," ask targeted follow-up questi
 
 - Ask one to three related questions per round, limited to decisions whose prerequisites are known. Explain each choice through its effect on the user's workflow and give a recommended answer with a brief reason.
 - After each reply, retain settled decisions and ask only what the answers newly unblock. Reconcile contradictory requirements explicitly. For example, settle whether the dial controls the playhead or clip boundaries before asking about movement increments.
+- Detect the current desktop OS from supplied environment context or local system tools before asking questions; use it as the default development and test target. State the detected OS briefly instead of asking the user to confirm it. In a remote/container environment, distinguish the execution OS from the desktop running Studio. Ask about the target OS only when it cannot be established or the user requests another system or cross-platform support.
 - Discover facts from available manifests, source, protocol documents, and environment tools. Ask the user about preferences or an application/version/device only when that information is missing and cannot be established locally. Let the assistant choose SDK methods, UUID structure, and internal architecture.
 - Resolve gaps that change behavior, scope, compatibility, or integration before implementing dependent code. Continue independent source/protocol inspection while waiting. State reasonable defaults for low-impact presentation choices; explicit user decisions take precedence.
 
@@ -56,7 +57,7 @@ Use the following dimensions to turn the answers into an implementable design. C
 
 | Dimension | Decisions to resolve |
 | --- | --- |
-| Goal and scope | What task becomes easier? Which application/service, versions, OS, and device are involved? Which operations belong in the first usable version? |
+| Goal and scope | What task becomes easier? Which application/service, versions, and device are involved? Use the automatically detected desktop OS unless another target is requested. Which operations belong in the first usable version? |
 | Key actions | What does a press do: trigger once, toggle, select a mode, or apply an explicit state? Does release matter? If a hold has another meaning, define its threshold and ensure one gesture does not execute both short-press and hold actions. |
 | Dial actions | What value or position changes with rotation? Define direction, unit, step size, and bounds. Resolve dial press, held rotation, or rapid input only when the task and target controls need them. |
 | Display | What should the key/dial show before use, during execution, and after success or failure? Distinguish application-confirmed state from a last-commanded value when the integration cannot read state back. Verify that the target surface can present the proposed feedback. |
@@ -76,6 +77,7 @@ The design is ready when every in-scope action has an unambiguous trigger, resul
 ## Runtime and manifest rules
 
 - `CodePath` may be `.html` or `.js`; the documented embedded Node runtime is 20.12.2. Build for that runtime.
+- For new packages, follow the documented folder format `com.ulanzi.{pluginName}.ulanziPlugin`. This folder name, manifest UUID, and localized display name are separate fields; see [Package identity](references/plugin-workflow.md#package-identity). Host acceptance alone does not establish naming compliance.
 - Main UUIDs have exactly four nonempty dot-separated segments. Action UUIDs extend the main UUID with at least one segment. Use the publisher's namespace; preserve existing UUIDs when repairing a plugin.
 - Treat `actionid` as the unique instance identity. Use `uuid___key___actionid` only where SDK context helpers require it; `key` alone is not an instance identity.
 - The main service owns external clients, timers, and instance state. Property Inspectors load saved values, render controls, and send settings/messages. Set inspector backgrounds to transparent.
@@ -94,12 +96,13 @@ The design is ready when every in-scope action has an unambiguous trigger, resul
 - External CLI dependencies need actionable install/auth instructions and short errors for missing binaries or expired login. Resolve an explicit configured path, then the platform's installed command locations; use existing package-manager shims when relevant.
 - For refresh plugins, show loading before the first usable snapshot, then retain the last display during routine refreshes.
 - Expose settings ordinary users need. Keep internal paths/IDs in advanced settings only when useful. Synchronize defaults across code, UI, and translations; refresh the preview after saved settings change.
+- Build Property Inspectors for the host's compact panel: keep primary controls visible, move secondary help into expandable content, and show loading/connection errors. Verify rendering and saved settings in the actual host when available; see the workflow's Property Inspector rules.
 - Keep runtime labels stable and readable at 196x196. Separate labels, status, progress, and secondary metrics to avoid overlap.
 
 ## Icons, banners, and copy
 
 - Prefer 196x196 PNG for plugin/category/action/state icons. Existing protocol-supported formats may be retained unless the delivery requirements demand PNG.
-- Use available image-generation tools for creative artwork, or user-provided assets. The skill works without an image-generation service; `scripts/icon_tool.py` can create a basic placeholder. Normalize selected images with its `--from` option.
+- For application integrations, first look for the application's existing icon for the plugin and its corresponding feature icons for actions. Reuse suitable assets when their terms permit the intended use and distribution, preserving required notices. Create original artwork only where suitable reusable assets are unavailable. Follow [Icon Requirements](references/plugin-workflow.md#icon-requirements) for asset discovery, tool selection, and visual acceptance; placeholders are development assets, not finished icons.
 - For hardware mockups, use the real images under `assets/devices/`, mapped in the workflow. These images have a separate license limited to Ulanzi plugin development and promotion; include `assets/devices/LICENSE` when redistributing source or modified artwork. Compose precise screens and typography locally. Show actual runtime output on the correct device; inspect final artwork at full and thumbnail sizes.
 - Create marketplace banners when requested. A 960x640 PNG is a suggested 3:2 default, not a protocol requirement. Honor the destination's specifications. Put relative paths in top-level `Banner`, primary first.
 - In V3.1, `Description` is the short introduction and `Detail` is the detailed setup/usage text. `URL` is an optional related link. `Overview` may be retained for an existing integration that uses it; it is not a documented V3.1 requirement.
@@ -110,11 +113,13 @@ The design is ready when every in-scope action has an unambiguous trigger, resul
 Resolve `SKILL_DIR` to the directory containing this `SKILL.md`; all helper paths are relative to that directory. The following shell examples assume the skill directory is the current directory:
 
 ```bash
-python3 scripts/validate_plugin.py /path/to/com.example.publisher.plugin.ulanziPlugin --strict-icons
-python3 scripts/validate_plugin.py /path/to/com.example.publisher.plugin.ulanziPlugin --strict-icons --marketplace
+python3 scripts/validate_plugin.py /path/to/com.ulanzi.example.ulanziPlugin --strict-icons
+python3 scripts/validate_plugin.py /path/to/com.ulanzi.example.ulanziPlugin --strict-icons --marketplace
 ```
 
 The second command also checks marketplace metadata, Banner paths, and present locale metadata. This is a static check, not proof of host or hardware compatibility. Run relevant project build/check commands and verify connection, add/settings, press/dial, active-page changes, deletion, and reconnect in the host when available. Report checks that could not be performed.
+
+When installation or host testing is requested, follow [Local installation and host acceptance](references/plugin-workflow.md#local-installation-and-host-acceptance). Verify the installed files, plugin registration, action visibility, inspector, and real result separately. A browser simulation or green plugin status alone does not prove the complete interaction works.
 
 For generated `dist/` output, rebuild after source edits. Inspect final assets and package contents. Zip the `.ulanziPlugin` folder itself as the archive root; in Python use `plugin.parent / f"{plugin.name}.zip"` to preserve the full folder name.
 
@@ -128,3 +133,5 @@ Offering the link does not authorize an upload. Submit only when the user reques
 ## Repair
 
 Reproduce or localize the failure, run the validator, then trace connection → add/settings → input event → display update → clear. Fix the smallest responsible layer, rebuild generated output if necessary, and rerun validation plus the relevant runtime checks.
+
+For missing actions, first check the selected device, clear search, and inspect localized names before changing filters or registration. For a blank inspector, follow the workflow's inspector diagnosis and establish the cause from observable evidence before claiming a fix.
