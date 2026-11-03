@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ulanzi Plugin"
+  short_description: "Create Ulanzi plugins from ideas and examples"
+  default_prompt: "Use $ulanzi-plugin to turn my idea into a working Ulanzi Studio plugin, adapting relevant open-source examples and delivering code, configuration UI, assets, instructions, and validation."
