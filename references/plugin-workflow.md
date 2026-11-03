@@ -254,10 +254,12 @@ Manifest:
 ```json
 {
   "Controllers": ["Keypad", "Encoder"],
-  "Devices": ["D200X"],
+  "Devices": ["D200", "D200H", "D200X"],
   "Encoder": { "layout": "$UA1" }
 }
 ```
+
+This fragment uses the default D200-series filter. `Controllers` declares the action's supported surfaces; the device list does not imply every model has a dial or the same display. Honor explicit narrower targets and verified hardware constraints. Read [D200X Encoder drag/drop compatibility](protocol-v3.1-notes.md#d200x-encoder-dragdrop-compatibility) before restricting a D200X Encoder action: on the observed macOS Studio 3.4.4 path, a `D200X`-only filter blocked dial assignment.
 
 Layout rules:
 
@@ -415,14 +417,27 @@ Do not claim a repaired plugin is complete until manifest paths, icons, CodePath
 
 ## Local installation and host acceptance
 
-When the user requests installation or host testing:
+For local plugin creation or repair, deploy proactively when Studio is installed on the target desktop, unless the user requests source/package only. A missing companion application or disconnected device limits runtime testing but need not prevent Studio deployment. When Studio is absent, the desktop is inaccessible from a remote/container environment, or permissions prevent deployment, deliver the package and report the specific limitation.
 
-1. Establish the running host version, OS, selected device and actual plugin directory before changing files. Common locations are `~/Library/Application Support/Ulanzi/UlanziDeck/Plugins/` on macOS and `%APPDATA%\Ulanzi\UlanziDeck\Plugins\` on Windows; confirm them from the local installation rather than creating a guessed path. Prefer available supported installation/reload mechanisms; direct copying is a development fallback.
-2. Build and validate the deliverable, then install the complete `.ulanziPlugin` folder with `manifest.json` directly inside it. Check for an existing package/UUID first, preserve local changes and settings, and back up a copy before replacing it. Verify the destination files and version before reporting installation complete.
+1. Establish the running host version, automatically detected desktop OS, selected device and actual plugin directory before changing files. Common locations are `~/Library/Application Support/Ulanzi/UlanziDeck/Plugins/` on macOS and `%APPDATA%\Ulanzi\UlanziDeck\Plugins\` on Windows; confirm them from the local installation rather than creating a guessed path. Use the platform-specific development deployment below.
+2. Build and validate the complete `.ulanziPlugin` folder with `manifest.json` directly inside it. Inspect the destination entry even if it is a broken link, and check for the same UUID under other folder names. Reuse a link already pointing to this package. Preserve existing independent installations, source changes and settings; before an intentional replacement, back up the entry outside the scanned Plugins directory. Never recursively delete through a directory link. Verify the resolved destination files and version before reporting deployment complete.
 3. Reload plugins through a supported host mechanism when available. If the host has not rescanned, normally quit and reopen it within the user's authorized testing scope, preserving ongoing work. Verify that the management page recognizes the expected name, version, and running status.
 4. Select the target device and surface, clear the action-list search, and look for the current UI language's plugin/category/action names. If still absent, inspect `Devices`, `Controllers`, manifest action entries, and load errors in that order. A search for the English name may hide a Chinese-localized action.
-5. Add the action to an unused key/slot or dedicated test page, preserving existing assignments. Open its inspector, configure it, save, reselect it, and exercise the key/dial behavior. Check the actual external result and visible success/failure feedback, not just process status.
+5. Drag each declared controller type onto an unused matching key or dial slot, preserving existing assignments. Confirm that an instance was actually created; appearing in the list or working on a key does not establish dial assignability. Open its inspector, configure it, save, reselect it, and exercise the key/dial behavior. Check the actual external result and visible success/failure feedback, not just process status. If dial drop fails, inspect `Controllers`, `Encoder.layout`, target surface and device-filter compatibility; consult the D200X notes before broadening filters.
 6. Report installation, registration, inspector/settings, runtime result, and hardware verification separately. If hardware is disconnected, distinguish the Studio preview from a physical-device test. Rebuild the final ZIP after any fixes so installed and delivered files agree.
+
+### Platform-specific development deployment
+
+Link the entire package from a stable development workspace into the confirmed Plugins directory, using the documented package folder name as the link name. Resolve absolute paths and quote paths containing spaces. Keep the source outside temporary build directories and outside the installed skill; tell the user that moving or removing it breaks the deployment. Links expose source edits, but generated bundles still need rebuilding and running services may need reloading.
+
+| Desktop platform | Preferred development deployment | Fallback |
+| --- | --- | --- |
+| macOS | Directory symbolic link: `ln -s "$pluginSource" "$pluginDestination"` | Supported Studio installation mechanism or a complete directory copy if links fail host recognition/access checks. |
+| Windows | For a local directory target on a filesystem supporting junctions, PowerShell: `New-Item -ItemType Junction -Path $pluginDestination -Target $pluginSource` | A directory symbolic link when already permitted, otherwise a supported installer or complete directory copy. |
+
+These commands assume the source exists and the destination is absent after inspection; use neither force-overwrite flags nor an extra directory level. On Windows, use native Windows paths, not WSL paths or POSIX `ln`. Symbolic links may require Developer Mode or elevated privileges; use an available fallback rather than changing system policy or requesting elevation solely for linking. See [PowerShell New-Item](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item) for link types and permission requirements. On any other platform, establish Studio support and its actual installation mechanism before deploying; do not infer a plugin path from macOS or Windows conventions.
+
+After linking, verify the link type, resolved target, readable manifest/assets/entrypoints, and Studio registration. Filesystem link creation alone does not prove Studio follows it. If copying is necessary, record that later source changes require recopying. Build release ZIPs from the real package contents so recipients receive files and dependencies rather than a development link.
 
 ## Publishing To UGC
 

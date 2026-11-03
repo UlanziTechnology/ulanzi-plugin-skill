@@ -53,6 +53,22 @@ git clone --depth 1 --branch skill https://github.com/UlanziTechnology/ulanzi-pl
 
 **确认安装**：在编程助手中新建对话，尝试调用 `ulanzi-plugin`。Codex CLI 可用 `/skills` 查看，或在输入框输入 `$ulanzi-plugin`；若未显示，重启后重试。然后发送下一步的创作需求。
 
+### 更新 skill
+
+通过 Skills CLI 安装后，可从记录的来源更新这个 skill：
+
+```bash
+npx skills update ulanzi-plugin
+```
+
+全局安装使用：
+
+```bash
+npx skills update ulanzi-plugin --global
+```
+
+手动安装且没有 Skills CLI 来源记录时，先比较或备份本地修改，再执行上方轻量分支的 `npx skills add` 命令；用户级安装追加 `--global`。更新后新开会话，或让助手重新读取 `SKILL.md`。单独下载的插件示例不会随这些命令更新。
+
 ## 开始使用
 
 从一个具体需求开始，让助手完成动作、配置界面、显示反馈和使用说明；也可以为已有插件增加交互、修复问题或准备发布包。

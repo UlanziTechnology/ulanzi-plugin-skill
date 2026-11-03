@@ -54,6 +54,22 @@ The shorthand `UlanziTechnology/ulanzi-plugin-skill --skill ulanzi-plugin` also 
 
 **Verify installation:** start a new conversation in your coding assistant and try invoking `ulanzi-plugin`. In Codex CLI, use `/skills` or type `$ulanzi-plugin` in the prompt. If it does not appear, restart and try again. Then send the creation request below.
 
+### Update the skill
+
+If installed with Skills CLI, update this skill from its recorded source:
+
+```bash
+npx skills update ulanzi-plugin
+```
+
+For a global installation, use:
+
+```bash
+npx skills update ulanzi-plugin --global
+```
+
+If installed manually without a Skills CLI source record, compare or back up local changes, then run the lightweight-branch `npx skills add` command above, using `--global` for a user-level installation. After updating, start a new conversation or ask the assistant to reread `SKILL.md`. Plugin examples downloaded separately are not updated by these commands.
+
 ## Usage
 
 Start with a specific idea and ask the assistant to build actions, settings UI, display feedback, and user instructions. You can also extend an existing plugin, repair a problem, or prepare a package for release.
