@@ -60,6 +60,19 @@ com.ulanzi.example.ulanziPlugin/
 └── README*.md
 ```
 
+### Package identity
+
+Keep these identities distinct:
+
+| Field | Purpose | Example |
+| --- | --- | --- |
+| Folder | Documented package naming format for new plugins | `com.ulanzi.weathercard.ulanziPlugin` |
+| Manifest `UUID` | Stable plugin identity: exactly four nonempty segments | `com.example.tools.weathercard` |
+| Action `UUID` | Plugin UUID extended with the action identifier | `com.example.tools.weathercard.current` |
+| `Name` and localized names | Human-readable labels shown in Studio | `Weather Card` / `天气卡片` |
+
+The protocol's folder convention is separate from the publisher's UUID namespace. Keep existing UUIDs stable during repairs or folder renames so saved actions retain their identity. Check affected paths and rebuild the ZIP after a rename; when an installed copy moves, reload the host and check its inspector paths. A plugin that loads may still depart from documented packaging conventions.
+
 ## Manifest Checklist
 
 Required top-level fields:
@@ -202,6 +215,11 @@ Property Inspector rules:
 - Load saved params/settings, render controls, and send settings or transient messages.
 - Use `sendToPlugin` for UI-to-main messages that are not persisted.
 - Avoid durable business logic; the main service owns long-running state.
+- Fit the host's available panel rather than a full browser page. Keep the primary inputs, selection, save action, and status visible; use responsive widths and expandable secondary instructions. Measure the actual viewport when available instead of inventing a universal panel size.
+- Render the form immediately with a loading/connection status. Keep useful errors visible if startup arguments, WebSocket connection, settings retrieval, or external requests fail; an empty panel is not an acceptable error state.
+- Verify the manifest's `PropertyInspectorPath`, relative scripts/styles, host-supplied startup parameters, connection handshake, restored settings, save acknowledgement, and main-service feedback. Use the supplied host address/port rather than assuming port 3906.
+- For a blank panel, distinguish document load failure from script errors, connection failure, and layout clipping. Inspect the installed files, resolved paths and available host logs/console; after a directory rename, verify whether the host still references the old path. Reload once when needed and retest the same action. Treat a cache issue as a hypothesis until the observed result supports it.
+- Browser mocks help exercise settings and error states; host acceptance also requires opening the inspector in Studio, saving a value, reselecting the action to verify persistence, and observing the resulting key/dial feedback. Report unavailable checks explicitly.
 
 ## Architecture Patterns
 
@@ -289,7 +307,15 @@ Create PNG icons at 196x196 pixels:
 
 Keep icons centered, high contrast, readable at small size, and matched to the function. Prefer symbolic visual metaphors over long text. Use state pairs for toggles: off/on, disconnected/connected, inactive/active, failed/success.
 
-Use available image-generation tools for polished artwork, or supplied assets. The fallback helper creates basic placeholders without dependencies.
+Choose artwork in this order:
+
+1. For a plugin integrating an application, first inspect supplied assets, the relevant example, and official application resources for the application's icon. For each action, look for that application's corresponding feature/tool icon, including suitable state variants. Reuse recognizable assets where available rather than inventing replacements.
+2. Check the asset's source and terms for the intended plugin use and redistribution; retain attribution and notices where required. An installed application or a public download alone does not establish redistribution permission. If reuse is restricted or unclear, use an original functional symbol instead of copying the logo or restricted artwork.
+3. For missing or unsuitable assets, design icons around each action's meaning. Keep new icons consistent with the reused set in weight, palette, contrast, and padding; distinguish related actions and states. A plugin with no target application needs its own visual identity.
+
+For original artwork, discover the image-generation/editing tools and relevant skills actually available in the current session and follow their instructions. Choose by available capability rather than agent brand: ChatGPT/Codex, Claude, Gemini, WorkBuddy, and Doubao clients may expose different tools. When an image-generation tool such as `imagegen` is available, use it for artwork that benefits from generation. Otherwise, use available SVG/Canvas drawing and PNG export tools for clear functional symbols, or suitable user-supplied assets. If the environment cannot produce final assets, report that limitation and label any remaining placeholders explicitly. The fallback helper generates development placeholders; replace them before calling the icons finished.
+
+Inspect every selected or created icon at full resolution and at the target key's thumbnail size. Check recognizable meaning, clean edges, padding, background/alpha behavior, consistent style, and distinguishable states. Size validation alone does not establish visual quality. Normalize final assets and verify the plugin, category, action, and state paths in the manifest.
 
 Run these helpers from the skill directory (or resolve their paths from the loaded skill):
 
@@ -386,6 +412,17 @@ npm run smoke
 ```
 
 Do not claim a repaired plugin is complete until manifest paths, icons, CodePath, and PI paths validate.
+
+## Local installation and host acceptance
+
+When the user requests installation or host testing:
+
+1. Establish the running host version, OS, selected device and actual plugin directory before changing files. Common locations are `~/Library/Application Support/Ulanzi/UlanziDeck/Plugins/` on macOS and `%APPDATA%\Ulanzi\UlanziDeck\Plugins\` on Windows; confirm them from the local installation rather than creating a guessed path. Prefer available supported installation/reload mechanisms; direct copying is a development fallback.
+2. Build and validate the deliverable, then install the complete `.ulanziPlugin` folder with `manifest.json` directly inside it. Check for an existing package/UUID first, preserve local changes and settings, and back up a copy before replacing it. Verify the destination files and version before reporting installation complete.
+3. Reload plugins through a supported host mechanism when available. If the host has not rescanned, normally quit and reopen it within the user's authorized testing scope, preserving ongoing work. Verify that the management page recognizes the expected name, version, and running status.
+4. Select the target device and surface, clear the action-list search, and look for the current UI language's plugin/category/action names. If still absent, inspect `Devices`, `Controllers`, manifest action entries, and load errors in that order. A search for the English name may hide a Chinese-localized action.
+5. Add the action to an unused key/slot or dedicated test page, preserving existing assignments. Open its inspector, configure it, save, reselect it, and exercise the key/dial behavior. Check the actual external result and visible success/failure feedback, not just process status.
+6. Report installation, registration, inspector/settings, runtime result, and hardware verification separately. If hardware is disconnected, distinguish the Studio preview from a physical-device test. Rebuild the final ZIP after any fixes so installed and delivered files agree.
 
 ## Publishing To UGC
 
