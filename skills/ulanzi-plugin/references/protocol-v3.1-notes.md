@@ -33,6 +33,16 @@ Model strings are case-sensitive in manifests. Product labels and asset filename
 
 `Controllers` selects Keypad or Encoder surfaces; it is independent of the hardware filter. The source documents D200X feedback coordinates as 126x140. It does not document DialMini or AU05 display geometry; do not reuse D200X coordinates or infer input capabilities from a product photo. Verify runtime events and layout support on each target device.
 
+For new D200-series actions, the skill's default is to include the family together: `Devices: ["D200", "D200H", "D200X"]`. Use canonical `D200X` casing even when a user writes D200x. This is a development default, not a protocol requirement or proof of tested support on all three models. Honor explicit narrower targets and verified hardware constraints; preserve intentional existing filters during repairs. Select Keypad/Encoder surfaces through `Controllers` and adapt runtime feedback to actual device capabilities.
+
+### D200X Encoder drag/drop compatibility
+
+Observed on macOS Studio 3.4.4: an Encoder action with `Devices: ["D200X"]` can appear in the action list but fail to drop onto a D200X dial. The examined host drag/drop path checks the legacy `D200` identifier; allowing both `D200X` and `D200` on the affected Encoder actions restored dial assignment in Studio. This is a host compatibility workaround, not a protocol model rename or evidence that a physical D200 has encoders. Other host versions and Windows need their own verification.
+
+The default family filter above includes the required legacy `D200` alias. When repairing an intentionally D200X-only plugin on this affected host, add `D200` to the affected Encoder actions and preserve UUIDs/settings; leave other intentional filters unchanged unless wider support is requested. Broader filters may also expose the action elsewhere, so check visibility and runtime behavior on intended surfaces; use an absent/empty filter only when broad device support is intended. Do not change reported runtime device identities or infer display geometry from this compatibility identifier.
+
+Acceptance requires dragging each Encoder action onto an unused dial slot, confirming that an instance was created, reopening its inspector, and checking its Encoder layout. Validate dial events on connected hardware when available. Action-list visibility and a valid manifest alone do not establish assignability.
+
 ## New manifest metadata
 
 - `Description`: short introduction parsed by UGC.

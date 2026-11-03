@@ -41,7 +41,7 @@ The optional DaVinci and Jianying examples use Python; this JS protocol skill an
 1. Turn the request into an action design using the interview below. Reuse decisions already supplied; a concrete request can proceed without an interview.
 2. Choose a relevant example or a minimal HTML/Node structure. When creating a new plugin from an example, assign a new plugin UUID and action UUIDs, update names and paths consistently, and keep required upstream license notices. Preserve UUIDs when repairing the original plugin.
 3. Implement one complete interaction from inspector settings through the main service to a key/dial result, then add the remaining requested actions. Keep external clients shared and action instances isolated.
-4. Finish assets, user instructions, build output when needed, and validation. Provide the working `.ulanziPlugin` folder and package when requested; include marketplace artwork and submission only when in scope.
+4. Finish assets, user instructions, build output when needed, and validation. If Studio is installed on the local target desktop, deploy the usable plugin for iteration using the workflow below unless the user requests source/package only. Provide the working `.ulanziPlugin` folder and package when requested; include marketplace artwork and submission only when in scope.
 
 ### Interview: from requirements to action design
 
@@ -86,6 +86,7 @@ The design is ready when every in-scope action has an unambiguous trigger, resul
 - Persist action settings with `setSettings` / `getSettings` / `didReceiveSettings`. Use global settings for plugin-wide values and `sendToPlugin` / `sendToPropertyInspector` for transient messages. Adapt SDK wrappers only after checking their actual signatures.
 - For V3.1 display updates on host 3.3.0+, use `setState`, `setImage`, and `setTitle`. Preserve legacy `state`/SDK icon helpers when supporting older hosts. Follow the notes for default versus temporary icons.
 - Add `Controllers` and an `Encoder.layout` for Encoder actions. Device filters use protocol models `D200`, `D200H`, `Dial`, `D200X`, `D100N`, and `AU05`; product names such as Vibe Key and DialMini are labels, not manifest values. See the device table and filtering caveat in the notes.
+- For new D200-series actions, default to `Devices: ["D200", "D200H", "D200X"]` together unless the user explicitly narrows the target or a verified hardware limitation requires a narrower filter. Declare supported surfaces separately with `Controllers`; the family filter does not grant every model Encoder capability or identical display geometry. Preserve intentional filters when repairing existing actions.
 - Use `Software.MinVersion` for the minimum supported host, not the protocol version. V3.1-specific features need `3.3.0`; see the feature matrix for lower compatible baselines. `Software.MinimumVersion` is deprecated.
 - V3.1 requires `States[].Name`; use `MultiActionImage` and `SupportedInKeyLogicActions` when relevant. Honor `isInMultiAction` and `multiActionState` when executing a selected state.
 - AI Agent subscriptions belong in the main service: subscribe after connection, resubscribe after reconnect, keep `include_raw` false by default, and query only subscribed agents. The documented host/device prerequisites are in the notes.
@@ -119,7 +120,7 @@ python3 scripts/validate_plugin.py /path/to/com.ulanzi.example.ulanziPlugin --st
 
 The second command also checks marketplace metadata, Banner paths, and present locale metadata. This is a static check, not proof of host or hardware compatibility. Run relevant project build/check commands and verify connection, add/settings, press/dial, active-page changes, deletion, and reconnect in the host when available. Report checks that could not be performed.
 
-When installation or host testing is requested, follow [Local installation and host acceptance](references/plugin-workflow.md#local-installation-and-host-acceptance). Verify the installed files, plugin registration, action visibility, inspector, and real result separately. A browser simulation or green plugin status alone does not prove the complete interaction works.
+For local creation or repair with Studio installed, proactively follow [Local installation and host acceptance](references/plugin-workflow.md#local-installation-and-host-acceptance) before final delivery; a separate installation request is unnecessary. Prefer a platform-appropriate directory link to the stable development package, with copying as a fallback. Honor source/package-only requests and report deployment blockers. Verify the installed files, plugin registration, action visibility, inspector, and real result separately. A browser simulation or green plugin status alone does not prove the complete interaction works.
 
 For generated `dist/` output, rebuild after source edits. Inspect final assets and package contents. Zip the `.ulanziPlugin` folder itself as the archive root; in Python use `plugin.parent / f"{plugin.name}.zip"` to preserve the full folder name.
 
@@ -134,4 +135,4 @@ Offering the link does not authorize an upload. Submit only when the user reques
 
 Reproduce or localize the failure, run the validator, then trace connection → add/settings → input event → display update → clear. Fix the smallest responsible layer, rebuild generated output if necessary, and rerun validation plus the relevant runtime checks.
 
-For missing actions, first check the selected device, clear search, and inspect localized names before changing filters or registration. For a blank inspector, follow the workflow's inspector diagnosis and establish the cause from observable evidence before claiming a fix.
+For missing actions, first check the selected device, clear search, and inspect localized names before changing filters or registration. If an action is visible but cannot be dropped onto a dial, verify actual Encoder assignment and the [D200X host compatibility caveat](references/protocol-v3.1-notes.md#d200x-encoder-dragdrop-compatibility); visibility alone is insufficient. For a blank inspector, follow the workflow's inspector diagnosis and establish the cause from observable evidence before claiming a fix.
