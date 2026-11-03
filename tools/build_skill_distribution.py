@@ -22,18 +22,21 @@ def build_distribution(output: Path) -> Path:
         SOURCE, output,
         ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store"),
     )
-    (output / "README.md").write_text(
-        "# Ulanzi Plugin Skill — lightweight distribution\n\n"
-        "This branch is generated from `skills/ulanzi-plugin/` on main.\n"
-        "It contains the skill, scripts, documentation, and device artwork. "
-        "Plugin examples are downloaded only when requested.\n\n"
-        "[Project, installation, and plugin examples]"
-        "(https://github.com/UlanziTechnology/ulanzi-plugin-skill/tree/main)\n\n"
-        "First-party code/documentation: [MIT](LICENSE). "
-        "Device artwork: [separate restricted license]"
-        "(assets/devices/LICENSE).\n",
-        encoding="utf-8",
-    )
+    # Publish the reviewed project introduction in both branches. Only example
+    # links point back to main, because the lightweight branch excludes plugins.
+    for name in ("README.md", "README.zh.md", "README.en.md"):
+        content = (ROOT / name).read_text(encoding="utf-8")
+        content = content.replace("](skills/ulanzi-plugin/", "](")
+        for index in ("README.md", "README.zh.md"):
+            content = content.replace(
+                f"](plugins/{index})",
+                f"](https://github.com/UlanziTechnology/ulanzi-plugin-skill/blob/main/plugins/{index})",
+            )
+        content = content.replace(
+            "](plugins/",
+            "](https://github.com/UlanziTechnology/ulanzi-plugin-skill/tree/main/plugins/",
+        )
+        (output / name).write_text(content, encoding="utf-8")
     return output
 
 
