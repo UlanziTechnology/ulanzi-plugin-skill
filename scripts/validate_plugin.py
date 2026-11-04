@@ -190,6 +190,14 @@ def validate(plugin_dir, strict_icons=False, marketplace=False):
         states = action.get("States") or []
         if not isinstance(states, list) or not states:
             errors.append(f"{prefix}.States: expected non-empty array")
+        elif len(states) > 2:
+            errors.append(f"{prefix}.States: expected at most 2 states (indices 0 and 1), got {len(states)}; use setImage for dynamic displays")
+        if "state" in action:
+            default_state = action["state"]
+            if type(default_state) is not int or default_state not in (0, 1):
+                errors.append(f"{prefix}.state: expected integer 0 or 1")
+            elif isinstance(states, list) and default_state >= len(states):
+                errors.append(f"{prefix}.state: index {default_state} has no corresponding States entry")
         for state_idx, state in enumerate(states if isinstance(states, list) else []):
             if not isinstance(state, dict):
                 errors.append(f"{prefix}.States[{state_idx}]: expected object")

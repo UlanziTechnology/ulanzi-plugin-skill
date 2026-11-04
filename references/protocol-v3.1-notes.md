@@ -55,9 +55,17 @@ Acceptance requires dragging each Encoder action onto an unused dial slot, confi
 
 `Overview` is a legacy convention from earlier skill guidance, not a documented V3.1 field. Preserve it only for consumers that explicitly use it. Translate `Description` and `Detail` in present locale files. Keep action/state labels aligned with the manifest's order.
 
+## Action state limits
+
+Each action must declare **one or two `States` entries, never more than two**. A single-state action uses index 0; a two-state action uses indices 0 and 1. Each entry requires a nonempty `Name` and an `Image`; `MultiActionImage` is optional. Default `state`, `setState`, `multiActionState`, and state/index references in icon updates must stay within these indices and reference an existing entry. `DisableAutomaticStates: true` changes who controls switching; it does not increase this limit.
+
+Reserve the declared states for a stable action meaning, such as off/on or stopped/running. Keep weather conditions, progress steps, API statuses, and other display variants in internal business data. Render dynamic images and send `setImage` with `isDefault: false` and one `icons` object using a documented path or Base64 source; use `setTitle` for text. For example, a weather action can declare one neutral state at index 0 while rendering clear, rain, snow, loading, and error displays without expanding `States`. These temporary images update the current state's display, not the selected logical state.
+
+When repairing a plugin with more than two states, consolidate its declarations and update default indices, runtime state mappings, and localized state metadata together. Preserve action UUIDs and existing settings, and handle stored selections of removed indices explicitly so they cannot emit an out-of-range state. The manifest validator rejects declarations above this limit; it cannot validate runtime messages or infer what an affected host would do with an unsupported index.
+
 ## Selected state execution
 
-New startup/event fields include `isInMultiAction` and `multiActionState` for configured multi-actions. Query parameters arrive as strings: parse booleans explicitly (`"false"` is truthy in JavaScript) and parse/validate the state index. State 0 is valid.
+New startup/event fields include `isInMultiAction` and `multiActionState` for configured multi-actions. Query parameters arrive as strings: parse booleans explicitly (`"false"` is truthy in JavaScript) and parse/validate the state index against the one or two declared entries. State 0 is valid.
 
 When an action executes in a multi-action with a selected state, apply that state deterministically instead of blindly toggling it. A repeated "start" invocation must not become "stop". Ordinary key actions may retain their intended toggle behavior. Preserve these fields through SDK/event adapters.
 
@@ -77,7 +85,7 @@ All three commands carry the action routing fields inside `param`:
 }
 ```
 
-`state` selects an index in the action's `States` array. `setTitle` uses the same routing fields and `text` for title content.
+`state` selects an existing index in the action's `States` array: only 0 or 1 is supported, and index 1 requires a second entry. `setTitle` uses the same routing fields and `text` for title content.
 
 `setImage` distinguishes persistent runtime default imagery from temporary display results:
 
