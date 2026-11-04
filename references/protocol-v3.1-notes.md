@@ -1,6 +1,6 @@
 # Protocol V3.1.0 implementation notes
 
-These notes reconcile the bundled protocol's version history, manifest examples, and device tables. The bundled Chinese protocol is the payload reference; its code fences contain illustrative pseudocode, comments, and placeholders, not directly runnable JSON. Protocol versions and Ulanzi Studio versions are separate values.
+These notes reconcile the bundled protocol's version history, manifest examples, and device tables. The bundled English translation of the supplied protocol is the payload reference; its code fences retain illustrative pseudocode, comments, and placeholders, not directly runnable JSON. Protocol versions and Ulanzi Studio versions are separate values.
 
 ## Host compatibility
 
@@ -90,6 +90,8 @@ For older hosts, retain the documented legacy `state` payload or compatible SDK 
 
 ## Other source inconsistencies
 
+- The text/pixmap element tables and Rect type use a 200×100 coordinate range, while the D200X layout section specifies 126×140. The translation retains both source values; verify the actual target surface and use the D200X-specific geometry for D200X layouts.
+- A legacy manifest annotation swaps the descriptions of `Name` and `Icon`. Use `Name` for the action label and `Icon` for its image path; these field names and example values remain unchanged in the translation.
 - The rotation example contains `hold—right` with an em dash and a response named `leftrotate` under `dialrotate`. Treat these as source inconsistencies: check target SDK/host events; normalize observed variants at the protocol boundary. Use canonical internal values `left`, `right`, `hold-left`, `hold-right`.
 - Some startup examples use lowercase `dial`; this does not redefine the manifest's `Dial` identifier.
 - Deprecated `Software.MinimumVersion` appears in a legacy example. Use `Software.MinVersion` for new manifests.
