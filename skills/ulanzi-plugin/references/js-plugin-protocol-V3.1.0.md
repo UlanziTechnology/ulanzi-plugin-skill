@@ -42,6 +42,8 @@ The folder normally contains manifest.json, localization files, plugin libraries
 
 The following is an illustrative example.
 
+Each action's `States` array must contain one or two entries only, with indices 0 and optionally 1. The manifest default `state`, `setState`, and `multiActionState` must reference an existing entry. More display variants, such as weather conditions or progress steps, use dynamic image/title updates rather than additional declared states. See [Action state limits](protocol-v3.1-notes.md#action-state-limits).
+
 ```JSON
 manifest.json
 {

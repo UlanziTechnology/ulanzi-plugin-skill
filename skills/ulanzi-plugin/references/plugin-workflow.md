@@ -107,8 +107,8 @@ Action fields:
 - `Icon`
 - `UUID`
 - `PropertyInspectorPath` when configurable
-- `States` with at least one `{ "Name", "Image" }`
-- `state` when the action has a default state index
+- `States` with **1–2 entries**, each containing `{ "Name", "Image" }`; state indices are 0 and optionally 1. See [Action state limits](protocol-v3.1-notes.md#action-state-limits).
+- `state` when the action has a default state index: integer 0 or 1, referencing an existing `States` entry
 - `Tooltip` for action help text
 - `SupportedInMultiActions: false` when the action must not be used in multi-actions
 - `SupportedInKeyLogicActions` to control availability in action triggers (defaults to true)
@@ -395,6 +395,8 @@ Supported localization filenames include `zh_CN.json`, `zh_HK.json`, `en.json`, 
 Run bundled helpers with Python 3.9+, resolving paths from the loaded skill directory. Structure validation and placeholder icon generation need only the standard library.
 
 `validate_plugin.py` checks JavaScript plugin manifests and paths. `--strict-icons` requires 196x196 PNG icons; `--marketplace` also checks `Description`, `Detail`, Banner paths, and corresponding metadata in locale files that exist. It does not require fixed Banner dimensions or all eight locales. Legacy SVG assets and missing state names can fail these delivery checks without proving the older plugin cannot run. The helper does not validate Python plugins or establish application/device compatibility.
+
+All validation modes reject more than two `States` entries and invalid or out-of-range manifest default `state` values. Runtime messages are not checked by this static helper; validate their state indices in the plugin.
 
 If `CodePath` points to source (`plugin/app.js` or `plugin/app.html`), no build may be required.
 
